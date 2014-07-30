@@ -1,0 +1,174 @@
+$break-small: 768px; 
+$break-large: 992px; 
+
+$column-width: 130px;
+$gutter-width: 30px;
+
+$font-stack: 'Open Sans', sans-serif;
+
+$width-small: ($column-width * 4 + $gutter-width * 3);
+$width-large: ($column-width * 6 + $gutter-width * 5);
+
+$margin-big: $gutter-width * 5;
+$margin-medium: $gutter-width * 3;
+$margin-small: $gutter-width;
+
+$color-primary: #444;
+$color-link: #006892;
+$color-linkvisited: darken($color-link, 10%);
+
+@mixin transition($property, $time, $function) {
+    -moz-transition: $property $time $function;
+    -webkit-transition: $property $time $function;
+    -o-transition: opacity $property $time $function;
+    transition: opacity $property $time $function;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+body {
+    font: 18px/1.5 $font-stack;
+    background-color: #fff;
+    color: $color-primary;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+footer, section {
+    clear: both;
+    margin: 0 auto;
+    padding: ($gutter-width / 2);
+    margin: ($gutter-width / 2 ) auto;
+    @media screen and (min-width: $break-small) and (max-width: $break-large) {
+        width: $width-small;
+    }
+
+    @media screen and (min-width: $break-large) {
+        width: $width-large;
+    }
+}
+
+.btn {
+    text-align: center;
+    border: 0;
+    color: #fff;
+    font-size: 0.8em;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: $color-link;
+    @include border-radius(5px);
+    @include transition(background-color, 0.3s, ease);
+
+    &:hover,
+    &:focus {
+        background-color: $color-linkvisited;
+    }
+}
+
+header {
+    background: url(../img/newyork.jpg) no-repeat 50% 100%;
+    color: #fff;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: $margin-small;
+    padding-bottom: $margin-small;
+    letter-spacing: 2px;
+
+    div.hero {
+        background-color: rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        padding: $gutter-width;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    p {
+        margin: 0;
+        border-bottom: 3px solid #fff;
+        font-size: 25px;
+        line-height: 1.4;
+    }
+
+    
+    @media screen and (min-width: $break-small) {
+        padding-top: $margin-big;
+        padding-bottom: $margin-big;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 30px;    
+        }
+    }
+}
+
+section {
+    margin: ($gutter-width / 2 ) auto;
+    @media screen and (min-width: $break-small) and (max-width: $break-large) {
+        width: $width-small;
+    }
+
+    @media screen and (min-width: $break-large) {
+        width: $width-large;
+    }
+
+    h2 {
+        font-weight: 500;
+        
+        span {
+            text-transform: uppercase;
+            display: block;
+            font-size: 0.5em;
+            color: lighten($color-primary, 30%);
+        }
+    }
+
+    &#developers {
+        h2, p {
+            @media screen and (min-width: $break-small) and (max-width: $break-large) {
+                width: ($column-width * 2) + ($gutter-width * 1);
+                margin-left: ($column-width * 2) + ($gutter-width * 2);
+            }
+
+            @media screen and (min-width: $break-large) {
+                width: ($column-width * 3) + ($gutter-width * 2);
+                margin-left: ($column-width * 3) + ($gutter-width * 3);
+            }
+        }
+    }
+
+    &#communities {
+        h2, p {
+            @media screen and (min-width: $break-small) and (max-width: $break-large) {
+                width: ($column-width * 2) + ($gutter-width * 1);
+            }
+
+            @media screen and (min-width: $break-large) {
+                width: ($column-width * 3) + ($gutter-width * 2);
+            }
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid lighten($color-primary, 50%);
+    color: lighten($color-primary, 20%);
+    margin-top: $margin-big;
+    font-size: 0.8em;
+}
