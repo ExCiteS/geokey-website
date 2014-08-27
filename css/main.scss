@@ -58,20 +58,24 @@ footer, section {
 }
 
 header {
-    background: url(../img/newyork.jpg) no-repeat 50% 100%;
     color: #fff;
+    background-color: $color-link;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-size: 30px;
     text-transform: uppercase;
-    text-align: center;
-    padding-top: $margin-small;
-    padding-bottom: $margin-small;
     letter-spacing: 2px;
 
     div.hero {
-        background-color: rgba(0, 0, 0, 0.5);
-        display: inline-block;
         padding: $gutter-width;
+        margin: 0 auto;
+
+        @media screen and (min-width: $break-small) and (max-width: $break-large) {
+            width: $width-small;
+        }
+
+        @media screen and (min-width: $break-large) {
+            width: $width-large;
+        }
     }
 
     h1 {
@@ -81,15 +85,28 @@ header {
 
     p {
         margin: 0;
-        border-bottom: 3px solid #fff;
         font-size: 25px;
         line-height: 1.4;
     }
 
+    &.main {
+        background: url(../img/newyork.jpg) no-repeat 50% 100%;
+        text-align: center;
+        padding-top: $margin-small;
+        padding-bottom: $margin-small;
+
+        div.hero {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
     
     @media screen and (min-width: $break-small) {
-        padding-top: $margin-big;
-        padding-bottom: $margin-big;
+        &.main {
+            padding-top: $margin-big;
+            padding-bottom: $margin-big;
+        }
 
         h1 {
             font-size: 50px;
@@ -139,6 +156,10 @@ a {
     background-color: $color-link;
     @include border-radius(5px);
     @include transition(background-color, 0.3s, ease);
+
+    &:visited {
+        color: #fff;
+    }
 
     &:hover,
     &:focus {
