@@ -6,8 +6,9 @@ $gutter-width: 30px;
 
 $font-stack: 'Open Sans', sans-serif;
 
-$width-small: ($column-width * 4 + $gutter-width * 3);
-$width-large: ($column-width * 6 + $gutter-width * 5);
+$width-small: ($column-width * 4 + $gutter-width * 4);
+$width-large: ($column-width * 6 + $gutter-width * 6
+    );
 
 $margin-big: $gutter-width * 5;
 $margin-medium: $gutter-width * 3;
@@ -46,8 +47,8 @@ body {
 footer, section {
     clear: both;
     margin: 0 auto;
-    padding: ($gutter-width / 2);
-    margin: ($gutter-width / 2 ) auto;
+    margin: ($gutter-width) auto;
+    padding: ($gutter-width) 0;
     @media screen and (min-width: $break-small) and (max-width: $break-large) {
         width: $width-small;
     }
@@ -177,21 +178,11 @@ section {
         width: $width-large;
     }
 
-    &#developers {
-        h2, p {
-            @media screen and (min-width: $break-small) and (max-width: $break-large) {
-                width: ($column-width * 2) + ($gutter-width * 1);
-                margin-left: ($column-width * 2) + ($gutter-width * 2);
-            }
+    div#communities,
+    div#developers {
+        float: left;
+        margin: 0 ($gutter-width/2);
 
-            @media screen and (min-width: $break-large) {
-                width: ($column-width * 3) + ($gutter-width * 2);
-                margin-left: ($column-width * 3) + ($gutter-width * 3);
-            }
-        }
-    }
-
-    &#communities {
         h2, p {
             @media screen and (min-width: $break-small) and (max-width: $break-large) {
                 width: ($column-width * 2) + ($gutter-width * 1);
@@ -205,14 +196,16 @@ section {
 
     &#blog {
         border-top: 1px solid lighten($color-primary, 50%);
+        padding-left: $gutter-width/2;
 
         ul {
-            float: left;
             list-style: none;
             padding: 0;
             margin: 0 0 $gutter-width 0;
 
+
             @media screen and (min-width: $break-large) {
+                float: left;
                 width: ($column-width * 2) + ($gutter-width * 1);
                 margin-left: $gutter-width;
             }
@@ -229,8 +222,9 @@ section {
         }
 
         article:first-of-type {
-            float: left;
+
             @media screen and (min-width: $break-large) {
+                float: left;
                 width: ($column-width * 4) + ($gutter-width * 3);
             }
 
@@ -248,7 +242,6 @@ section {
         border-top: 1px solid lighten($color-primary, 50%);
 
         div#platform {
-            float: left;
             @media screen and (min-width: $break-small) and (max-width: $break-large) {
                 width: ($column-width * 2) + ($gutter-width * 1);
             }
@@ -259,10 +252,36 @@ section {
         }
 
         div#devs {
-            float: left;
-            @media screen and (min-width: $break-small) {
-                margin-left: $gutter-width;
-                width: ($column-width * 2) + ($gutter-width * 1);
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                -moz-column-count: 2;
+                -moz-column-gap: $gutter-width;
+                -webkit-column-count: 2;
+                -webkit-column-gap: $gutter-width;
+                column-count: 2;
+                column-gap: $gutter-width;
+
+                li {
+                    padding: 0;
+                    display: block;
+                    clear: both;
+
+                    &:first-child {
+                        h3 {
+                            margin-top: 0;
+                        }
+                    }
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        @include border-radius(50px);
+                        float: left;
+                        margin-right: $gutter-width / 2;
+                    }
+                }
             }
         }
     }
@@ -272,5 +291,6 @@ footer {
     border-top: 1px solid lighten($color-primary, 50%);
     color: lighten($color-primary, 20%);
     margin-top: $margin-big;
+    padding: ($gutter-width / 2);
     font-size: 0.8em;
 }
