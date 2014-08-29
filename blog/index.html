@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Blog - Archive"
+---
+
+<header>
+    {% include nav.html %}
+    <div class="hero">
+        <h1>Blog</h1>
+        <p>Read about what we've been up to recently</p>
+    </div>
+</header>
+
+<section>
+    <div class="content">
+        {% for post in site.posts %}
+        <article class="row">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="meta">Published on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time></p>
+
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
+        </article>
+        {% endfor %}
+    </div>
+</section>

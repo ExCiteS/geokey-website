@@ -4,24 +4,33 @@ title: "[The Platform] - Build your own app"
 ---
 
 <header>
+    {% include nav.html %}
     <div class="hero">
         <h1>Developers</h1>
-        <p>Build your own app on top of our API or help us improve the platform.</p>
+        <p>The Platform is 100% open source. You can deploy it on your own servers, extend it or build an app on top of the API.</p>
     </div>
 </header>
 
 <section>
     <div class="row">
-        <div class="item">
-            <h2>Deploy the code</h2>
-            <p>Learn how to deploy the code on your own servers.</p>    
-        </div>
-    </div>
+        <div class="item" id="run-service">
+            <h2><span class="mega-octicon octicon-gear"></span> Run your own service</h2>
+            <p>You want to run your own independent service? Learn how to deploy the code on your system and how to keep the system up to date.</p>
 
-    <div class="row">
-        <div class="item">
-            <h2>Build your own app</h2>
-            <p>We have build an open API, so you can build the tools you want. <a href="https://github.com/ExCiteS/opencommunitymaps/wiki">Read the docs</a> to get started.</p>    
+            <ul>
+                <li><a href="#">How to install</a> </li>
+                <li><a href="#">How to update</a></li>
+            </ul>
+        </div>
+
+        <div class="item" id="build-app">
+            <h2><span class="mega-octicon octicon-code"></span> Build your own app</h2>
+            <p>Whether you want to build a client for data collection, create a sophisticated visualisation of your data or statiscally analyse the data — use our REST API to get connected.</p>
+
+            <ul>
+                <li><a href="https://github.com/ExCiteS/opencommunitymaps/wiki">Read the docs to get started</a> </li>
+                <li><a href="#">Explore the examples</a> </li>
+            </ul>
         </div>
     </div>
 </section>
@@ -29,11 +38,16 @@ title: "[The Platform] - Build your own app"
 <section>
     <div class="row">
         <div class="item">
-            <h2>Help us to improve the platform</h2>
-            <ul>
-                <li><a href="https://github.com/ExCiteS/opencommunitymaps">Fork us on Github</a> Help us to fix bugs or build new features.</li>
-                <li><a href="https://github.com/ExCiteS/opencommunitymaps/issues/new">Report an issue</a> Something does not work as expected? Are you missing a feature? Let us know; we promise to look into it.</li>
-            </ul>
+            <div class="item" id="github-fork">
+            <h2><span class="mega-octicon octicon-git-branch"></span> Fork the code</h2>
+            <p>Help us to fix bugs or build new features.</p>
+            <p><a href="https://github.com/ExCiteS/opencommunitymaps" class="btn">Fork the code on Github</a></p>
+        </div>
+
+        <div class="item" id="github-issue">
+            <h2><span class="mega-octicon octicon-issue-opened"></span> Report a problem</h2>
+            <p>Something does not work as expected? Are you missing a feature? Let us know; we promise to look into it.</p>
+            <p><a href="https://github.com/ExCiteS/opencommunitymaps/issues/new" class="btn">Report a problem</a></p>
         </div>
     </div>
 </section>

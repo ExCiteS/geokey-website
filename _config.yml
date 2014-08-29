@@ -1,3 +1,4 @@
 name: The platform
 markdown: redcarpet
 pygments: true
+permalink: /blog/:year/:month/:day/:title.html

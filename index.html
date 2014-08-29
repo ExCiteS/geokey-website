@@ -10,7 +10,7 @@ title: [The Platform]
     </div>
 </header>
 
-<section>
+<section id="where-to-go">
     <div class="row">
         <div id="communities" class="item">
             <h2><span>Communities</span> Create your own map</h2>
@@ -29,16 +29,20 @@ title: [The Platform]
 <section id="blog">
     <div class="row">
         <div class="item latest">
-            <h2><span>Read the latest news</span>Plugin for EpiCollect released.</h2>
-            <p>Mauris vitae augue ac erat dapibus fermentum ac in magna. In non felis fermentum, venenatis nunc non, maximus nibh. Fusce lobortis libero non leo volutpat ullamcorper. Donec mi augue, suscipit ut ex vel, bibendum auctor nulla. Donec et.</p>
+            <h2><span>Read the latest news</span>{{ site.posts.first.title }}</h2>
+            {{ site.posts.first.excerpt }}
+            <p><a href="{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
         </div>
 
         <div class="item archive">
             <h2><span>From the archives</span></h2>
             <ul>
-                <li><a href="#">Version 0.1 released.</a></li>
-                <li><a href="#">A welcome note</a></li>
-                <li><a href="#" class="btn">Read all news in the blog</a></li>
+            {% for post in site.posts limit:7 %}
+                {% if forloop.index0 > 0 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}    
+            {% endfor %}
+                <li><a href="/blog/" class="btn">Read all news in the blog</a></li>
             </ul>
         </div>
     </div>

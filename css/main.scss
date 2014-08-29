@@ -90,6 +90,49 @@ header {
     text-transform: uppercase;
     letter-spacing: 2px;
 
+    nav {
+        @media screen and (min-width: $break-small) and (max-width: $break-large) {
+            width: $width-small;
+        }
+
+        @media screen and (min-width: $break-large) {
+            width: $width-large;
+        }
+
+        font-family: $font-stack;
+        font-size: 14px;
+        line-height: 1;
+        padding: ($gutter-width) 0 0 0;
+        text-transform: none;
+        letter-spacing: 0;
+        margin: 0 auto;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: right;
+
+            li {
+                display: inline-block;
+            }
+
+            a:link,
+            a:visited {
+                color: #fff;
+                text-decoration: none;
+                padding: ($gutter-width/4);
+                @include border-radius(3px);
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+
     div.hero {
         padding: $gutter-width;
         margin: 0 auto;
@@ -168,6 +211,10 @@ a {
     &:focus {
         text-decoration: none;
     }
+
+    &.no-underline {
+        text-decoration: none;
+    }
 }
 
 .btn {
@@ -191,16 +238,60 @@ a {
     }
 }
 
-div#communities,
-div#developers {
-    float: left;
+article.row {
+    h2 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 0;
 
-    @media screen and (min-width: $break-small) and (max-width: $break-large) {
-        width: ($column-width * 2) + ($gutter-width * 1);
+        a:link,
+        a:visited,
+        a:hover,
+        a:focus,
+        a:active {
+            color: $color-primary;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: underline;
+        }
+    }
+
+    p.meta {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.8em;
+        color: lighten($color-primary, 30%);
+        margin-top: 0;
+        margin-bottom: $margin-small;
+    }
+
+    ul, ol {
+        padding-left: 1em;
     }
 
     @media screen and (min-width: $break-large) {
-        width: ($column-width * 3) + ($gutter-width * 2);
+        h2, p, ul, ol {
+            margin-left: $column-width + $gutter-width;
+            margin-right: $column-width + $gutter-width;
+        }
+    }
+}
+
+section#where-to-go {
+    div#communities,
+    div#developers {
+        float: left;
+
+        @media screen and (min-width: $break-small) and (max-width: $break-large) {
+            width: ($column-width * 2) + ($gutter-width * 1);
+        }
+
+        @media screen and (min-width: $break-large) {
+            width: ($column-width * 3) + ($gutter-width * 2);
+        }
     }
 }
 
@@ -279,6 +370,27 @@ section#about {
                 }
             }
         }
+    }
+}
+
+div#run-service,
+div#build-app,
+div#github-fork,
+div#github-issue {
+    float: left;
+
+    h2 {
+        span {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: $break-small) and (max-width: $break-large) {
+        width: ($column-width * 2) + ($gutter-width * 1);
+    }
+
+    @media screen and (min-width: $break-large) {
+        width: ($column-width * 3) + ($gutter-width * 2);
     }
 }
 
