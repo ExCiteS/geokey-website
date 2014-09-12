@@ -19,7 +19,7 @@ title: "Blog - Archive"
             <p class="meta">Published on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time></p>
 
             {{ post.excerpt }}
-            <p><a href="{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
+            <p class="centered"><a href="{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
         </article>
         {% endfor %}
     </div>

@@ -1,17 +1,17 @@
 $break-small: 768px; 
 $break-large: 992px; 
 
-$column-width: 130px;
-$gutter-width: 30px;
+$column-width: 110px;
+$gutter-width: 50px;
 
 $font-stack: 'Open Sans', sans-serif;
 
 $width-small: ($column-width * 4 + $gutter-width * 4);
 $width-large: ($column-width * 6 + $gutter-width * 6);
 
-$margin-big: $gutter-width * 5;
-$margin-medium: $gutter-width * 3;
-$margin-small: $gutter-width;
+$margin-big: $gutter-width * 1.5;
+$margin-medium: $gutter-width;
+$margin-small: $gutter-width / 2;
 
 $color-primary: #444;
 $color-link: #006892;
@@ -56,12 +56,11 @@ section {
     &:nth-child(odd) {
         background-color: lighten($color-primary, 70%);
     }
-    padding: ($gutter-width) 0;
+    padding: 0;
 }
 
 .row {
     @include clear-float();
-    // clear: both;
     margin: 0 auto;
     padding: ($gutter-width) ($gutter-width / 2);
 
@@ -119,9 +118,10 @@ header {
 
             a:link,
             a:visited {
+                @include transition(background-color, 0.3s, ease);
                 color: #fff;
                 text-decoration: none;
-                padding: ($gutter-width/4);
+                padding: ($gutter-width/4) ($gutter-width/2);
                 @include border-radius(3px);
             }
 
@@ -217,6 +217,12 @@ a {
     }
 }
 
+img {
+    -webkit-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
+}
+
 .btn {
     text-align: center;
     border: 0;
@@ -236,6 +242,10 @@ a {
     &:focus {
         background-color: $color-linkvisited;
     }
+}
+
+.centered {
+    text-align: center;
 }
 
 article.row {
@@ -273,7 +283,7 @@ article.row {
     }
 
     @media screen and (min-width: $break-large) {
-        h2, p, ul, ol {
+        h2, h3, p, ul, ol {
             margin-left: $column-width + $gutter-width;
             margin-right: $column-width + $gutter-width;
         }
@@ -316,6 +326,10 @@ section#blog {
         @media screen and (min-width: $break-large) {
             float: left;
             width: ($column-width * 2) + ($gutter-width * 1);
+        }
+
+        h2 {
+            margin-bottom: 0;
         }
     }
 
