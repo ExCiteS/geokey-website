@@ -35,4 +35,8 @@ Finally, click *Save* to create your project. You will then end at your projectâ
 
 ### Where next?
 
-Create a new category
+<ul class="next-links">
+    <li><a href="my-special-place.html">Create a new category</a></li>
+    <li><a href="my-special-place.html">Create a new category</a></li>
+    <li><a href="my-special-place.html">Create a new category</a></li>
+</ul>

@@ -31,7 +31,7 @@ title: Winjee
         <div class="item latest">
             <h2><span>Read the latest news</span>{{ site.posts.first.title }}</h2>
             {{ site.posts.first.excerpt }}
-            <p class="centered"><a href="{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
+            <p class="centered"><a href="{{ site.url }}{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
         </div>
 
         <div class="item archive">
@@ -39,10 +39,10 @@ title: Winjee
             <ul>
             {% for post in site.posts limit:7 %}
                 {% if forloop.index0 > 0 %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
                 {% endif %}    
             {% endfor %}
-                <li><a href="{{site.url}}blog/" class="btn">Read all news in the blog</a></li>
+                <li><a href="{{ site.url }}blog/" class="btn">Read all news in the blog</a></li>
             </ul>
         </div>
     </div>
