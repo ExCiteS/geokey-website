@@ -2,6 +2,7 @@ name: Winjee
 markdown: redcarpet
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title.html
+url: /opencommunitymaps/
 
 collections:
   tutorials:
