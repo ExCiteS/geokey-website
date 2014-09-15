@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title:  "How to create a project"
+title:  "How to create a new project"
 ---
 
 Whether you want to map the favourite places in your city or places in your neighbourhood that need improvement â€” we created a straightforward interface to setup and manage projects. 
@@ -36,7 +36,6 @@ Finally, click *Save* to create your project. You will then end at your projectâ
 ### Where next?
 
 <ul class="next-links">
-    <li><a href="my-special-place.html">Create a new category</a></li>
-    <li><a href="my-special-place.html">Create a new category</a></li>
-    <li><a href="my-special-place.html">Create a new category</a></li>
+    <li><a href="how-to-setup-categories.html">How to setup categories for data collection</a></li>
+    <li><a href="change-settings-of-project.html">Change the settings of a project</a></li>
 </ul>

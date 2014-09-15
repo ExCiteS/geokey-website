@@ -1,4 +1,4 @@
-name: Winjee
+name: Community Maps
 markdown: redcarpet
 highlighter: pygments
 permalink: /blog/:year/:month/:day/:title.html

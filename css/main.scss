@@ -189,12 +189,14 @@ header {
 h2 {
     font-weight: 500;
     font-size: 1.3em;
+    line-height: 1.2;
     
     span {
         text-transform: uppercase;
         display: block;
         font-size: 0.5em;
         color: lighten($color-primary, 30%);
+        margin-bottom: 5px;
     }
 }
 
@@ -295,6 +297,12 @@ article.row {
             margin-left: $column-width + $gutter-width;
             margin-right: $column-width + $gutter-width;
         }
+    }
+}
+
+article.row.tutorial {
+    h2 {
+        margin-bottom: $margin-small;
     }
 }
 
