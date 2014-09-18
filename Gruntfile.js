@@ -30,6 +30,8 @@ module.exports = function(grunt) {
             main: {
                 files: [
                     {expand: true, src: ['css/octicons/*'], dest: 'build/'},
+                    {expand: true, src: ['css/bootstrap.min.css'], dest: 'build/'},
+                    {expand: true, src: ['css/syntax.css'], dest: 'build/'}
                 ]
             }
         },

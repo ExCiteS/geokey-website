@@ -3,17 +3,19 @@ layout: default
 ---
 
 <header>
-    {% include nav.html %}
-    <div class="hero">
-        <h1>Tutorials</h1>
+    <div class="container">
+        {% include nav.html %}
+        <h1>Help</h1>
     </div>
 </header>
 
 <section>
-    <div class="content">
+    <div class="container">
         <article class="row tutorial">
-            <h2>{{ page.title }}</h2>
-            {{ content }}
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                <h2>{{ page.title }}</h2>
+                {{ content }}
+            </div>
         </article>
     </div>
 </section>

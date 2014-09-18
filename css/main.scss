@@ -1,17 +1,10 @@
 $break-small: 768px; 
 $break-large: 992px; 
 
-$column-width: 110px;
-$gutter-width: 50px;
-
 $font-stack: 'Open Sans', sans-serif;
 
-$width-small: ($column-width * 4 + $gutter-width * 4);
-$width-large: ($column-width * 6 + $gutter-width * 6);
-
-$margin-big: $gutter-width * 1.5;
-$margin-medium: $gutter-width;
-$margin-small: $gutter-width / 2;
+$gutter-width: 30px;
+$margin: 15px;
 
 $color-primary: #444;
 $color-link: #006892;
@@ -40,6 +33,12 @@ $color-linkvisited: darken($color-link, 10%);
           border-radius: $radius;
 }
 
+@mixin stripes() {
+    &:nth-child(odd) {
+        background-color: lighten($color-primary, 70%);
+    }
+}
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 body {
@@ -53,32 +52,8 @@ body {
 
 section {
     @include clear-float();
-    &:nth-child(odd) {
-        background-color: lighten($color-primary, 70%);
-    }
-    padding: 0;
-}
-
-.row {
-    @include clear-float();
-    margin: 0 auto;
-    padding: ($gutter-width) ($gutter-width / 2);
-
-    @media screen and (min-width: $break-small) and (max-width: $break-large) {
-        width: $width-small;
-    }
-
-    @media screen and (min-width: $break-large) {
-        width: $width-large;
-    }
-
-    .item {
-        margin-left: $gutter-width;
-    }
-
-    .item:first-child {
-        margin-left: $gutter-width / 2;
-    }
+    @include stripes();
+    padding: ($margin * 3) 0;
 }
 
 header {
@@ -88,26 +63,19 @@ header {
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    padding-bottom: $margin * 4;
 
     nav {
-        @media screen and (min-width: $break-small) and (max-width: $break-large) {
-            width: $width-small;
-        }
-
-        @media screen and (min-width: $break-large) {
-            width: $width-large;
-        }
-
         font-family: $font-stack;
         font-size: 14px;
         line-height: 1;
-        padding: ($gutter-width) 0 0 0;
+        padding: $margin 0;
         text-transform: none;
         letter-spacing: 0;
         margin: 0 auto;
 
         ul {
-            margin: 0;
+            margin: $margin 0 0 0;
             padding: 0;
             list-style: none;
             text-align: right;
@@ -121,7 +89,7 @@ header {
                 @include transition(background-color, 0.3s, ease);
                 color: #fff;
                 text-decoration: none;
-                padding: ($gutter-width/4) ($gutter-width/2);
+                padding: ($margin/2) ($margin);
                 @include border-radius(3px);
             }
 
@@ -134,16 +102,8 @@ header {
     }
 
     div.hero {
-        padding: $gutter-width;
+        padding: $margin * 2;
         margin: 0 auto;
-
-        @media screen and (min-width: $break-small) and (max-width: $break-large) {
-            width: $width-small;
-        }
-
-        @media screen and (min-width: $break-large) {
-            width: $width-large;
-        }
     }
 
     h1 {
@@ -160,8 +120,8 @@ header {
     &.main {
         background: url(../img/newyork.jpg) no-repeat 50% 100%;
         text-align: center;
-        padding-top: $margin-small;
-        padding-bottom: $margin-small;
+        padding-top: $margin;
+        padding-bottom: $margin;
 
         div.hero {
             display: inline-block;
@@ -172,8 +132,8 @@ header {
     
     @media screen and (min-width: $break-small) {
         &.main {
-            padding-top: $margin-big;
-            padding-bottom: $margin-big;
+            padding-top: $margin * 4;
+            padding-bottom: $margin * 4;
         }
 
         h1 {
@@ -260,7 +220,6 @@ img {
 
 article.row {
     h2 {
-        text-align: center;
         font-size: 2.5em;
         margin-bottom: 0;
 
@@ -281,43 +240,20 @@ article.row {
 
     p.meta {
         text-transform: uppercase;
-        text-align: center;
         font-size: 0.8em;
         color: lighten($color-primary, 30%);
-        margin-top: 0;
-        margin-bottom: $margin-small;
+        margin-top: $margin;
+        margin-bottom: $margin;
     }
 
     ul, ol {
         padding-left: 1em;
     }
-
-    @media screen and (min-width: $break-large) {
-        h2, h3, p, ul, ol {
-            margin-left: $column-width + $gutter-width;
-            margin-right: $column-width + $gutter-width;
-        }
-    }
 }
 
 article.row.tutorial {
     h2 {
-        margin-bottom: $margin-small;
-    }
-}
-
-section#where-to-go {
-    div#communities,
-    div#developers {
-        float: left;
-
-        @media screen and (min-width: $break-small) and (max-width: $break-large) {
-            width: ($column-width * 2) + ($gutter-width * 1);
-        }
-
-        @media screen and (min-width: $break-large) {
-            width: ($column-width * 3) + ($gutter-width * 2);
-        }
+        margin-bottom: $margin;
     }
 }
 
@@ -339,51 +275,35 @@ section#blog {
     }
 
     div.archive {
-        @media screen and (min-width: $break-large) {
-            float: left;
-            width: ($column-width * 2) + ($gutter-width * 1);
-        }
-
         h2 {
             margin-bottom: 0;
-        }
-    }
-
-    div.latest {
-        @media screen and (min-width: $break-large) {
-            float: left;
-            width: ($column-width * 4) + ($gutter-width * 3);
         }
     }
 }
 
 section#about {
-    div#platform {
-        @media screen and (min-width: $break-small) and (max-width: $break-large) {
-            width: ($column-width * 2) + ($gutter-width * 1);
-        }
-
-        @media screen and (min-width: $break-large) {
-            width: ($column-width * 4) + ($gutter-width * 3);
-        }
-    }
-
     div#devs {
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            -moz-column-count: 2;
-            -moz-column-gap: $gutter-width;
-            -webkit-column-count: 2;
-            -webkit-column-gap: $gutter-width;
-            column-count: 2;
-            column-gap: $gutter-width;
+
+            @media screen and (min-width: $break-small) {
+                -moz-column-count: 2;
+                -moz-column-gap: $gutter-width;
+                -webkit-column-count: 2;
+                -webkit-column-gap: $gutter-width;
+                column-count: 2;
+                column-gap: $gutter-width;    
+            }
+            
 
             li {
                 padding: 0;
                 display: block;
                 clear: both;
+                margin-bottom: $margin;
+                min-height: 100px;
 
                 &:first-child {
                     h3 {
@@ -396,7 +316,7 @@ section#about {
                     height: 100px;
                     @include border-radius(50px);
                     float: left;
-                    margin-right: $gutter-width / 2;
+                    margin-right: $margin;
                 }
             }
         }
@@ -407,20 +327,10 @@ div#run-service,
 div#build-app,
 div#github-fork,
 div#github-issue {
-    float: left;
-
     h2 {
         span {
             display: block;
         }
-    }
-
-    @media screen and (min-width: $break-small) and (max-width: $break-large) {
-        width: ($column-width * 2) + ($gutter-width * 1);
-    }
-
-    @media screen and (min-width: $break-large) {
-        width: ($column-width * 3) + ($gutter-width * 2);
     }
 }
 
@@ -441,7 +351,7 @@ ul.next-links {
         border: 0 solid $color-link;
         border-width: 1px 1px 0 1px;
         margin: 0;
-        padding: 10px; 
+        padding: ($margin/2) $margin;
 
         &:first-child {
             @include border-radius(5px 5px 0 0);
@@ -457,4 +367,47 @@ ul.next-links {
             border-bottom-width: 1px;
         }
     }
+}
+
+ul.tutorial-links {
+    list-style-type: none;
+    padding-left: 18px;
+    text-indent: -18px;
+    margin: 0;
+
+    li {
+        font-size: 14px;
+        margin-bottom: 7px;
+        &:before {
+            content: "➜ ";
+            color: $color-link;
+            font-size: 14px;
+        }
+
+        a {
+            font-size: 18px;
+        }
+    }
+}
+
+table {
+    thead {
+        border-bottom: 2px solid lighten($color-primary, 50%);
+    }
+    tr {
+        border-bottom: 1px solid lighten($color-primary, 50%);
+        @include stripes();
+    }
+
+    th, td {
+        text-align: left;
+        vertical-align: top;
+        padding: ($margin / 2) ($margin);
+    }
+}
+
+.language-http .err {
+    display: block;
+    @include border-radius(5px);
+    padding: ($margin / 2) $margin;
 }

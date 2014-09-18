@@ -4,6 +4,9 @@ highlighter: pygments
 permalink: /blog/:year/:month/:day/:title.html
 url: /opencommunitymaps/
 
+redcarpet:
+  extensions: ['tables']
+
 collections:
-  tutorials:
+  help:
     output: true
