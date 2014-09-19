@@ -1,37 +1,31 @@
 ---
 layout: docs
-title:  "Single project"
+title:  "All contributions"
 ---
-
 `````````````````````
-GET /api/projects/:project_id/
+GET /api/projects/:project_id/data-groupings/all-contributions/
 `````````````````````
 
 #### Request parameters
 
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
-`project_id`      | `Integer`   | A unique identifier for the project.
+`project_id`      | `Integer`   | Unique identifier for the project.
 
 #### Response
 
-The response contains a [complete Project repsonse object](project-response.html).
+The response contains a [GeoJSON Feature Collection](http://geojson.org/geojson-spec.html#feature-collection-objects) object of all [contributions](contribution-response.html) the authenticated user can access in the project.
 
 {% highlight json %}
-[
-  {
-    "id": 26,
-    "name": "The project name", 
-    "description": "A project description",
-    "is_involved": true
-  }
-]
+{
+    "type": "FeatureCollection",
+    "features": []
+}
 {% endhighlight %}
-
 
 #### Response status codes
 
 Code  |  Reason
 ------|-----------------------------------------
- 200  |  The project has been returned successfully.
+ 200  |  The list data grouping has been returned successfully.
  404  |  The project was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence private projects to unauthorised users.
