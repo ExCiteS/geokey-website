@@ -10,3 +10,5 @@ redcarpet:
 collections:
   help:
     output: true
+  docs:
+    output: true

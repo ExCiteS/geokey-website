@@ -42,7 +42,7 @@ $color-linkvisited: darken($color-link, 10%);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 body {
-    font: 18px/1.5 $font-stack;
+    font: 16px/1.5 $font-stack;
     background-color: #fff;
     color: $color-primary;
     font-weight: 400;
@@ -154,7 +154,7 @@ h2 {
     span {
         text-transform: uppercase;
         display: block;
-        font-size: 0.5em;
+        font-size: 12px;
         color: lighten($color-primary, 30%);
         margin-bottom: 5px;
     }
@@ -200,12 +200,15 @@ img {
     text-align: center;
     border: 0;
     color: #fff;
-    font-size: 0.8em;
     text-decoration: none;
     padding: 10px 15px;
     background-color: $color-link;
     @include border-radius(5px);
     @include transition(background-color, 0.3s, ease);
+
+    &:link {
+        text-decoration: none;
+    }
 
     &:visited {
         color: #fff;
@@ -420,8 +423,16 @@ table {
     }
 }
 
+pre {
+    background-color: lighten($color-primary, 70%);
+    padding: $margin;
+    @include border-radius(5px);
+    font-size: 14px;
+}
+
 .language-http .err {
     display: block;
     @include border-radius(5px);
     padding: ($margin / 2) $margin;
 }
+
