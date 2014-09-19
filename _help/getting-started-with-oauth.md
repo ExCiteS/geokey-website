@@ -63,3 +63,16 @@ Sign the request by setting the `Authorization` header in the request.
 {% highlight http %}
 Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 {% endhighlight %}
+
+### Where next
+
+<ul class="next-links tutorial-links">
+    <li>
+     <h6><a href="register-your-app.html">Register your app</a></h6>
+      <p>Before you can use our API you need to register your app.</p>
+    </li>
+    <li>
+      <h6><a href="https://github.com/ExCiteS/opencommunitymaps/wiki">Read the API docs</a></h6>
+      <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
+    </li>
+</ul>

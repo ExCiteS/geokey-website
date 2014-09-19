@@ -169,8 +169,11 @@ p {
 }
 
 a {
-    @include transition(color, 0.3s, ease);
-    color: $color-link;
+    &:link {
+        @include transition(color, 0.3s, ease);
+        color: $color-link;
+        text-decoration: underline;
+    }
 
     &:visited {
         color: $color-linkvisited;
@@ -342,6 +345,34 @@ footer {
     padding-top: 1em;
 }
 
+ul.tutorial-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin-bottom: 7px;
+        &:before {
+            content: "➜ ";
+            color: $color-link;
+            font-size: 14px;
+            padding-right: 5px;
+        }
+
+        h6 {
+            display: inline-block;
+            font-weight: normal;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding-left: 23px;
+        }
+    }
+}
+
 ul.next-links {
     padding: 0 !important;
     margin-top: 0;
@@ -366,26 +397,9 @@ ul.next-links {
             @include border-radius(5px);
             border-bottom-width: 1px;
         }
-    }
-}
 
-ul.tutorial-links {
-    list-style-type: none;
-    padding-left: 18px;
-    text-indent: -18px;
-    margin: 0;
-
-    li {
-        font-size: 14px;
-        margin-bottom: 7px;
-        &:before {
-            content: "➜ ";
-            color: $color-link;
-            font-size: 14px;
-        }
-
-        a {
-            font-size: 18px;
+        p {
+            margin-bottom: 0;
         }
     }
 }
