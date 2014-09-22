@@ -18,25 +18,37 @@ The response contains an array of [compact Project repsonse objects](response-pr
   {
     "id": 21,
     "name": "London Transport",
-    "description": ""
+    "description": "",
+    "user_info": {
+      "is_involved": true,
+      "can_moderate": true,
+      "is_admin": true,
+      "can_contribute": true
+    }
   },
   {
     "id": 26,
     "name": "Hackney Wick",
     "description": "Hackney Wick is located within the Wick Ward in the far east of the borough 
                     and on the edge of the planned 2012 Olympic Park. Hackney Wick has a proud 
-                    history at the heart of east Londons industrial development."
-  },
-  {
-    "id": 26,
-    "name": "The project name", 
-    "description": "A project description",
-    "is_involved": true
+                    history at the heart of east Londons industrial development.",
+    "user_info": {
+      "is_involved": true,
+      "can_moderate": true,
+      "is_admin": true,
+      "can_contribute": true
+    }
   },
   {
     "id": 28,
     "name": "Local spots",
-    "description": ""
+    "description": "",
+    "user_info": {
+      "is_involved": true,
+      "can_moderate": true,
+      "is_admin": true,
+      "can_contribute": true
+    }
   },
 ]
 {% endhighlight %}

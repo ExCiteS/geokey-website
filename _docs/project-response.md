@@ -11,11 +11,10 @@ Parameter           | Type        | Description                                 
 `name`              | `String`    | Name of the project.                                                                  | ✔              | ✔   
 `description`       | `String`    | Detailed description of the nature of the project.                                    | ✔              | ✔ 
 `created_at`        | `Timestamp` | Date and time, when the project was created.                                          | ✔              | ✔
-`categories`        | `Array`     | List of [categories](category-response.html) of that project.                         | ✔              |
-`data_grouping`     | `Array`     | List of [data groupings](data-grouping-response.html) the authenticated can access.   | ✔              |
-`contribution_info` | `Object`    | Statistics on contribtions in this project                                            | ✔              |
-`user_info`         | `Object`    | Information, which permissions this user has been granted in the project.             | ✔              |
-`is_involved`       | `Boolean`   | Indicates if the authenticated user is member of any user group of this project       | ✔              | ✔
+`categories`        | `Array`     | List of [categories](category-response.html) of that project.                         |                | ✔
+`data_grouping`     | `Array`     | List of [data groupings](data-grouping-response.html) the authenticated can access.   |                | ✔
+`contribution_info` | `Object`    | Statistics on contribtions in this project                                            |                | ✔
+`user_info`         | `Object`    | Information, which permissions this user has been granted in the project.             | ✔              | ✔ 
 
 #### Example
 
