@@ -90,6 +90,7 @@ Parameter           | Type        | Description                                 
                 }
             ],
             "colour": "#0033ff",
+            "symbol": "/assets/symbols/pub.png"
             "created_at": "2014-09-17T00:00:00Z"
         },
         {
@@ -127,6 +128,7 @@ Parameter           | Type        | Description                                 
                 }
             ],
             "colour": "#0033ff",
+            "symbol": null,
             "created_at": "2014-09-17T00:00:00Z"
         },
         {
@@ -164,6 +166,7 @@ Parameter           | Type        | Description                                 
                 }
             ],
             "colour": "#0033ff",
+            "symbol": null,
             "created_at": "2014-09-17T00:00:00Z"
         }
     ],

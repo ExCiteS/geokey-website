@@ -11,7 +11,7 @@ GET /api/projects/
 
 #### Response
 
-The response contains an array of [compact Project repsonse objects](response-project.html).
+The response contains an array of [compact Project repsonse objects](project-response.html).
 
 {% highlight json %}
 [  
