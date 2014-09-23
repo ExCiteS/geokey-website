@@ -15,6 +15,12 @@ Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | A unique identifier for the project.
 
+#### Request headers
+
+Header            | Required value
+------------------|-------------
+`Content-Type`    | `application/json`
+
 #### POST body example
 
 The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geojson-objects) encoded description of the contribution and its location. 

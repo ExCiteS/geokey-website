@@ -13,9 +13,9 @@ In order to obtain OAuth tokens with your client application, you need to regist
 
 The user using your application needs to authorise your application to make requests on their behalf. In order to get the authorisation, redirect the browser to the authorisation page.
 
-{% highlight http %}
-GET http://[your_host]/oauth2/authorize/
-{% endhighlight %}
+````
+GET /oauth2/authorize/
+````
 
 ##### Parameters
 
@@ -29,9 +29,9 @@ Name            | Type     | Description
 
 If the user authorises the application Community Maps redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from Community Maps. 
 
-{% highlight http %}
-POST http://[your_host]/oauth2/access_token
-{% endhighlight %}
+````
+POST /oauth2/access_token
+````
 
 #### Parameters
 
@@ -60,9 +60,9 @@ Using the access token your application can make requests to Community Maps on b
 
 Sign the request by setting the `Authorization` header in the request.
 
-{% highlight http %}
+````
 Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-{% endhighlight %}
+````
 
 ### Where next
 
