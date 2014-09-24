@@ -252,8 +252,14 @@ article.row {
         margin-bottom: $margin;
     }
 
+    h3 {
+        margin-top: $margin * 3;
+        margin-bottom: $margin / 2;
+        border-bottom: 1px dotted lighten($color-primary, 50%);
+    }
+
     ul, ol {
-        padding-left: 1em;
+        padding-left: 24px;
     }
 }
 
