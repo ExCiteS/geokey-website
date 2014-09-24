@@ -3,31 +3,33 @@ layout: tutorial
 title:  "How to setup categories for data collection"
 ---
 
-Now that we have [created a new project](how-to-create-project.html), we want to setup categories and their fields for data collection. Categories help us to define what kind of data is being collected and what kind of information a contributer needs to provide. Based on categories clients create the form for data collection and the provided input is validated before it appears on the map.
+Now that we have [created a new project](how-to-create-project.html), we want to setup categories and their fields for data collection. Categories help us to define what kind of data is being collected and what kind of information a contributer needs to provide. Based on categories clients create forms for data collection and the provided input is validated before it appears on the map.
 
 We start adding categories by selecting the _Catgories_ from the menu on left-hand side of the project home page.
 
 ![Select Categories](img/how-to-setup-categories-01.png)
 
-Then select _Create new category_ and fill in a meaningful name for your category, for example _Restaurants_. Also think of more providing a short explaination of what this category is about in the description field. 
+You will be redirected to the categories overview page. Here you will see all categories that have been created for that project. To add new category, click on _Create new category_. 
 
-After saving your new category you start adding fields. Using fields you can define what data you want to collect for the category. For the category _Restaurant_ you might want to store a name, an address, the number of seats and which couisine they serve. 
+To create a category, you have to fill in the following form. First, provide a name for your category, for example _Restaurants_ and an optional description. 
 
-Start adding a new field for the restaurant's name by clicking _Create new field_. In the following form add "Name" to the field _Name_. 
+Then, you need to select the default status for contributions of this category. The defaults status determinates, what happens to a new contribution when its saved to the database. If you select *Pending*, then a moderator of the project needs to approve the contribution before it will appear on the map. If you select *Active*on the other hand, the contribution will be visible on the map straight away -- no need for moderation.
 
-The following field _key_ will be filled automattically. A field's key is used to identify the field when the application used for data collection and the data base communicate to store and update information. 
+Finally click *Save* to create the category. You will be redirected to the category overview page. Form here you can change the set up of the category, e.g. [adding fields](how-to-create-field.html), change [how contributions of this category should be displayed on the map](category-display.html) or change the [general settings](category-settings.html) of the category. You can use the menu on the left-hand side to navigation to the different parts.
 
-Next, add a description and select if your contributors are required to add a value for the field. If you choose not the tick the box, user may leave the field empty when contributing data. The name of a restaurant is important, so we want users to provide a name in any case.
+### Where next
 
-Finally, select the type of data this field represents. The name is simply text, so we select _Text_.
-
-After saving the new field you either change the [settings of the field](changing-settings-of-field.html) or add another field by clicking on the link on the success message on top of the page.
-
-![Select Categories](img/how-to-setup-categories-02.png)
-
-### Where next?
-
-<ul class="next-links">
-    <li><a href="change-settings-of-category.html">Change the settings of a category</a></li>
-    <li><a href="change-settings-of-field.html">Change the settings of a field</a></li>
+<ul class="next-links tutorial-links">
+    <li>
+        <h6><a href="how-to-create-field.html">How to create fields for a category</a></h6>
+        <p>Learn how to add fields to your category.</p>
+    </li>
+    <li>
+        <h6><a href="category-display.html">Category Display Settings</a></h6>
+        <p>Define how your contributions will be displayed on the map.</p>
+    </li>
+    <li>
+        <h6><a href="category-display.html">Category General Settings</a></h6>
+        <p>Change the general settings of the category.</p>
+    </li>
 </ul>
