@@ -28,8 +28,4 @@ Finally click *Save* to create the category. You will be redirected to the categ
         <h6><a href="category-display.html">Category Display Settings</a></h6>
         <p>Define how your contributions will be displayed on the map.</p>
     </li>
-    <li>
-        <h6><a href="category-display.html">Category General Settings</a></h6>
-        <p>Change the general settings of the category.</p>
-    </li>
 </ul>

@@ -39,8 +39,4 @@ Finally, click *Save* to create your project. You are now redirect your projectâ
     <li>
       <h6><a href="how-to-setup-categories.html">How to setup categories for data collection</a></h6>
     </li>
-    <li>
-     <h6><a href="project-settings.html">Project settings</a></h6>
-      <p>Learn what the settings of your project mean.</p>
-    </li>
 </ul>

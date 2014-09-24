@@ -15,7 +15,7 @@ Next, you select if your contributors are required to add a value for the field.
 
 Finally, select the type of data this field represents. The name is simply text, so we select _Text_.
 
-After saving the new field you either change the [settings of the field](field-settings.html) or add another field by clicking on the link on the success message on top of the page.
+After saving the new field you either change the settings of the field or add another field by clicking on the link on the success message on top of the page.
 
 ![Select Categories](img/how-to-setup-categories-02.png)
 
@@ -35,9 +35,5 @@ To add a new value enter its name in the field below the list and click _Add_. T
     <li>
         <h6><a href="field-types.html">Field types</a></h6>
         <p>Learn about different field types and what you can do with them.</p>
-    </li>
-    <li>
-        <h6><a href="field-settings.html">Field Settings</a></h6>
-        <p>Learn about which settings you can change for your field.</p>
     </li>
 </ul>
