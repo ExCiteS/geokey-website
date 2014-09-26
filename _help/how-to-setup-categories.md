@@ -15,7 +15,7 @@ To create a category, you have to fill in the following form. First, provide a n
 
 Then, you need to select the default status for contributions of this category. The defaults status determinates, what happens to a new contribution when its saved to the database. If you select *Pending*, then a moderator of the project needs to approve the contribution before it will appear on the map. If you select *Active*on the other hand, the contribution will be visible on the map straight away -- no need for moderation.
 
-Finally click *Save* to create the category. You will be redirected to the category overview page. Form here you can change the set up of the category, e.g. [adding fields](how-to-create-field.html), change [how contributions of this category should be displayed on the map](category-display.html) or change the [general settings](category-settings.html) of the category. You can use the menu on the left-hand side to navigation to the different parts.
+Finally click *Save* to create the category. You will be redirected to the category overview page. Form here you can change the set up of the category, e.g. [adding fields](how-to-create-field.html), change [how contributions of this category should be displayed on the map](category-display-settings.html) or change the general settings of the category. You can use the menu on the left-hand side to navigation to the different parts.
 
 ### Where next
 
