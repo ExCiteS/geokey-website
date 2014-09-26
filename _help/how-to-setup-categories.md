@@ -25,7 +25,7 @@ Finally click *Save* to create the category. You will be redirected to the categ
         <p>Learn how to add fields to your category.</p>
     </li>
     <li>
-        <h6><a href="category-display.html">Category Display Settings</a></h6>
+        <h6><a href="category-display-settings.html">Category Display Settings</a></h6>
         <p>Define how your contributions will be displayed on the map.</p>
     </li>
 </ul>

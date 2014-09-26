@@ -59,23 +59,18 @@ section {
 header {
     color: #fff;
     background-color: $color-link;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    font-size: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     padding-bottom: $margin * 4;
 
     nav {
         font-family: $font-stack;
         font-size: 14px;
         line-height: 1;
-        padding: $margin 0;
+        padding: ($margin / 2) 0;
         text-transform: none;
         letter-spacing: 0;
         margin: 0 auto;
 
         ul {
-            margin: $margin 0 0 0;
             padding: 0;
             list-style: none;
             text-align: right;
@@ -101,30 +96,39 @@ header {
         }
     }
 
-    div.hero {
-        padding: $margin * 2;
-        margin: 0 auto;
-    }
-
     h1 {
         margin: 0;
         font-size: 40px;
+        font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     p {
         margin: 0;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.4;
     }
 
     &.main {
         background: url(../img/newyork.jpg) no-repeat 50% 100%;
         text-align: center;
-        padding-top: $margin;
         padding-bottom: $margin;
+
+        p {
+            font-size: 25px;
+            border-bottom: 3px solid #fff;
+            text-transform: uppercase;
+        }
 
         div.hero {
             display: inline-block;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: $margin * 2;
+            margin: 0 auto;
+        }
+
+        nav {
             background-color: rgba(0, 0, 0, 0.5);
         }
     }
@@ -132,16 +136,19 @@ header {
     
     @media screen and (min-width: $break-small) {
         &.main {
-            padding-top: $margin * 4;
             padding-bottom: $margin * 4;
-        }
 
-        h1 {
-            font-size: 50px;
-        }
+            div.hero {
+                margin-top: $margin * 4; 
+            }
 
-        p {
-            font-size: 30px;    
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 30px;    
+            }
         }
     }
 }
@@ -208,6 +215,7 @@ img {
 
     &:link {
         text-decoration: none;
+        color: #fff;
     }
 
     &:visited {
@@ -347,11 +355,30 @@ div#github-issue {
 }
 
 footer {
-    border-top: 1px solid lighten($color-primary, 50%);
-    color: lighten($color-primary, 20%);
-    font-size: 0.8em;
-    text-align: center;
-    padding-top: 1em;
+    background-color: $color-primary;
+    color: lighten($color-primary, 70%);
+    padding: ($margin * 4) 0;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:focus,
+    a:active, {
+        color: lighten($color-primary, 50%);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 }
 
 ul.tutorial-links {
@@ -361,6 +388,9 @@ ul.tutorial-links {
 
     li {
         margin-bottom: 7px;
+        padding-left: 23px;
+        text-indent: -23px;
+
         &:before {
             content: "➜ ";
             color: $color-link;
@@ -369,7 +399,7 @@ ul.tutorial-links {
         }
 
         h6 {
-            display: inline-block;
+            display: inline;
             font-weight: normal;
             font-size: 18px;
             margin: 0;
@@ -377,7 +407,7 @@ ul.tutorial-links {
 
         p {
             font-size: 16px;
-            padding-left: 23px;
+            padding-left: 0px;
             margin-bottom: 0;
         }
     }
