@@ -43,5 +43,5 @@ You need to obtain a `client_id` by [registering your application]({{site.url}}h
 
 Code  |  Reason
 ------|-----------------------------------------
- 201  | The was registered successfully.
+ 201  | The was user registered successfully.
  400  | A user with the email and/or display has already registered. <br>You did provide an invalid client id or not client id at all.
