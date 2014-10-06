@@ -92,39 +92,9 @@ The response contains the [contribution](contribution-response.html) that has be
         "id": 40,
         "name": "Pubs",
         "description": "",
-        "status": "active",
-        "fields": [
-            {
-                "id": 117,
-                "name": "Name",
-                "key": "name",
-                "fieldtype": "TextField",
-                "description": "",
-                "status": "active",
-                "required": true
-            },
-            {
-                "id": 118,
-                "name": "Address",
-                "key": "address",
-                "fieldtype": "TextField",
-                "description": "",
-                "status": "active",
-                "required": false
-            },
-            {
-                "id": 119,
-                "name": "Child friedly",
-                "key": "child_friedly",
-                "fieldtype": "TrueFalseField",
-                "description": "Would your take your kids?",
-                "status": "active",
-                "required": false
-            }
-        ],
         "colour": "#0033ff",
         "created_at": "2014-09-17T00:00:00Z"
-    },
+    }
 }
 {% endhighlight %}
 
