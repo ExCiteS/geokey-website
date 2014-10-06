@@ -12,7 +12,7 @@ Parameter           | Type        | Description
 `properties`        | `Object`    | [Properties](contribution-properties.html) of the contribution.
 `comments`          | `List`      | List of [comments](comment-response.html) to the contribution.
 `isowner`           | `Boolean`   | `True` if the user authenticated with the request has created this contribution.
-`category`          | `Object`    | Complete [category object](category-response.html) of the contribution.
+`category`          | `Object`    | Minified [category object](category-response.html) of the contribution.
 
 #### Example
 
@@ -56,38 +56,8 @@ Parameter           | Type        | Description
         "id": 40,
         "name": "Pubs",
         "description": "",
-        "status": "active",
-        "fields": [
-            {
-                "id": 117,
-                "name": "Name",
-                "key": "name",
-                "fieldtype": "TextField",
-                "description": "",
-                "status": "active",
-                "required": true
-            },
-            {
-                "id": 118,
-                "name": "Address",
-                "key": "address",
-                "fieldtype": "TextField",
-                "description": "",
-                "status": "active",
-                "required": false
-            },
-            {
-                "id": 119,
-                "name": "Child friedly",
-                "key": "child_friedly",
-                "fieldtype": "TrueFalseField",
-                "description": "Would your take your kids?",
-                "status": "active",
-                "required": false
-            }
-        ],
         "colour": "#0033ff",
         "created_at": "2014-09-17T00:00:00Z"
-    },
+    }
 }
 {% endhighlight %}
