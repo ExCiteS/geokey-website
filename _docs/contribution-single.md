@@ -76,7 +76,7 @@ The response contains the [GeoJSON](http://geojson.org/geojson-spec.html) encode
         "description": "",
         "colour": "#0033ff",
         "created_at": "2014-09-17T00:00:00Z"
-    },
+    }
 }
 {% endhighlight %}
 
