@@ -12,7 +12,7 @@ Parameter           | Type        | Description
 `properties`        | `Object`    | [Properties](contribution-properties.html) of the contribution.
 `comments`          | `List`      | List of [comments](comment-response.html) to the contribution.
 `isowner`           | `Boolean`   | `True` if the user authenticated with the request has created this contribution.
-`category`          | `Object`    | Complete [category object](category-response.html) of the contribution.
+`category`          | `Object`    | Minified [category object](category-response.html) of the contribution.
 
 #### Example
 
