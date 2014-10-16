@@ -25,6 +25,31 @@ Header            | Required value
 
 The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geojson-objects) encoded description of the contribution and its location. 
 
+{% highlight json %}
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -0.144415497779846,
+            51.54671869005856
+        ]
+    },
+    "properties": {
+        "attributes": {
+            "child_friedly": false,
+            "name": "The Grafton",
+            "address": "20 Prince of Wales Rd, London NW5 3LG"
+        },
+        "category": 40
+    }   
+}
+{% endhighlight %}
+
+### Response
+
+#### Example response
+
 {% include api-examples/contribution.md %}
 
 #### Response codes

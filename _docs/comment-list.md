@@ -3,7 +3,7 @@ layout: docs
 title:  "List comments"
 ---
 
-You can get a list of comments to an contribution via three different endpoints.
+You can get a list of comments to a contribution via three different endpoints.
 
 **All users:**
 
