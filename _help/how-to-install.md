@@ -119,7 +119,13 @@ Open the file in your favourite text editor (e.g. Vim):
 vim core/settings/project.py
 ```
 
-and enter the user name and password of the data base user.
+and enter the user name and password of the data base user. Also, don't forget to change the platform to your project:
+
+```
+PLATFORM_NAME = 'My awesome mapping project'
+```
+
+This name will be user throughout the system, e.g. when notifying users via email.
 
 Finally create the structure in your data base:
 
@@ -227,6 +233,15 @@ And set the media root to the directory you have just created.
 
 ```
 MEDIA_ROOT = '/var/www/geokey/opencommunitymaps/media/'
+```
+
+Videos are – by default – uploaded to your Youtube account. First you will need to obtain Youtube API keys following [this guide](https://developers.google.com/youtube/registering_an_application). The add the credentials to the project settings:
+
+```
+YOUTUBE_AUTH_EMAIL = 'your-email@example.com'
+YOUTUBE_AUTH_PASSWORD = 'password'
+YOUTUBE_DEVELOPER_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+YOUTUBE_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
 ```
 
 ### Enabling email
