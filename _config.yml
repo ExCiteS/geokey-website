@@ -1,8 +1,9 @@
 name: Community Maps
 markdown: redcarpet
 highlighter: pygments
-permalink: /blog/:year/:month/:day/:title.html
+permalink: /blog/:year/:title.html
 url: /opencommunitymaps/
+exclude: ['Gruntfile.js', 'package.json', 'node_modules']
 
 redcarpet:
   extensions: ['tables']
