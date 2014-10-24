@@ -21,7 +21,7 @@ title: "GeoKey – Blog"
             {% for post in site.posts %}
             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                 <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-                <p class="meta">Published on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time></p>
+                <p class="meta">Published on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time> by {% if post.author_link %}<a href="{{ post.author_link }}">{% endif %}{{ post.author}}{% if post.author_link %}</a>{% endif %}</p>
 
                 {{ post.excerpt }}
                 <p class="centered"><a href="{{ site.url }}{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>

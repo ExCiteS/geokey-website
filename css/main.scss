@@ -1,5 +1,5 @@
-$break-small: 768px; 
-$break-large: 992px; 
+$break-small: 768px;
+$break-large: 992px;
 
 $font-stack: 'Open Sans', sans-serif;
 
@@ -143,13 +143,13 @@ header {
         }
     }
 
-    
+
     @media screen and (min-width: $break-small) {
         &.main {
             padding-bottom: $margin * 4;
 
             div.hero {
-                margin-top: $margin * 4; 
+                margin-top: $margin * 4;
             }
 
             h1 {
@@ -157,7 +157,7 @@ header {
             }
 
             p {
-                font-size: 30px;    
+                font-size: 30px;
             }
         }
     }
@@ -167,7 +167,7 @@ h2 {
     font-weight: 500;
     font-size: 1.3em;
     line-height: 1.2;
-    
+
     span {
         text-transform: uppercase;
         display: block !important;
@@ -277,7 +277,20 @@ article.row {
     }
 
     ul, ol {
-        padding-left: 24px;
+        padding-left: 0;
+    }
+
+    ul {
+        li {
+            list-style: none;
+            text-indent: -17px;
+            margin-bottom: 7px;
+            &:before{
+                content: "—";
+                position: relative;
+                left: -15px;
+            }
+        }
     }
 }
 
@@ -324,9 +337,9 @@ section#about {
                 -webkit-column-count: 2;
                 -webkit-column-gap: $gutter-width;
                 column-count: 2;
-                column-gap: $gutter-width;    
+                column-gap: $gutter-width;
             }
-            
+
 
             li {
                 padding: 0;
@@ -471,4 +484,3 @@ pre {
     @include border-radius(5px);
     padding: ($margin / 2) $margin;
 }
-
