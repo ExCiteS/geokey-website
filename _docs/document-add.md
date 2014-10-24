@@ -57,8 +57,9 @@ Content-Disposition: form-data; name="description"
 
 It clearly shows that the swing is broken
 ---XXX---
-Content-Disposition: attachment; filename=file.png;
+Content-Disposition: form-data; name="file"; filename="file.png"
 Content-Type: image/png
+
 
 ---XXX---
 ````
