@@ -3,7 +3,7 @@ layout: tutorial
 title:  "Getting started with OAuth"
 ---
 
-OAuth is an open standard to authorise third-party applications to access information in [the platform]. OAuth is an open protocol that employs exchanging randomly generated access tokens to identify and authorise users instead of exposing user name and passwords. To authenticate users, client applications have to simply sign the requests to the API with the exchange token obtained beforehand.
+OAuth is an open standard to authorise third-party applications to access information in GeoKey. OAuth is an open protocol that employs exchanging randomly generated access tokens to identify and authorise users instead of exposing user name and passwords. To authenticate users, client applications have to simply sign the requests to the API with the exchange token obtained beforehand.
 
 In order to obtain OAuth tokens with your client application, you need to register your application before getting started. Each registered application is assigned a unique Client ID and Client Secret.
 
@@ -27,7 +27,7 @@ Name            | Type     | Description
 
 ### Community Maps redirects back to your site
 
-If the user authorises the application Community Maps redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from Community Maps. 
+If the user authorises the application Community Maps redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from Community Maps.
 
 ````
 POST /oauth2/access_token

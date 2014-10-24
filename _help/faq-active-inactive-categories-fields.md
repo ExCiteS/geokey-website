@@ -5,7 +5,7 @@ title:  "What's the difference between active and inactive categories and fields
 
 ### Active categories and fields
 
-Active categories and fields can be used for data contribution. Contributied data will be validated against them.
+Active categories and fields can be used for data contribution. Contributed data will be validated against them.
 
 ### Inactive categories and fields
 

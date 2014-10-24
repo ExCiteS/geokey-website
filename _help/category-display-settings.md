@@ -3,7 +3,7 @@ layout: tutorial
 title:  "Category display settings"
 ---
 
-For each category, you can define how contributions of that catogory should be displayed on the map. You can set both the colour and a symbol that are used to draw icons on the map. 
+For each category, you can define how contributions of that category should be displayed on the map. You can set both the colour and a symbol that are used to draw icons on the map. 
 
 To change the display of a category head to the display settings by clicking on _Display_ in category navigation on the left-hand site.
 

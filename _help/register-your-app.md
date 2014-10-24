@@ -3,15 +3,15 @@ layout: tutorial
 title:  "Register your app"
 ---
 
-As a developer, you can build applications for [the platform] on top of our API. Your first need to register your new app to be able to obtain OAuth tokens to authenticate and authorise users.
+As a developer, you can build applications for GeoKey on top of our API. Your first need to register your new app to be able to obtain OAuth tokens to authenticate and authorise users.
 
-Registered your app is straightforward. First, head to the application section by clicking on _Your applications_ on top of the page. 
+Registered your app is straightforward. First, head to the application section by clicking on _Your applications_ on top of the page.
 
 ![Click “Your applications”](img/register-your-app-01.png)
 
 Then click on “Register a new application”, which leads you to the form to register a new app.
 
-Next provide the name of your application and an optional description of what your app is about. 
+Next provide the name of your application and an optional description of what your app is about.
 
 In the field _Download / welcome page URL_ you should provide a website, where users can find more information on your app or where they can download the app.
 

@@ -3,7 +3,7 @@ layout: tutorial
 title:  "How to update"
 ---
 
-Updating [the platform] to the latest version takes just three simple steps.
+Updating GeoKey to the latest version takes just three simple steps.
 
 Pull the latest updates from Github
 

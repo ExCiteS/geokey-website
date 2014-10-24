@@ -3,13 +3,13 @@ layout: tutorial
 title:  "How to install"
 ---
 
-This guide walks you through the process of setting up [the platform] on your own server. It explains how to setup the database, an Apache web server and what configurations you should do to make [the platform] run smoothly.
+This guide walks you through the process of setting up GeoKey on your own server. It explains how to setup the database, an Apache web server and what configurations you should do to make GeoKey run smoothly.
 
 ### Installing pre-requisites
 
-Before we you can start setting up [the platform], you need to install the following pre-requisites:
+Before we you can start setting up GeoKey, you need to install the following pre-requisites:
 
-1. Postgres (follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt)). 
+1. Postgres (follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt)).
 2. Dev dependencies: `apt-get install postgresql-server-dev-9.3 pyhton-dev`
 3. PostGIS: `sudo apt-get install postgresql-9.3-postgis`
 4. Pip and virtualenv: `sudo apt-get install python-pip python-virtualenv`
@@ -22,7 +22,7 @@ Before we you can start setting up [the platform], you need to install the follo
 
 The database runs on Postgres 9.3 with hstore and PostGIS extension, which should be installed if you followed the instructions above.
 
-First, you should create a new user, which [the platform] to write to and read from the data base. 
+First, you should create a new user, which GeoKey to write to and read from the data base.
 
 Start by adding a new user to your system.
 
@@ -30,7 +30,7 @@ Start by adding a new user to your system.
 # adduser django
 ```
 
-To add the user to your database and create a database for [the platform], connect to postgres first.
+To add the user to your database and create a database for GeoKey, connect to postgres first.
 
 ```
 # su - postgres
@@ -41,7 +41,7 @@ Now you're connected to Postgres, you can add the user and create a new database
 
 ```
 CREATE USER django WITH PASSWORD 'django123';
-CREATE DATABASE communitymaps OWNER django;
+CREATE DATABASE geokey OWNER django;
 ```
 
 Close the data base
@@ -53,39 +53,39 @@ Close the data base
 and connect to the database you just created to install PostGIS and hstore:
 
 ```
-psql -d communitymaps
+psql -d geokey
 ```
 
 Enable both extensions in your data base.
 
 ```
-communitymaps=# CREATE EXTENSION hstore;
-communitymaps=# CREATE EXTENSION postgis;
+geokey=# CREATE EXTENSION hstore;
+geokey=# CREATE EXTENSION postgis;
 ```
 
 ### Setting up your virtual environment
 
-When installed, Apache automatically creates the directory `/var/www`, which is the default root for the web server. We're going to place [the platform] and all its dependencies in that directory.
+When installed, Apache automatically creates the directory `/var/www`, which is the default root for the web server. We're going to place GeoKey and all its dependencies in that directory.
 
-To be save, we install [the platform] in a [virtual enviroment](http://virtualenv.readthedocs.org/en/latest/virtualenv.html). That way you can run applications that depend on different versions of the same library simultaniously without having to worry about version conflicts.
+To be save, we install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.org/en/latest/virtualenv.html). That way you can run applications that depend on different versions of the same library simultaniously without having to worry about version conflicts.
 
-To set up a virtual environment, create a new directory in `/var/www` that will host [the platform] and its dependencies. 
+To set up a virtual environment, create a new directory in `/var/www` that will host GeoKey and its dependencies.
 
 ```
 cd /var/www
-mkdir communitymaps
-cd communitymaps
+mkdir geokey
+cd geokey
 ```
 
-Now create a virtualenv for the instance of [the platform].
+Now create a virtualenv for the instance of GeoKey.
 
 ```
 virtualenv env
 ```
 
-Your virtual environment is now set up. 
+Your virtual environment is now set up.
 
-### Installing [the platform]
+### Installing GeoKey
 
 [The platform] can be installed by downloading the code from the Github repository, installing the requirements in the virtual environment and setting the data base structure.
 
@@ -93,7 +93,7 @@ First, pull the code from the [Github repository](https://github.com/ExCiteS/ope
 
 ```
 git clone https://github.com/ExCiteS/opencommunitymaps.git
-``` 
+```
 
 Switch to the platform directory
 
@@ -107,7 +107,7 @@ and install the dependencies into your virtual environment
 ../env/bin/pip install -r requirements.txt
 ```
 
-Now connect [the platform] to your data base. First, duplicate the project settings file.
+Now connect GeoKey to your data base. First, duplicate the project settings file.
 
 ```
 cp core/settings/project.sample.py core/settings/project.py
@@ -134,13 +134,13 @@ You should be all set now. Try running the test server:
 ../env/bin/python manage.py runserver 0.0.0.0:8000
 ```
 
-If you point your browser to `your-domain.com:8000/admin` you should see the landing page of [the platform].
+If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
 
-### Running [the platform] in Apache
+### Running GeoKey in Apache
 
-You have now succesfully installed [the platform] on your Debian server. You will agree, that running the server in the test environment is not exactly optimal. Hence, we're now setting up Apache with mod_wsgi to run [the platform] in Apache.
+You have now succesfully installed GeoKey on your Debian server. You will agree, that running the server in the test environment is not exactly optimal. Hence, we're now setting up Apache with mod_wsgi to run GeoKey in Apache.
 
-For simplicity, we are going to use the default virtual host provided by the Apache installation. 
+For simplicity, we are going to use the default virtual host provided by the Apache installation.
 
 Open the apache config file in your text editor.
 
@@ -151,29 +151,29 @@ vim /etc/apache2/sites-available/default
 Add the following lines just below `<VirtualHost *:80>`:
 
 ```
-WSGIDaemonProcess communitymaps python-path=/var/www/communitymaps/opencommunitymaps:/var/www/communitymaps/env/lib/python2.7/site-packages
-WSGIProcessGroup communitymaps
-WSGIScriptAlias / /var/www/communitymaps/opencommunitymaps/core/wsgi.py
+WSGIDaemonProcess geokey python-path=/var/www/geokey/opencommunitymaps:/var/www/geokey/env/lib/python2.7/site-packages
+WSGIProcessGroup geokey
+WSGIScriptAlias / /var/www/geokey/opencommunitymaps/core/wsgi.py
 WSGIPassAuthorization On
 ```
 
-This first line creates a new WSGI deamon that runs [the platfom] in Apache. Its name (in our case `communitymaps`) can be anything, but you should use a descriptive name. The `python-path` directive contains both the path of your Django project and the path to the Python packages inside your virtual environment. 
+This first line creates a new WSGI deamon that runs [the platfom] in Apache. Its name (in our case `geokey`) can be anything, but you should use a descriptive name. The `python-path` directive contains both the path of your Django project and the path to the Python packages inside your virtual environment.
 
-The second line tells the virtual host to use the WSGI daemon we just created. 
+The second line tells the virtual host to use the WSGI daemon we just created.
 
-The third line tells Apache and mod_wsgi where to find the WSGI configuration. 
+The third line tells Apache and mod_wsgi where to find the WSGI configuration.
 
 The last line enables WSGI to pass authorisation credentials to the Django application. This is neccessary, because Django would not be able to authenticate users otherwise.
 
 We then have to tell Apache where to find static and media files from your Django project.
 
 ```
-Alias /static/ /var/www/communitymaps/opencommunitymaps/static/
+Alias /static/ /var/www/geokey/opencommunitymaps/static/
 <Location "/static/">
     Options -Indexes
 </Location>
 
-Alias /media/ /var/www/communitymaps/opencommunitymaps/media/
+Alias /media/ /var/www/geokey/opencommunitymaps/media/
 <Location "/media/">
     Options -Indexes
 </Location>
@@ -182,14 +182,14 @@ Alias /media/ /var/www/communitymaps/opencommunitymaps/media/
 Finally, we need to tell WSGI where to find configuration files for our Django project. Open the WSGI confguration in your text editor:
 
 ```
-sudo vim /var/www/communitymaps/opencommunitymaps/core/wsgi.py
+sudo vim /var/www/geokey/opencommunitymaps/core/wsgi.py
 ```
 
 Replace `import os` with the following lines:
 
 ```
 import os, sys
-sys.path.append('/var/www/communitymaps/opencommunitymaps/')
+sys.path.append('/var/www/geokey/opencommunitymaps/')
 ```
 
 You should be all set now. Now restart Apache
@@ -206,7 +206,7 @@ and point your browser to your domain. You should see the admin landing page now
 In order to enable upload of media, you need to create a media directory and point Django to it. Head to your Django application directory and create the directory.
 
 ```
-cd /var/www/communitymaps/opencommunitymaps/
+cd /var/www/geokey/opencommunitymaps/
 sudo mkdir media
 ```
 
@@ -226,12 +226,12 @@ vim core/settings/project.py
 And set the media root to the directory you have just created.
 
 ```
-MEDIA_ROOT = '/var/www/communitymaps/opencommunitymaps/media/'
+MEDIA_ROOT = '/var/www/geokey/opencommunitymaps/media/'
 ```
 
 ### Enabling email
 
-[the platform] uses e-mail in various cases; for instance, when users want to reset their password. We therefore need to setup [Postfix](http://www.postfix.org/) to send e-mail from your server.
+GeoKey uses e-mail in various cases; for instance, when users want to reset their password. We therefore need to setup [Postfix](http://www.postfix.org/) to send e-mail from your server.
 
 First install Postfix:
 
@@ -255,4 +255,4 @@ DEFAULT_FROM_EMAIL = 'sender@example.com'
 
 ### That's all
 
-You have now successfully installed [the platform] on your server.
+You have now successfully installed GeoKey on your server.

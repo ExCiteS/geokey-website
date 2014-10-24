@@ -13,8 +13,8 @@ Granting permissions to user groups is two-fold:
 There are three different roles you can hand to user groups and hence the members of user groups.
 
 - **Read-only:** Members can only read data. They are not able contribute data. However, members of a read-only user group can comment on contributions they can view.
-- **Contributor:** Members of the user group will be able to view contribute and comment on data. They are able to edit and delete data they contributed themselves. 
-- **Moderator:** Moderators are able to view contribute and comment on data. In addition they can approve pending contributions for display on the map as well as edit and delete data. 
+- **Contributor:** Members of the user group will be able to view contribute and comment on data. They are able to edit and delete data they contributed themselves.
+- **Moderator:** Moderators are able to view contribute and comment on data. In addition they can approve pending contributions for display on the map as well as edit and delete data.
 
 The roles are set for the whole project, independent of the data the members of the user group can access.
 
@@ -26,7 +26,7 @@ If you have set up your project so that every user, who has access to the projec
 
 You can define which user groups can access which subsets of the data by granting them access to data groupings. Data groupings provide access to a subset of all data contributed to a project. Hence, by granting user groups access to data groupings, you can define what data its members will be able to view or moderate.
 
-Granting access to user groups is straighfoward. When editing the permissions for a user group, click the buttons next to the data grouping name to grant or revoke access to that user group.
+Granting access to user groups is straightforward. When editing the permissions for a user group, click the buttons next to the data grouping name to grant or revoke access to that user group.
 
 ![Granting access to user groups](img/granting-permissions-to-usergroups-01.png)
 
