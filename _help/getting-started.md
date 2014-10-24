@@ -3,21 +3,21 @@ layout: tutorial
 title:  "Getting started — An overview of GeoKey"
 ---
 
-Geographic data is usually collected and provided by local authorities. However, official information quite often does not reflect the situation the same way local residents perceive it. The concept of participatory mapping addresses this problem by providing local communities with tools and methods to collect, visualise and analyse geographic data to get a better understanding of the processes happening in their community and to support work to change places.
+Geographic data is usually collected and provided by local authorities. However, official information quite often does not reflect the situation the same way local residents perceive it. The concept of [participatory mapping](http://www.mappingforrights.org/participatory_mapping) addresses this problem by providing local communities with tools and methods to collect, visualise and analyse geographic data to get a better understanding of the processes happening in their community and to support work to change places.
 
-GeoKey is a platform for participatory mapping. Consider it a data-centre for community-based mapping activities of different kinds. It provides a data base to store the data collected by your volunteers and the means to connect various front-end applications to collect data, visualise data and analyse data. If you want to run a mapping project tp map your neighbourhood, you can utilise GeoKey's adminstration panels to set up your project, define what data you want your peers to collect and define who will be able to contribute and access data.
+GeoKey is a platform for participatory mapping. Consider it a data-centre for community-based mapping activities of different kinds. It provides communities with a web-based infrastructure to collect, share and discuss local knowledge. You can use it to set up your own mapping project via GeoKey's administration interfaces and to collect and visualise the data with the tools of your choice using the public API.
 
 We agree, that this all sounds very technical, so let's have a look at this simple example: Let’s say, you want to create a map of your neighbourhood’s finest restaurants, pubs and local shops. Because you want to keep your maps tidy, only members of your communities that are trusted connoisseurs should be able to contribute data to your project. You also live in a small and trusted community, so not everyone should be able to read data from your project and, of course, you don’t want children to have access to information on local pubs.
 
-### Categories, data groupings and user groups — what is it all about?
-
 Now, let’s see how this example translates in a project run with GeoKey.
+
+### Categories, data groupings and user groups — what is it all about?
 
 Community mapping ventures are organised into distinct projects. For each project you define a set of categories; in our case this would be one for each restaurants, pubs and local shops. Using categories you can define, which data you want your contributors to collect. For the category restaurants, this could be a name, its address, the number of available seats and cuisine being served at that place. These would be the fields of your category.
 
 In order to allow a selected set of users to contribute data to your new project, you create a user group “Contributors” and grant its members permission to contribute.
 
-Now your contributors add data to the project, a few places for each category, but so far nobody can actually access your data. You provide access to your data using data groupings. Data groupings are assigned with a set of filters that define, which data will be accessible through that grouping. As you want to provide access to all of your data, but restrict access for children to local stores and restaurants only, you create three data grouping — one for each category.
+Now your contributors add data to the project, a few places for each category, but so far nobody can actually access your data. You provide access to your data using data groupings. Data groupings are assigned with a set of filters that define, which data will be accessible through that respective grouping. As you want to provide access to all of your data, but restrict access for children to local stores and restaurants only, you create three data grouping — one for each category.
 
 Finally, you grant permissions to access these data groupings to your users. Your contributors are all adults, so you simply permit access to all three data groupings to that user groups.
 
@@ -25,7 +25,7 @@ You also create two additional user groups: Community Members and Children. You 
 
 Now you should be all set up and ready to go.
 
-### Now really… how can I contribute and view my data?
+### So… How can I contribute and view my data?
 
 As we pointed out earlier, GeoKey is just the data hub for your maps data. There is a couple of third-party applications that were build on top of GeyKey that you can use for contributing and viewing data.
 
