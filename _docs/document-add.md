@@ -5,6 +5,12 @@ title:  "Add document"
 
 You can add a documents to a contribution via three different endpoints.
 
+Currently the following file formats are supported:
+
+- _Images:_ `.png`, `.jpg`, `.jpeg`, `.gif`
+- _Videos:_ `.mov`, `.mpeg4`, `.avi`, `.wmv`, `.flv`, `.3gpp`, `.webm`
+
+
 **All users:**
 
 ``````
@@ -42,10 +48,21 @@ Header          | Required value
 #### POST body exampe
 
 ````
-name=Photo+of+the+playground&
-description=It+clearly+shows+that+the+swing+is+broken&
-file=@file.png
+---XXX---
+Content-Disposition: form-data; name="name"
+
+Photo of the playground
+---XXX---
+Content-Disposition: form-data; name="description"
+
+It clearly shows that the swing is broken
+---XXX---
+Content-Disposition: attachment; filename=file.png;
+Content-Type: image/png
+
+---XXX---
 ````
+Content-Disposition: attachment; filename=genome.jpeg;
 
 ### Response
 
