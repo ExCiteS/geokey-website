@@ -60,7 +60,6 @@ It clearly shows that the swing is broken
 Content-Disposition: form-data; name="file"; filename="file.png"
 Content-Type: image/png
 
-
 ---XXX---
 ````
 Content-Disposition: attachment; filename=genome.jpeg;
