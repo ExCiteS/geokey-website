@@ -27,10 +27,9 @@ Now you should be all set up and ready to go.
 
 ### So… How can I contribute and view my data?
 
-As we pointed out earlier, GeoKey is just the data hub for your maps data. There is a couple of third-party applications that were build on top of GeyKey that you can use for contributing and viewing data.
+As we pointed out earlier, GeoKey is just the data hub for your maps data. And that's why we need your help. If you are a developer feel free to build an app using the [API]({{site.url}}docs).
 
-- [Mapping for Change](http://mappingforchange.org.uk/) has developed a sophisticated client called [Community Maps](http://communitymaps.org.uk), which you can use for free.
-- [EpiCollect](http://www.epicollect.net/) has a mobile application that connects to GeoKey. You can used it for data collection.
+We are currently developing mobile and browser-based applications for GeoKey — get in touch with us to find out more.
 
 ### Where next
 
