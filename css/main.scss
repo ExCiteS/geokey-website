@@ -50,6 +50,10 @@ body {
     margin: 0;
 }
 
+div.row > div {
+    margin-bottom: 30px;
+}
+
 section {
     @include clear-float();
     @include stripes();
