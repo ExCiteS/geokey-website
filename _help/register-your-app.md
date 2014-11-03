@@ -29,7 +29,7 @@ After saving your app, you will be redirected to the app’s settings page. Here
       <p>Learn how to obtain OAuth tokens and how to sign your request to authenticate and authorise users.</p>
     </li>
     <li>
-      <h6><a href="{{site.url}}docs/">Read the API docs</a></h6>
+      <h6><a href="/docs/">Read the API docs</a></h6>
       <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
     </li>
 </ul>
