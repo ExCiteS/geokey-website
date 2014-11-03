@@ -9,9 +9,9 @@ categories: news
 
 After about a year of hard work, we are proud to announce the official release of GeoKey, a new approach to support [participatory mapping](http://www.mappingforrights.org/participatory_mapping).
 
-GeoKey provides local communities with a web-based infrastructure to collect, share and discuss local knowledge. You can use it to setup your own mapping project with your community and to collect, visualise and analyse data using your tools of choice.
+GeoKey provides local communities with a web-based infrastructure to collect, share and discuss local knowledge. You can use it to setup your own mapping project with your community and to collect, visualise and analyse data using the tools of your choice.
 
-GeoKey has been developed at [ExCiteS Research Group](http://www.ucl.ac.uk/excites), who have about 10 years experience working with communities on aspects of citizen science and participatory mapping. The architecture and design of GeoKey reflect lessons learned during this time.
+GeoKey has been developed at [ExCiteS Research Group](http://www.ucl.ac.uk/excites), who have long-standing experiences working with communities on aspects of citizen science and participatory mapping. The architecture and design of GeoKey reflect lessons learned during this time.
 
 ### Key features
 
@@ -19,7 +19,7 @@ GeoKey has been developed at [ExCiteS Research Group](http://www.ucl.ac.uk/excit
 - **Decide who can access, contribute and moderate data:** Use user groups and data groupings — a predefined subset of all data contributed to the project — to define, which users can access, contribute and moderate data.
 - **Add photos and videos to your contributions:** Enrich your contributions by uploading photos and videos to each of your contributions.
 - **Discuss:** Comments on each contribution allow you and your community to discuss observations you have made.
-- **Connect your app using our API:** Use our public REST API to build and connect applications for data collection, analysis and visualisation.
+- **Connect your app using our API:** Use our public [REST API](/docs/) to build and connect applications for data collection, analysis and visualisation.
 
 ### How to get started
 
