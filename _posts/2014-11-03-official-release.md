@@ -7,7 +7,7 @@ date:   2014-11-03 14:00:00
 categories: news
 ---
 
-After about a year of hard work, we are proud to announce the official release of GeoKey, a new approach to support [participatory mapping](http://www.mappingforrights.org/participatory_mapping).
+Today, we are proud to announce the official release of GeoKey, a new approach to support [participatory mapping](http://www.mappingforrights.org/participatory_mapping).
 
 GeoKey provides local communities with a web-based infrastructure to collect, share and discuss local knowledge. You can use it to setup your own mapping project with your community and to collect, visualise and analyse data using the tools of your choice.
 
