@@ -27,7 +27,7 @@ Now you should be all set up and ready to go.
 
 ### So… How can I contribute and view my data?
 
-As we pointed out earlier, GeoKey is just the data hub for your maps data. And that's why we need your help. If you are a developer feel free to build an app using the [API]({{site.url}}docs).
+As we pointed out earlier, GeoKey is just the data hub for your maps data. And that's why we need your help. If you are a developer feel free to build an app using the [API](/docs).
 
 We are currently developing mobile and browser-based applications for GeoKey — get in touch with us to find out more.
 
@@ -35,11 +35,11 @@ We are currently developing mobile and browser-based applications for GeoKey —
 
 <ul class="next-links tutorial-links">
     <li>
-      <h6><a href="{{site.url}}help/how-to-create-project.html">Create your first project</a></h6>
+      <h6><a href="/help/how-to-create-project.html">Create your first project</a></h6>
       <p>Learn how to setup your first project.</p>
     </li>
     <li>
-     <h6><a href="../developers/">Developers</a></h6>
+     <h6><a href="/developers/">Developers</a></h6>
       <p>Learn how to install GeoKey on your server or how to use the API to build apps.</p>
     </li>
 </ul>
