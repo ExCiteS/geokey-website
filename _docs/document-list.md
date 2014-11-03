@@ -43,6 +43,8 @@ The response contains an array of all [documents](document-response.html) attach
         "description": "It clearly shows that the swing is broken",
         "isowner": true,
         "url": "/media/user-uploads/img-2165.jpg",
+        "thumbnail_url": "/media/user-uploads/img-2165.jpg.300x300_q85_crop.png",
+        "file_type": "ImageFile",
         "creator": {
             "id": 422,
             "display_name": "Peter Schmeichel"
