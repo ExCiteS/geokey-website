@@ -33,6 +33,7 @@
         "review_comment": null,
     },
     "comments": [],
+    "media": [],
     "isowner": true,
     "category": {
         "id": 40,
