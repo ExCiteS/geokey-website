@@ -89,16 +89,16 @@ Your virtual environment is now set up.
 
 [The platform] can be installed by downloading the code from the Github repository, installing the requirements in the virtual environment and setting the data base structure.
 
-First, pull the code from the [Github repository](https://github.com/ExCiteS/opencommunitymaps/).
+First, pull the code from the [Github repository](https://github.com/ExCiteS/geokey/).
 
 ```
-git clone https://github.com/ExCiteS/opencommunitymaps.git
+git clone https://github.com/ExCiteS/geokey.git
 ```
 
 Switch to the platform directory
 
 ```
-cd opencommunitymaps
+cd geokey
 ```
 
 and install the dependencies into your virtual environment
@@ -157,9 +157,9 @@ vim /etc/apache2/sites-available/default
 Add the following lines just below `<VirtualHost *:80>`:
 
 ```
-WSGIDaemonProcess geokey python-path=/var/www/geokey/opencommunitymaps:/var/www/geokey/env/lib/python2.7/site-packages
+WSGIDaemonProcess geokey python-path=/var/www/geokey/geokey:/var/www/geokey/env/lib/python2.7/site-packages
 WSGIProcessGroup geokey
-WSGIScriptAlias / /var/www/geokey/opencommunitymaps/core/wsgi.py
+WSGIScriptAlias / /var/www/geokey/geokey/core/wsgi.py
 WSGIPassAuthorization On
 ```
 
@@ -174,12 +174,12 @@ The last line enables WSGI to pass authorisation credentials to the Django appli
 We then have to tell Apache where to find static and media files from your Django project.
 
 ```
-Alias /static/ /var/www/geokey/opencommunitymaps/static/
+Alias /static/ /var/www/geokey/geokey/static/
 <Location "/static/">
     Options -Indexes
 </Location>
 
-Alias /media/ /var/www/geokey/opencommunitymaps/media/
+Alias /media/ /var/www/geokey/geokey/media/
 <Location "/media/">
     Options -Indexes
 </Location>
@@ -188,14 +188,14 @@ Alias /media/ /var/www/geokey/opencommunitymaps/media/
 Finally, we need to tell WSGI where to find configuration files for our Django project. Open the WSGI confguration in your text editor:
 
 ```
-sudo vim /var/www/geokey/opencommunitymaps/core/wsgi.py
+sudo vim /var/www/geokey/geokey/core/wsgi.py
 ```
 
 Replace `import os` with the following lines:
 
 ```
 import os, sys
-sys.path.append('/var/www/geokey/opencommunitymaps/')
+sys.path.append('/var/www/geokey/geokey/')
 ```
 
 You should be all set now. Now restart Apache
@@ -212,7 +212,7 @@ and point your browser to your domain. You should see the admin landing page now
 In order to enable upload of media, you need to create a media directory and point Django to it. Head to your Django application directory and create the directory.
 
 ```
-cd /var/www/geokey/opencommunitymaps/
+cd /var/www/geokey/geokey/
 sudo mkdir media
 ```
 
@@ -232,7 +232,7 @@ vim core/settings/project.py
 And set the media root to the directory you have just created.
 
 ```
-MEDIA_ROOT = '/var/www/geokey/opencommunitymaps/media/'
+MEDIA_ROOT = '/var/www/geokey/geokey/media/'
 ```
 
 Videos are – by default – uploaded to your Youtube account. First you will need to obtain Youtube API keys following [this guide](https://developers.google.com/youtube/registering_an_application). The add the credentials to the project settings:
