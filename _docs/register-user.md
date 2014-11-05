@@ -21,7 +21,7 @@ Header            | Required value
 {
   "client_id": XXXXXXXXXXXXXXXXXX,
   "email": "oliver@example.com",
-  "password": "123"
+  "password": "123",
   "display_name": "Oliver"
 }
 {% endhighlight %}
