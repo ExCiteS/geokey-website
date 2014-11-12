@@ -6,25 +6,39 @@ title: Home
 <header class="main" id="home">
         {% include nav.html %}
     <div class="hero container">
-        <h1>Your key to local knowledge</h1>
-        <p>GeoKey is a platform for participatory mapping</p>
+        <h1>Collect, share and discuss local knowledge.</h1>
+        <p>GeoKey is an infrastructure for participatory mapping.</p>
     </div>
 </header>
 
-<section id="where-to-go">
+<section>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="/build/img/map2.gif" height="200" width="254">
-                <h2><span>For communities</span> Collect, share and discuss local knowledge</h2>
+        <div class="row" id="communities">
+            <div class="col-lg-6 col-lg-offset-5 col-sm-8 col-sm-offset-4">
+                <h2><span>Communities</span> Collect exactly the data your community needs.</h2>
                 <p>Whether you want to map the history of your neighbourhood, collect data to identify issues that should be fixed by your local government or simply map hidden gems in your area&mdash;GeoKey can help.</p>
+
+                <ul class="features">
+                    <li><i class="fa fa-database fa-fw fa-lg"></i> Setup up your data structures</li>
+                    <li><i class="fa fa-users fa-fw fa-lg"></i> Decide who can access, contribute and moderate data</li>
+                    <li><i class="fa fa-camera-retro fa-fw fa-lg"></i> Add photos and videos to your contributions</li>
+                    <li><i class="fa fa-comments-o fa-fw fa-lg"></i> Discuss</li>
+                </ul>
+
                 <p><a href="/communities/" class="btn">Start mapping today</a></p>
             </div>
+        </div>
 
-            <div class="col-sm-6">
-                <img src="/build/img/code.gif" height="200" width="276">
-                <h2><span>For developers</span> Build and connect apps to visualise and analyse data</h2>
+        <div class="row" id="developers">
+            <div class="col-lg-6 col-lg-offset-1 col-sm-8">
+                <h2><span>Developers</span> Build and connect apps to visualise and analyse data</h2>
                 <p>Use our public API to create your own mobile app to collect data, visualise your data in a GIS or run complex statistical analysis on your data.</p>
+
+                <ul class="features">
+                    <li><i class="fa fa-code fa-fw fa-lg"></i> Use the REST API to build apps</li>
+                    <li><i class="fa fa-desktop fa-fw fa-lg"></i> Install GeoKey on your server</li>
+                </ul>
+
                 <p><a href="/developers/" class="btn">Start coding</a></p>
             </div>
         </div>
@@ -35,13 +49,13 @@ title: Home
 <section id="blog">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-lg-7 col-lg-offset-1 col-sm-8">
                 <h2><span>Read the latest news</span>{{ site.posts.first.title }}</h2>
                 {{ site.posts.first.excerpt }}
                 <p class="centered"><a href="{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
             </div>
 
-            <!-- <div class="archive col-sm-4">
+            <!-- <div class="archive col-sm-3">
                 <h2><span>From the archives</span></h2>
                 <ul>
                 {% for post in site.posts limit:7 %}
@@ -59,7 +73,7 @@ title: Home
 <section id="about">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-lg-7 col-lg-offset-1 col-sm-8">
                 <h2><span>About GeoKey</span></h2>
                 <p>GeoKey has been developed at <a href="http://www.ucl.ac.uk/excites">Extreme Citizen Science Research Group</a> at University College London. The development of the initial version was part of FP-7 project <a href="http://citizencyberlab.eu/">Citizen Cyberlab</a>. </p>
             </div>

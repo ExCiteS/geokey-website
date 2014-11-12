@@ -26,3 +26,25 @@ The response contains a [GeoJSON Feature Collection](http://geojson.org/geojson-
     "features": []
 }
 {% endhighlight %}
+
+Each features adds search result information:
+
+{% highlight json %}
+{
+    "search": {
+        "display_field": {
+            "key": "field-key",
+            "value": "field value"
+        },
+        "search_matches": {
+            "match-key": "match-value"
+        }
+
+    }
+}
+{% endhighlight %}
+
+Parameter           | Type        | Description
+--------------------|-------------|---------------------------------------------------------------------------------------
+`display_field`     | `Object`    | The first field of the contribution's category. Use this as the default display field for the entry.
+`search_matches`    | `Object`    | Several key-value pairs of fields that match the query.
