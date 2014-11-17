@@ -240,6 +240,13 @@ img {
     max-width: 100%;
 }
 
+#about img {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-right: 15px;
+}
+
 .centered {
     text-align: center;
 }
