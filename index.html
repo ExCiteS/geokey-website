@@ -53,6 +53,14 @@ title: Home
                 <h2><span>Read the latest news</span>{{ site.posts.first.title }}</h2>
                 {{ site.posts.first.excerpt }}
                 <p class="centered"><a href="{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
+
+                {% for post in site.posts limit:7 %}
+                    {% if forloop.index0 > 0 %}
+                        <h2>{{ post.title }}</h2>
+                        {{ post.excerpt }}
+                        <p class="centered"><a href="{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
+                    {% endif %}
+                {% endfor %}
             </div>
 
             <!-- <div class="archive col-sm-3">
