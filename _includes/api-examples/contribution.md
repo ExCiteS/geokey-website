@@ -29,10 +29,10 @@
         "status": "active",
         "created_at": "2014-09-19T15:51:32.804Z",
         "version": 1,
-        "category": 40,
-        "review_comment": null,
+        "category": 40
     },
     "comments": [],
+    "review_comments": [],
     "media": [],
     "isowner": true,
     "category": {

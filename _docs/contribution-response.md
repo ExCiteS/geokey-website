@@ -14,6 +14,7 @@ Parameter           | Type        | Description
 `media   `          | `Array`     | List of [documents](document-response.html) added to the contribution.
 `isowner`           | `Boolean`   | `True` if the user authenticated with the request has created this contribution.
 `category`          | `Object`    | Minified [category object](category-response.html) of the contribution.
+`review_comments`   | `Array`     | List of comments that refer to a problem with this contribution. Will be empty if contribution status is `active`.
 
 #### Example
 
