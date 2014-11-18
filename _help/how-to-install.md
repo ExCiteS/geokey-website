@@ -10,7 +10,7 @@ This guide walks you through the process of setting up GeoKey on your own server
 Before we you can start setting up GeoKey, you need to install the following pre-requisites:
 
 1. Postgres (follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt)).
-2. Dev dependencies: `apt-get install postgresql-server-dev-9.3 pyhton-dev`
+2. Dev dependencies: `apt-get install postgresql-server-dev-9.3 python-dev`
 3. PostGIS: `sudo apt-get install postgresql-9.3-postgis`
 4. Pip and virtualenv: `sudo apt-get install python-pip python-virtualenv`
 5. Git: `sudo apt-get install git`
