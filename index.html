@@ -50,30 +50,20 @@ title: Home
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-lg-offset-1 col-sm-8">
-                <h2><span>Read the latest news</span>{{ site.posts.first.title }}</h2>
+                <h2><span>Read the latest news — {{ site.posts.first.date | date_to_long_string }}</span>{{ site.posts.first.title }}</h2>
                 {{ site.posts.first.excerpt }}
                 <p class="centered"><a href="{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
-
-                {% for post in site.posts limit:7 %}
-                    {% if forloop.index0 > 0 %}
-                        <h2>{{ post.title }}</h2>
-                        {{ post.excerpt }}
-                        <p class="centered"><a href="{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
-                    {% endif %}
-                {% endfor %}
-            </div>
-
-            <!-- <div class="archive col-sm-3">
-                <h2><span>From the archives</span></h2>
-                <ul>
-                {% for post in site.posts limit:7 %}
-                    {% if forloop.index0 > 0 %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-                    <li><a href="blog/" class="btn">Read all news in the blog</a></li>
-                </ul>
-            </div> -->
+        </div>
+        <div class="archive col-lg-4">
+            <h2><span>From the archives</span></h2>
+            <ul>
+            {% for post in site.posts limit:7 %}
+                {% if forloop.index0 > 0 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time></li>
+                {% endif %}
+            {% endfor %}
+                <li><a href="blog/" class="btn">Read all news in the blog</a></li>
+            </ul>
         </div>
     </div>
 </section>

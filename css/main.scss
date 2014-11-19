@@ -301,9 +301,27 @@ article.row.tutorial {
     h2 {
         margin-bottom: $margin;
     }
+
+    .tut-step {
+        color: $color-link;
+        font-size: 1.5em;
+        display: inline-block;
+        text-align: right;
+        width: 50px;
+        margin-right: 3px;
+        margin-left: -55px;
+    }
 }
 
 section#blog {
+    time {
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        color: lighten($color-primary, 30%);
+        margin-bottom: $margin;
+    }
+
     ul {
         list-style: none;
         padding: 0;
