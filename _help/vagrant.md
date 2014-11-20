@@ -13,7 +13,7 @@ title:  "Setup a development environment with Vagrant and VirtualBox"
 git clone https://github.com/excites/geokey
 ```
 
-<span class="tut-step">3</span> In the directory `core/settings`, copy the file `project.sample.py` to `project.py`. Open `project.py` in your text editor and change the database settings:
+<span class="tut-step">3</span> In the directory `core/settings`, copy the file `project.sample.py` to `project.py`. Open `project.py` in your text editor and change the database settings to:
 
 ```
 DATABASES = {
@@ -75,7 +75,7 @@ vagrant up
 If, on your host machine, the port 8080 is already used for another application, you need to change the following line in the `Vagrantfile`:
 
 ```
-config.vm.network "forwarded_port", guest: 8000, host: 8080
+config.vm.network "forwarded_port", guest: 8000, host: 5000
 ```
 
-Replace `host: 8080` with whatever port you want to use in your host to access the Vagrant box.
+Replace `host: 5000` with whatever port you want to use in your host to access the Vagrant box.
