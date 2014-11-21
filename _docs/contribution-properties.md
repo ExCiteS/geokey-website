@@ -15,6 +15,8 @@ Parameter           | Type        | Description
 `version`           | `Integer`   | Version number of the contribution.
 `category`          | `Integer`   | Unique identifier of the contribution's category.
 `status`            | `String`    | Status of the contribution. Can be `active`, `review`, `draft` or `pending`. `pending` contributions are only visible to project moderators, `draft` only to contribution owners.
+`display_field`     | `Object`    | Optional. The first field of the contribution's category. Use this as the default display field for the entry.
+`search_matches`    | `Object`    | Optional, only available in search results. Several key-value pairs of fields that match the query.
 
 #### Example
 {% highlight json %}
