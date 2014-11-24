@@ -75,7 +75,7 @@ vagrant up
 If, on your host machine, the port 8080 is already used for another application, you need to change the following line in the `Vagrantfile`:
 
 ```
-config.vm.network "forwarded_port", guest: 8000, host: 5000
+config.vm.network "forwarded_port", guest: 8000, host: 4000
 ```
 
-Replace `host: 5000` with whatever port you want to use in your host to access the Vagrant box.
+Replace `host: 4000` with whatever port you want to use in your host to access the Vagrant box.
