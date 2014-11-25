@@ -52,7 +52,7 @@ python manage.py test --nocapture --nologcapture
 python manage.py runserver 0.0.0.0:8000
 ```
 
-You now should be able to access the admin interface from your browser via [http://localhost:8080](http://localhost:8080).
+You now should be able to access the admin interface from your browser via [http://localhost:4000](http://localhost:4000).
 
 You have now successfully set up a self contained development environment.
 
@@ -72,7 +72,7 @@ vagrant up
 
 ### Troubleshooting
 
-If, on your host machine, the port 8080 is already used for another application, you need to change the following line in the `Vagrantfile`:
+If, on your host machine, the port 4000 is already used for another application, you need to change the following line in the `Vagrantfile`:
 
 ```
 config.vm.network "forwarded_port", guest: 8000, host: 4000
