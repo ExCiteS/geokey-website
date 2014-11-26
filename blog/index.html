@@ -17,16 +17,18 @@ title: "GeoKey – Blog"
 
 <section>
     <div class="container">
-        <article class="row">
+
             {% for post in site.posts %}
+            <article class="row">
             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
                 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 <p class="meta">Published on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time> by {% if post.author_link %}<a href="{{ post.author_link }}">{% endif %}{{ post.author}}{% if post.author_link %}</a>{% endif %}</p>
 
                 {{ post.excerpt }}
-                <p class="centered"><a href="{{ post.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
+                <a href="{{ post.url }}" class="no-underline btn"><i class="fa fa-link"></i> Read more</a>
             </div>
-            {% endfor %}
         </article>
+            {% endfor %}
+
     </div>
 </section>

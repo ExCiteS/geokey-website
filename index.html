@@ -11,15 +11,16 @@ title: Home
     </div>
 </header>
 
-<section>
+<section id="communities">
     <div class="container">
-        <div class="row" id="communities">
-            <div class="col-lg-6 col-lg-offset-5 col-sm-8 col-sm-offset-4">
-                <h2><span>Communities</span> Collect exactly the data your community needs.</h2>
+        <div class="row">
+            <h2 class="col-lg-10 col-lg-offset-1 col-sm-12"><span>Communities</span> Collect exactly the data your community needs.</h2>
+            <div class="col-lg-offset-1 col-sm-4">
                 <p>Whether you want to map the history of your neighbourhood, collect data to identify issues that should be fixed by your local government or simply map hidden gems in your area&mdash;GeoKey can help.</p>
-
+            </div>
+            <div class="col-lg-7 col-sm-8">
                 <ul class="features">
-                    <li><i class="fa fa-database fa-fw fa-lg"></i> Setup up your data structures</li>
+                    <li><i class="fa fa-cubes fa-fw fa-lg"></i> Setup up your data structures</li>
                     <li><i class="fa fa-users fa-fw fa-lg"></i> Decide who can access, contribute and moderate data</li>
                     <li><i class="fa fa-camera-retro fa-fw fa-lg"></i> Add photos and videos to your contributions</li>
                     <li><i class="fa fa-comments-o fa-fw fa-lg"></i> Discuss</li>
@@ -28,12 +29,17 @@ title: Home
                 <p><a href="/communities/" class="btn">Start mapping today</a></p>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="row" id="developers">
-            <div class="col-lg-6 col-lg-offset-1 col-sm-8">
-                <h2><span>Developers</span> Build and connect apps to visualise and analyse data</h2>
+<section id="developers">
+    <div class="container">
+        <div class="row">
+            <h2 class="col-lg-10 col-lg-offset-1 col-sm-12"><span>Developers</span> Build and connect apps to collect, visualise and analyse data.</h2>
+            <div class="col-lg-offset-1 col-sm-4">
                 <p>Use our public API to create your own mobile app to collect data, visualise your data in a GIS or run complex statistical analysis on your data.</p>
-
+            </div>
+            <div class="col-lg-7 col-sm-8">
                 <ul class="features">
                     <li><i class="fa fa-code fa-fw fa-lg"></i> Use the REST API to build apps</li>
                     <li><i class="fa fa-desktop fa-fw fa-lg"></i> Install GeoKey on your server</li>
@@ -42,28 +48,29 @@ title: Home
                 <p><a href="/developers/" class="btn">Start coding</a></p>
             </div>
         </div>
+    </div>
+</section>
 
+<section id="try-it">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h2>Fancy a try?</h2>
+                <p>We have set up a testing service for GeoKey that you can use to give it a try. You can sign up, create projects and connect to the API. Just don't use it in production, we'll clean the data from time to time.</p>
+                <p><a href="http://play.geokey.org.uk" class="btn"><i class="fa fa-caret-square-o-right"></i> Try GeoKey now</a></p>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="blog">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-lg-offset-1 col-sm-8">
-                <h2><span>Read the latest news — {{ site.posts.first.date | date_to_long_string }}</span>{{ site.posts.first.title }}</h2>
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h2><span>From the blog — {{ site.posts.first.date | date_to_long_string }}</span>{{ site.posts.first.title }}</h2>
                 {{ site.posts.first.excerpt }}
-                <p class="centered"><a href="{{ site.posts.first.url }}" class="no-underline"><span class="octicon octicon-arrow-right"></span> Read more</a></p>
-        </div>
-        <div class="archive col-lg-4">
-            <h2><span>From the archives</span></h2>
-            <ul>
-            {% for post in site.posts limit:7 %}
-                {% if forloop.index0 > 0 %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time></li>
-                {% endif %}
-            {% endfor %}
-                <li><a href="blog/" class="btn">Read all news in the blog</a></li>
-            </ul>
+                <p class=btn-group><a href="{{ site.posts.first.url }}" class="no-underline btn"><i class="fa fa-link"></i> Read more</a><a href="blog" class="no-underline btn"><i class="fa fa-archive"></i> Find older entries in the archive</a></p>
+            </div>
         </div>
     </div>
 </section>
@@ -71,30 +78,11 @@ title: Home
 <section id="about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-lg-offset-1 col-sm-8">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                 <h2><span>About GeoKey</span></h2>
                 <p>GeoKey has been developed at <a href="http://www.ucl.ac.uk/excites">Extreme Citizen Science Research Group</a> at University College London. The development of the initial version was funded by FP-7 project <a href="http://citizencyberlab.eu/">Citizen Cyberlab</a>.</p>
                 <p><a href="http://ucl.ac.uk/excites"><img src="build/img/excites-logo.png" width="93" height="100"></a> <a href="http://citizencyberlab.eu/"><img src="build/img/ccl-logo.png" width="198" height="100"></a></p>
             </div>
         </div>
-
-        <!-- <div class="row" id="devs">
-            <div class="col-sm-12">
-                <h2><span>Meet the team</span></h2>
-                <ul>
-                    <li>
-                        <img src="build/img/persons/peter.png">
-                        <h3>Peter Griffin</h3>
-                        <p>Master mind</p>
-                    </li>
-                    <li>
-                        <img src="build/img/persons/homer.jpg">
-                        <h3>Homer Simpson</h3>
-                        <p>Lead developer</p>
-                    </li>
-
-                </ul>
-            </div>
-        </div> -->
     </div>
 </section>

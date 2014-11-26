@@ -2,13 +2,14 @@ $break-small: 768px;
 $break-large: 992px;
 $break-xlarge: 1200px;
 
-$font-stack: 'Open Sans', sans-serif;
+$font-stack: 'Lato', sans-serif;
 
 $gutter-width: 30px;
 $margin: 15px;
 
-$color-primary: #444;
-$color-link: #006892;
+$color-primary: #22313F;
+$dark-blue: #2C3E50;
+$color-link: #4B77BE;
 $color-linkvisited: darken($color-link, 10%);
 
 @mixin clear-float() {
@@ -36,14 +37,14 @@ $color-linkvisited: darken($color-link, 10%);
 
 @mixin stripes() {
     &:nth-child(odd) {
-        background-color: lighten($color-primary, 70%);
+        background-color: lighten($color-primary, 75%);
     }
 }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
 
 body {
-    font: 16px/1.5 $font-stack;
+    font: 18px/1.5 $font-stack;
     background-color: #fff;
     color: $color-primary;
     font-weight: 400;
@@ -55,6 +56,9 @@ body {
 div.row > div {
     margin-bottom: 30px;
 }
+article.row {
+    margin-bottom: $gutter-width * 3;
+}
 
 section {
     @include clear-float();
@@ -64,7 +68,7 @@ section {
 
 header {
     color: #fff;
-    background-color: $color-link;
+    background-color: $dark-blue;
     padding-bottom: $margin * 4;
 
     .row > div {
@@ -84,7 +88,7 @@ header {
 
     nav {
         font-family: $font-stack;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1;
         padding: $margin 0;
         text-transform: none;
@@ -143,7 +147,7 @@ header {
     }
 
     &.main {
-        background: url(../img/header.jpg) no-repeat 50% 100%;
+        background: url(../img/map-back.png) no-repeat 50% 100%;
         background-size: cover;
 
         h1 {
@@ -166,7 +170,7 @@ header {
 
 h2 {
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.7em;
     line-height: 1.2;
 
     span {
@@ -210,26 +214,41 @@ a {
 
 .btn {
     text-align: center;
-    border: 0;
-    color: #fff;
+    border: 2px solid $dark-blue;
+    color: $dark-blue;
     text-decoration: none;
     padding: 10px 15px;
-    background-color: $color-link;
+    font-size: 16px;
+    line-height: 1;
     @include border-radius(5px);
 
     &:link {
         text-decoration: none;
-        color: #fff;
-        @include transition(background-color, 0.3s, ease);
+        color: $dark-blue;
+        @include transition(all, 0.3s, ease);
     }
 
     &:visited {
-        color: #fff;
+        color: $dark-blue;
     }
 
     &:hover,
     &:focus {
+        color: #fff;
         background-color: $color-linkvisited;
+    }
+}
+
+.btn-group .btn {
+    border-left-width: 0;
+
+    &:first-child {
+        border-left-width: 2px;
+        @include border-radius(5px 0 0 5px);
+    }
+
+    &:last-child {
+        @include border-radius(0 5px 5px 0);
     }
 }
 
@@ -253,7 +272,6 @@ img {
 
 article.row {
     h2 {
-        font-size: 2.5em;
         margin-bottom: 0;
 
         a:link,
@@ -303,7 +321,7 @@ article.row.tutorial {
     }
 
     .tut-step {
-        color: $color-link;
+        color: $dark-blue;
         font-size: 1.5em;
         display: inline-block;
         text-align: right;
@@ -418,39 +436,29 @@ footer {
 }
 
 #communities {
-    background: url(../img/map2.gif) no-repeat 0 85px;
 
-    @media screen and (max-width: $break-small) {
-        background-position: 50% 0;
-        padding-top: 250px;
-    }
-
-    @media screen and (min-width: $break-small) and (max-width: $break-large) {
-        background-size: 230px auto;
-    }
-
-    @media screen and (min-width: $break-xlarge) {
-        background-position: 150px 85px;
-    }
 }
 
 #developers {
-    margin-top: $margin * 4;
-    background: url(../img/code.gif) no-repeat 630px 85px;
+    background-color: #4B77BE !important;
+    color: #fff;
 
-    @media screen and (max-width: $break-small) {
-        background-position: 50% 0;
-        padding-top: 250px;
+    h2 span {
+        color: #fff;
     }
 
-    @media screen and (min-width: $break-small) and (max-width: $break-large) {
-        background-size: 230px auto;
-        background-position: 500px 85px;
-    }
+    .btn {
+        border-color: #fff;
 
-    @media screen and (min-width: $break-xlarge) {
-        background: url(../img/code.gif) no-repeat 680px 85px;
+        &:link,
+        &:visited {
+            color: #fff;
+        }
     }
+}
+
+#try-it {
+    text-align: center;
 }
 
 ul.features {
@@ -477,7 +485,7 @@ ul.tutorial-links {
 
         &:before {
             content: "➜ ";
-            color: $color-link;
+            color: $dark-blue;
             font-size: 14px;
             padding-right: 5px;
         }
@@ -503,7 +511,7 @@ ul.next-links {
 
     li {
         list-style: none !important;
-        border: 0 solid $color-link;
+        border: 0 solid $dark-blue;
         border-width: 1px 1px 0 1px;
         margin: 0 !important;
         padding: ($margin/2) $margin ($margin/2) ($margin * 2.5);
@@ -545,7 +553,7 @@ table {
 }
 
 pre {
-    background-color: lighten($color-primary, 70%);
+    background-color: lighten($color-primary, 75%);
     padding: $margin;
     @include border-radius(5px);
     font-size: 14px;
