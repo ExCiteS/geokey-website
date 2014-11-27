@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-    // 1. All configuration goes here 
+    // 1. All configuration goes here
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -23,12 +23,13 @@ module.exports = function(grunt) {
                 files: {
                     'build/css/global.css': 'css/main.scss'
                 }
-            } 
+            }
         },
 
         copy: {
             main: {
                 files: [
+                    {expand: true, src: ['css/fonts/*'], dest: 'build/'},
                     {expand: true, src: ['css/octicons/*'], dest: 'build/'},
                     {expand: true, src: ['css/bootstrap.min.css'], dest: 'build/'},
                     {expand: true, src: ['css/syntax.css'], dest: 'build/'}
