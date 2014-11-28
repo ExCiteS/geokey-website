@@ -7,7 +7,7 @@ title:  "Setup a development environment with Vagrant and VirtualBox"
 
 <span class="tut-step">1</span> Install [Vagrant](https://docs.vagrantup.com/v2/installation/index.html) and [VirtualBox](https://www.virtualbox.org/) on your machine.
 
-<span class="tut-step">2</span> <a href="https://github.com/ExCiteS/geokey/fork">Fork the repository</a> to your account:
+<span class="tut-step">2</span> <a href="https://github.com/ExCiteS/geokey/fork">Fork the repository</a> to your account.
 
 <span class="tut-step">3</span> Clone the repository:
 
