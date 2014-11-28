@@ -12,7 +12,7 @@ title:  "Setup a development environment with Vagrant and VirtualBox"
 <span class="tut-step">3</span> Clone the repository:
 
 ```
-git clone https://github.com/excites/geokey
+git clone https://github.com/[YOUR_GITHUB_ACCOUNT_HANDLE]/geokey
 ```
 
 <span class="tut-step">4</span> In the directory `core/settings`, copy the file `project.sample.py` to `project.py`. Open `project.py` in your text editor and change the database settings to:
