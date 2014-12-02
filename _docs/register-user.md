@@ -26,7 +26,7 @@ Header            | Required value
 }
 {% endhighlight %}
 
-You need to obtain a `client_id` by [registering your application]({{site.url}}help/register-your-app.html) with [the platform].
+You need to obtain a `client_id` by [registering your application]({{site.url}}help/register-your-app.html) with GeoKey.
 
 ### Response
 

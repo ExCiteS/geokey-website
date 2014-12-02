@@ -87,7 +87,7 @@ Your virtual environment is now set up.
 
 ### Installing GeoKey
 
-[The platform] can be installed by downloading the code from the Github repository, installing the requirements in the virtual environment and setting the data base structure.
+GeoKey can be installed by downloading the code from the Github repository, installing the requirements in the virtual environment and setting the data base structure.
 
 First, pull the code from the [Github repository](https://github.com/ExCiteS/geokey/).
 
@@ -119,7 +119,7 @@ Open the file in your favourite text editor (e.g. Vim):
 vim core/settings/project.py
 ```
 
-and enter the user name and password of the data base user. Also, don't forget to change the platform to your project:
+and enter the user name and password of the data base user. Also, don't forget to change the platform name to your project:
 
 ```
 PLATFORM_NAME = 'My awesome mapping project'
