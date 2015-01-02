@@ -118,14 +118,22 @@ header {
         margin: 0 auto ($margin * 4) auto;
         background-color: rgba(0, 0, 0, 0.5);
 
+        button#burger {
+            background: none;
+            border: none;
+            color: #fff;
+            line-height: 30px;
+            float: right;
+
+            @media screen and (min-width: $break-small) {
+                display: none;
+            }
+        }
+
         ul {
             padding: 0;
             list-style: none;
             text-align: right;
-
-            li {
-                display: inline-block;
-            }
 
             a:link,
             a:visited {
@@ -133,13 +141,45 @@ header {
                 color: #fff;
                 text-decoration: none;
                 padding: ($margin/2) ($margin);
-                @include border-radius(3px);
             }
 
             a:hover,
             a:focus,
             a:active {
                 background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            @media screen and (max-width: $break-small) {
+                @include transition(right, 0.3s, ease);
+                position: absolute;
+                top: 51px;
+                right: -9999px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 999;
+
+                &.active {
+                    right: 0;
+                }
+
+                li {
+                    height: 46px;
+                }
+
+                a:link {
+                    display: block;
+                    padding: ($margin) ($margin + 5px);
+                }
+            }
+
+            @media screen and (min-width: $break-small) {
+                li {
+                    display: inline-block;
+                }
+
+                a {
+                    @include border-radius(3px);
+                }
             }
         }
     }
@@ -150,8 +190,18 @@ header {
     &#header-help #nav-help a,
     &#header-docs #nav-docs a,
     &#header-blog #nav-blog a {
-        border-bottom: 3px solid #ff5c00;
-        @include border-radius(3px 3px 0 0);
+        @media screen and (max-width: $break-small) {
+            &::before {
+                color: #ff5c00;
+                content: "●";
+                margin-right: 5px;
+            }
+        }
+
+        @media screen and (min-width: $break-small) {
+            border-bottom: 3px solid #ff5c00;
+            @include border-radius(3px 3px 0 0);
+        }
     }
 
     h1 {

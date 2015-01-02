@@ -32,7 +32,8 @@ module.exports = function(grunt) {
                     {expand: true, src: ['css/fonts/*'], dest: 'build/'},
                     {expand: true, src: ['css/octicons/*'], dest: 'build/'},
                     {expand: true, src: ['css/bootstrap.min.css'], dest: 'build/'},
-                    {expand: true, src: ['css/syntax.css'], dest: 'build/'}
+                    {expand: true, src: ['css/syntax.css'], dest: 'build/'},
+                    {expand: true, src: ['js/*'], dest: 'build/'}
                 ]
             }
         },
