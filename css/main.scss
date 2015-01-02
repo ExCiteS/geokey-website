@@ -262,15 +262,33 @@ a {
 }
 
 .btn-group .btn {
-    border-left-width: 0;
+    border-top-width: 0;
+    display: block;
+    max-width: 300px;
+    text-align: left;
 
     &:first-child {
-        border-left-width: 2px;
-        @include border-radius(5px 0 0 5px);
+        border-top-width: 2px;
+        @include border-radius(5px 5px 0 0);
     }
 
     &:last-child {
-        @include border-radius(0 5px 5px 0);
+        @include border-radius(0 0 5px 5px);
+    }
+
+    @media screen and (min-width: $break-small) {
+        border-left-width: 0;
+        border-top-width: 2px;
+        display: inline;
+
+        &:first-child {
+            border-left-width: 2px;
+            @include border-radius(5px 0 0 5px);
+        }
+
+        &:last-child {
+            @include border-radius(0 5px 5px 0);
+        }
     }
 }
 
