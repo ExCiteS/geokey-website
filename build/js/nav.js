@@ -7,5 +7,5 @@ window.onload = function () {
         } else {
             menue.setAttribute('class', 'active');
         }
-    }
-}
+    };
+};

@@ -150,16 +150,16 @@ header {
             }
 
             @media screen and (max-width: $break-small) {
-                @include transition(right, 0.3s, ease);
+                @include transition(width, 0.3s, ease);
                 position: absolute;
                 top: 51px;
-                right: -9999px;
-                width: 100%;
+                right: 0;
+                width: 0;
                 background-color: rgba(0, 0, 0, 0.7);
                 z-index: 999;
 
                 &.active {
-                    right: 0;
+                    width: 100%;
                 }
 
                 li {
