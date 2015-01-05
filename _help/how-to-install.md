@@ -271,3 +271,12 @@ DEFAULT_FROM_EMAIL = 'sender@example.com'
 ### That's all
 
 You have now successfully installed GeoKey on your server.
+
+#### Where next?
+
+<ul class="next-links tutorial-links">
+    <li>
+        <h6><a href="/help/install-troubleshooting.html">Troubleshooting</a></h6>
+        <p>Identify and fix troubles with your installation.</p>
+    </li>
+</ul>
