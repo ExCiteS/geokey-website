@@ -30,7 +30,7 @@ Name            | Type     | Description
 If the user authorises the application Community Maps redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from Community Maps.
 
 ````
-POST /oauth2/access_token
+POST /oauth2/token/
 ````
 
 #### Parameters
