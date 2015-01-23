@@ -11,6 +11,12 @@ Pull the latest updates from Github
 sudo git pull
 ```
 
+Update the requirements
+
+```
+pip install -U -r requirements.txt
+```
+
 Install the database migrations
 
 ```
