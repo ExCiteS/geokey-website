@@ -107,10 +107,11 @@ and install the dependencies into your virtual environment
 ../env/bin/pip install -r requirements.txt
 ```
 
-Now connect GeoKey to your data base. First, duplicate the project settings file.
+Now connect GeoKey to your data base. First, duplicate the project settings and the extensions urls file. The latter one will be used to register extension API endpoints with GeoKey.
 
 ```
 cp core/settings/project.sample.py core/settings/project.py
+cp core/url/extensions.sample.py url/extensions.sample.py
 ```
 
 Open the file in your favourite text editor (e.g. Vim):
@@ -132,6 +133,12 @@ Finally create the structure in your data base:
 ```
 ../env/bin/python manage.py syncdb --all
 ../env/bin/python manage.py migrate --fake
+```
+
+Create yourself as the first super user, This will allow you to manage the whole platform and add more super users. You will be prompted to enter your email, display name and password.
+
+```
+python manage.py createsuperuser
 ```
 
 You should be all set now. Try running the test server:
