@@ -648,6 +648,16 @@ ul.next-links {
     }
 }
 
+ul.topics {
+    margin-left: 0;
+    padding-left: 20px;
+
+    li {
+        list-style: square;
+        margin-bottom: 7px;
+    }
+}
+
 table {
     thead {
         border-bottom: 2px solid lighten($color-primary, 50%);
