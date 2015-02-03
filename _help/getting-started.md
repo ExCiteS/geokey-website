@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title:  "Getting started — An overview of GeoKey"
+title:  "How does GeoKey work"
 ---
 
 Geographic data is usually collected and provided by local authorities. However, official information quite often does not reflect the situation the same way local residents perceive it. The concept of [participatory mapping](http://www.mappingforrights.org/participatory_mapping) addresses this problem by providing local communities with tools and methods to collect, visualise and analyse geographic data to get a better understanding of the processes happening in their community and to support work to change places.
