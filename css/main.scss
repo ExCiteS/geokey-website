@@ -190,7 +190,7 @@ header {
     }
 
     &#header-home #nav-home a,
-    &#header-communities #nav-communities a,
+    &#header-communities #nav-collect a,
     &#header-developers #nav-developers a,
     &#header-help #nav-help a,
     &#header-docs #nav-docs a,
@@ -263,7 +263,7 @@ h2 {
     font-size: 1.7em;
     line-height: 1.2;
 
-    span, i {
+    span {
         text-transform: uppercase;
         display: block !important;
         font-size: 12px;
@@ -361,9 +361,6 @@ a {
 }
 
 img {
-    // -webkit-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
-    // -moz-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
-    // box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.2);
     max-width: 100%;
     text-align: center;
     display: block;
@@ -376,6 +373,34 @@ img {
     box-shadow: none;
     margin-right: 15px;
     display: inline-block;
+}
+
+.collect-app {
+    padding: 45px 0;
+    border-top: 1px solid lighten($color-primary, 75%);
+    position: relative;
+    overflow: hidden;
+
+    &:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.illustration {
+    @media screen and (min-width: $break-small) {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        width: 1000px;
+        img {
+            display: inline;
+        }
+    }
 }
 
 .centered {

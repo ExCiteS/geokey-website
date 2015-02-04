@@ -25,7 +25,7 @@ GeoKey has been developed at [ExCiteS Research Group](http://www.ucl.ac.uk/excit
 
 We have compiled materials to get you started:
 
-- If you are a **community member** and want to start mapping, head over to the [Communities Section](/communities/) to learn how to set up your participatory mapping projects.
+- If you are a **community member** and want to start mapping, head over to the [Help Section](/help/) to learn how to set up your participatory mapping projects.
 - In the [Developer Section](/developers/), **software developers** learn how to install GeoKey on their own servers and how to build apps on top of the API.
 
 ### Get in touch
