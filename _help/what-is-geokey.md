@@ -3,7 +3,7 @@ layout: tutorial
 title:  "What is GeoKey"
 ---
 
-Geographic data is usually collected and provided by local authorities. However, official information quite often does not reflect the situation the same way local residents perceive it. The concept of participatory mapping addresses this problem by providing local communities with tools and methods to collect, visualise and analyse geographic data to get a better understanding of the processes happening in their community and to support work to change places.
+Geographic data is usually collected and provided by local authorities. However, official information quite often does not reflect the situation the same way local residents perceive it. The concept of [participatory mapping](http://www.mappingforrights.org/participatory_mapping) addresses this problem by providing local communities with tools and methods to collect, visualise and analyse geographic data to get a better understanding of the processes happening in their community and to support work to change places.
 
 ![Features](img/what-is-geokey-01.png)
 
@@ -11,6 +11,6 @@ GeoKey is a platform for participatory mapping. It provides communities with a w
 
 ![API](img/what-is-geokey-02.png)
 
-However, GeoKey does not provide the user interfaces to add, edit visualise or analyse data. Its aim is to provide an infrastructure for a great variety of citizen science and participatory mapping projects. We therefore chose to only build the backend infrastructure to setup projects, manage access to data and to store and validate data.
+However, GeoKey does not provide the user interfaces to add, edit, visualise or analyse data. Its aim is to provide an infrastructure for a great variety of citizen science and participatory mapping projects. We therefore chose to only build the backend infrastructure to setup projects, manage access to data and to store and validate data.
 
 Applications tied to specific use-cases can be build on top of the [REST API](/docs/). These apps can vary from smartphone apps for data collection over web maps for data visualisation and editing to GIS for data analysis.
