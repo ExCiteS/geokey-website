@@ -131,8 +131,7 @@ This name will be user throughout the system, e.g. when notifying users via emai
 Finally create the structure in your data base:
 
 ```
-../env/bin/python manage.py syncdb --all
-../env/bin/python manage.py migrate --fake
+../env/bin/python manage.py migrate
 ```
 
 Create yourself as the first super user, This will allow you to manage the whole platform and add more super users. You will be prompted to enter your email, display name and password.
