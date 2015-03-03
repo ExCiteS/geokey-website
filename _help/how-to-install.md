@@ -137,7 +137,7 @@ Finally create the structure in your data base:
 Create yourself as the first super user, This will allow you to manage the whole platform and add more super users. You will be prompted to enter your email, display name and password.
 
 ```
-python manage.py createsuperuser
+../env/bin/python manage.py createsuperuser
 ```
 
 You should be all set now. Try running the test server:
