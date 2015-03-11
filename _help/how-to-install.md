@@ -111,7 +111,7 @@ Now connect GeoKey to your data base. First, duplicate the project settings and 
 
 ```
 cp core/settings/project.sample.py core/settings/project.py
-cp core/url/extensions.sample.py url/extensions.sample.py
+cp core/url/extensions.sample.py core/url/extensions.py
 ```
 
 Open the file in your favourite text editor (e.g. Vim):
