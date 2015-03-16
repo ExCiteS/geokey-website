@@ -21,7 +21,7 @@ Header            | Required value
 {
   "oldpassword": "myoldpassword",
   "password1": "mynewpassword",
-  "password1": "mynewpassword"
+  "password2": "mynewpassword"
 }
 {% endhighlight %}
 
