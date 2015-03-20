@@ -21,15 +21,18 @@ After saving your app, you will be redirected to the app’s settings page. Here
 
 ![Click “Obtain client ID and secret”](img/register-your-app-02.png)
 
-#### Where next?
-
-<ul class="next-links tutorial-links">
-    <li>
-			<h6><a href="getting-started-with-oauth.html">Gettings started with OAuth</a></h6>
-      <p>Learn how to obtain OAuth tokens and how to sign your request to authenticate and authorise users.</p>
-    </li>
-    <li>
-      <h6><a href="/docs/">Read the API docs</a></h6>
-      <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
-    </li>
-</ul>
+<div class="info-box alert alert-info">
+    <i class="fa fa-info-circle"></i>
+    <div>
+        <ul class="tutorial-links">
+            <li>
+                    <h6><a href="getting-started-with-oauth.html">Gettings started with OAuth</a></h6>
+              <p>Learn how to obtain OAuth tokens and how to sign your request to authenticate and authorise users.</p>
+            </li>
+            <li>
+              <h6><a href="/docs/">Read the API docs</a></h6>
+              <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
+            </li>
+        </ul>
+    </div>
+</div>

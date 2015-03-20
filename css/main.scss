@@ -11,6 +11,8 @@ $color-primary: #22313F;
 $dark-blue: #2C3E50;
 $color-link: #4B77BE;
 $color-linkvisited: darken($color-link, 10%);
+$green: #1E824C;
+$yellow: #F7CA18;
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
@@ -560,10 +562,6 @@ footer {
     }
 }
 
-#communities {
-
-}
-
 #developers {
     background-color: #4B77BE !important;
     color: #fff;
@@ -584,6 +582,71 @@ footer {
 
 #try-it {
     text-align: center;
+}
+
+.info-box {
+    padding: 15px;
+    margin-top: 45px;
+    border: 1px solid $color-primary;
+    @include clear-float();
+    @include border-radius(5px);
+
+    &.alert {
+        padding: 0;
+
+        i {
+            font-size: 20px;
+            color: #fff;
+            width: 10%;
+            float: left;
+            padding: 10px;
+            text-align: center;
+
+            @media screen and (min-width: $break-small) {
+                font-size: 40px;
+            }
+        }
+
+        p, div {
+            @include border-radius(0 4px 4px 0);
+            background-color: #fff;
+            width: 90%;
+            float: right;
+            display: block;
+            padding: 10px;
+            min-height: 62px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        ul.tutorial-links{
+            li {
+                list-style: none;
+            }
+
+            p {
+                width: 100%;
+                padding: 0;
+                min-height: 0;
+                float: none;
+            }
+        }
+    }
+
+    &.alert-success {
+        background-color: $green;
+        border-color: $green;
+    }
+
+    &.alert-warning {
+        background-color: $yellow;
+        border-color: $yellow;
+    }
+
+    &.alert-info {
+        background-color: $color-primary;
+    }
 }
 
 ul.features {
