@@ -30,15 +30,18 @@ Through user groups, you further assign roles to its members. In GeoKey there ar
 3. **Contributors** can contribute to a project and read all data they are allowed to access. They can edit and delete their own contributions, comments and attached media.
 4. **Read only users** can only access data they are allowed to.
 
-### Where next
-
-<ul class="next-links tutorial-links">
-    <li>
-      <h6><a href="/help/how-to-create-project.html">Create your first project</a></h6>
-      <p>Learn how to setup your first project.</p>
-    </li>
-    <li>
-     <h6><a href="/developers/">Developers</a></h6>
-      <p>Learn how to install GeoKey on your server or how to use the API to build apps.</p>
-    </li>
-</ul>
+<div class="info-box alert alert-info">
+    <i class="fa fa-info-circle"></i>
+    <div>
+        <ul class="tutorial-links">
+            <li>
+              <h6><a href="/help/how-to-create-project.html">Create your first project</a></h6>
+              <p>Learn how to setup your first project.</p>
+            </li>
+            <li>
+             <h6><a href="/developers/">Developers</a></h6>
+              <p>Learn how to install GeoKey on your server or how to use the API to build apps.</p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -17,15 +17,18 @@ Then, you need to select the default status for contributions of this category. 
 
 Finally click *Save* to create the category. You will be redirected to the category overview page. Form here you can change the set up of the category, e.g. [adding fields](how-to-create-field.html), change [how contributions of this category should be displayed on the map](category-display-settings.html) or change the general settings of the category. You can use the menu on the left-hand side to navigation to the different parts.
 
-### Where next
-
-<ul class="next-links tutorial-links">
-    <li>
-        <h6><a href="how-to-create-field.html">How to create fields for a category</a></h6>
-        <p>Learn how to add fields to your category.</p>
-    </li>
-    <li>
-        <h6><a href="category-display-settings.html">Category Display Settings</a></h6>
-        <p>Define how your contributions will be displayed on the map.</p>
-    </li>
-</ul>
+<div class="info-box alert alert-info">
+    <i class="fa fa-info-circle"></i>
+    <div>
+        <ul class="tutorial-links">
+            <li>
+                <h6><a href="how-to-create-field.html">How to create fields for a category</a></h6>
+                <p>Learn how to add fields to your category.</p>
+            </li>
+            <li>
+                <h6><a href="category-display-settings.html">Category Display Settings</a></h6>
+                <p>Define how your contributions will be displayed on the map.</p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -29,11 +29,14 @@ The field _cuisine_ could be a select box. Select boxes allow users to select an
 
 To add a new value enter its name in the field below the list and click _Add_. To remove a value click _Remove_ next to the value.
 
-### Where next
-
-<ul class="next-links tutorial-links">
-    <li>
-        <h6><a href="field-types.html">Field types</a></h6>
-        <p>Learn about different field types and what you can do with them.</p>
-    </li>
-</ul>
+<div class="info-box alert alert-info">
+    <i class="fa fa-info-circle"></i>
+    <div>
+        <ul class="tutorial-links">
+            <li>
+                <h6><a href="field-types.html">Field types</a></h6>
+                <p>Learn about different field types and what you can do with them.</p>
+            </li>
+        </ul>
+    </div>
+</div>
