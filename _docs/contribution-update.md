@@ -46,9 +46,7 @@ The body contains are partial contribution with only the fields you want to upda
 {% highlight json %}
 {
   "properties": {
-    "attributes": {
       "address": "20 Prince of Wales Road, London NW5 3LG"
-    }
   }
 }
 {% endhighlight %}
@@ -66,6 +64,6 @@ The response contains the [GeoJSON](http://geojson.org/geojson-spec.html) encode
 Code  |  Reason
 ------|-----------------------------------------
  200  | The contribution has been updated successfully.
- 400  | The request data is not valid. 
+ 400  | The request data is not valid.
  403  | The user authenticated with the request is not allowed to update the contribution. (You have to be either creator of the contribution or a moderator of the project)
  404  | The project or contribution was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence private projects to unauthorised users.

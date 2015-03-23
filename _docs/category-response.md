@@ -5,7 +5,7 @@ title:  "Category response"
 
 #### Parameters
 
-Parameter           | Type        | Description                                                                           
+Parameter           | Type        | Description
 --------------------|-------------|---------------------------------------------------------------------------------------
 `id`                | `Integer`   | Unique identifier of the category.
 `name`              | `String`    | Name of the category.
@@ -14,6 +14,7 @@ Parameter           | Type        | Description
 `fields`            | `Array`     | A list of [fields](field-response.html) assigned to this category.
 `colour`            | `String`    | Default colour, which should be used to display features for this category.
 `symbol`            | `String`    | Image URL of a symbol, , which should be used to display features for this category.
+`order`             | `Integer`   | The order in the list of categories.
 
 #### Example
 

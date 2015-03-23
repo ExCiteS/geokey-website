@@ -89,10 +89,11 @@ Your virtual environment is now set up.
 
 GeoKey can be installed by downloading the code from the Github repository, installing the requirements in the virtual environment and setting the data base structure.
 
-First, pull the code from the [Github repository](https://github.com/ExCiteS/geokey/).
+First, clone the code from the [Github repository](https://github.com/ExCiteS/geokey/) and switch to latest stable branch.
 
 ```
 git clone https://github.com/ExCiteS/geokey.git
+git checkout stable/0.4.x
 ```
 
 Switch to the platform directory

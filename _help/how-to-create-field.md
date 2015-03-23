@@ -29,8 +29,8 @@ The field _cuisine_ could be a select box. Select boxes allow users to select an
 
 To add a new value enter its name in the field below the list and click _Add_. To remove a value click _Remove_ next to the value.
 
-<div class="info-box alert alert-info">
-    <i class="fa fa-info-circle"></i>
+<div class="info-box alert alert-success">
+    <i class="fa fa-check-square-o"></i>
     <div>
         <ul class="tutorial-links">
             <li>
