@@ -33,8 +33,8 @@ If you select *Only members of contributor groups can cantribute*, only users, w
 
 Finally, click *Save* to create your project. You are now redirect your project’s home page. Start here to set up and manage Categories, Data groupings, user groups.
 
-<div class="info-box alert alert-info">
-    <i class="fa fa-info-circle"></i>
+<div class="info-box alert alert-success">
+    <i class="fa fa-check-square-o"></i>
     <div>
     <ul class="tutorial-links">
         <li>

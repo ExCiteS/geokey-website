@@ -17,8 +17,8 @@ Then, you need to select the default status for contributions of this category. 
 
 Finally click *Save* to create the category. You will be redirected to the category overview page. Form here you can change the set up of the category, e.g. [adding fields](how-to-create-field.html), change [how contributions of this category should be displayed on the map](category-display-settings.html) or change the general settings of the category. You can use the menu on the left-hand side to navigation to the different parts.
 
-<div class="info-box alert alert-info">
-    <i class="fa fa-info-circle"></i>
+<div class="info-box alert alert-success">
+    <i class="fa fa-check-square-o"></i>
     <div>
         <ul class="tutorial-links">
             <li>
