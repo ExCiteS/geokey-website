@@ -29,8 +29,6 @@ This guide walks you through the process of setting up GeoKey on your own server
 
 ### Setting up the database
 
-
-
 1. Create a new user on you system, which GeoKey uses to write to and read from the data base.
 
     ```
@@ -163,8 +161,20 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
     manage.py runserver 0.0.0.0:8000
     ```
 
-    If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
+   If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
 
-### That's all
 
-Geokey is now installed on your system. You should also look into running [GeoKey in Apache](run-in-apache.html).
+<div class="info-box alert alert-success">
+    <i class="fa fa-check-square-o"></i>
+    <div>
+        <ul class="tutorial-links">
+            <li>
+                <h6><a href="/help/install-troubleshooting.html">Troubleshooting</a></h6>
+                <p>Identify and fix troubles with your installation.</p>
+            </li>
+            <li>
+                <h6><a href="/help/run-in-apache.html">Running GeoKey in Apache</a></h6>
+            </li>
+        </ul>
+    </div>
+</div>

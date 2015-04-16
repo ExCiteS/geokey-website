@@ -33,10 +33,13 @@ If you select *Only members of contributor groups can cantribute*, only users, w
 
 Finally, click *Save* to create your project. You are now redirect your project’s home page. Start here to set up and manage Categories, Data groupings, user groups.
 
-### Where next
-
-<ul class="next-links tutorial-links">
-    <li>
-      <h6><a href="how-to-setup-categories.html">How to setup categories for data collection</a></h6>
-    </li>
-</ul>
+<div class="info-box alert alert-success">
+    <i class="fa fa-check-square-o"></i>
+    <div>
+    <ul class="tutorial-links">
+        <li>
+          <h6><a href="how-to-setup-categories.html">How to setup categories for data collection</a></h6>
+        </li>
+    </ul>
+    </div>
+</div>

@@ -1,10 +1,10 @@
 ---
 layout: docs
-title:  "Update user info"
+title:  "Update password"
 ---
 
 ``````
-PATCH /api/user/
+POST /api/user/password/change
 ``````
 
 ### Request
@@ -19,26 +19,17 @@ Header            | Required value
 
 {% highlight json %}
 {
-  "email": "oliver@example.com",
-  "display_name": "Oliver"
+  "oldpassword": "myoldpassword",
+  "password1": "mynewpassword",
+  "password2": "mynewpassword"
 }
 {% endhighlight %}
 
-### Response
 
-#### Response example
-
-{% highlight json %}
-{
-  "id": 1,
-  "display_name": "Oliver"
-}
-{% endhighlight %}
-
-#### Response codes
+### Response codes
 
 Code  |  Reason
 ------|-----------------------------------------
- 200  | The user updated was successfully.
- 400  | A user with the email and/or display has already registered.
+ 204  | The password updated was successfully.
+ 400  | Either the old password was wrong or the new passwords don't match.
  401  | The request has not been signed with an access token. An access token is required to identify the acting user.

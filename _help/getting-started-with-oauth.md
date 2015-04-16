@@ -54,25 +54,15 @@ Name              | Type     | Description
 }
 {% endhighlight %}
 
+
 ### Sign the request to the API
 
 Using the access token your application can make requests to Community Maps on behalf of the user.
 
 Sign the request by setting the `Authorization` header in the request.
 
-````
+```
 Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-````
+```
 
-### Where next
-
-<ul class="next-links tutorial-links">
-    <li>
-     <h6><a href="register-your-app.html">Register your app</a></h6>
-      <p>Before you can use our API you need to register your app.</p>
-    </li>
-    <li>
-      <h6><a href="/docs/">Read the API docs</a></h6>
-      <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
-    </li>
-</ul>
+<div class="info-box alert alert-info"><i class="fa fa-info-circle"></i><div><ul class="tutorial-links"><li><h6><a href="register-your-app.html">Register your app</a></h6><p>Before you can use our API you need to register your app.</p></li><li><h6><a href="/docs/">Read the API docs</a></h6><p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p></li></ul></div></div></div>

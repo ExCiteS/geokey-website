@@ -13,7 +13,10 @@
             "fieldtype": "TextField",
             "description": "The name of the restaurent",
             "status": "active",
-            "required": true
+            "required": true,
+            "maxlength": 20,
+            "textarea": false,
+            "order": 0
         },
         {
             "id": 114,
@@ -22,7 +25,10 @@
             "fieldtype": "TextField",
             "description": "",
             "status": "active",
-            "required": true
+            "required": true,
+            "order": 1,
+            "maxlength": null,
+            "textarea": true,
         },
         {
             "id": 116,
@@ -31,6 +37,7 @@
             "fieldtype": "LookupField",
             "description": "",
             "required": true,
+            "order": 2
             "lookupvalues": [
                 {
                     "id": 31,
@@ -59,12 +66,14 @@
             "status": "active",
             "required": false,
             "minval": null,
-            "maxval": null
+            "maxval": null,
+            "order": 3
         }
     ],
     "colour": "#0033ff",
     "symbol": "/assets/symbols/pub.png",
-    "created_at": "2014-09-17T00:00:00Z"
+    "created_at": "2014-09-17T00:00:00Z",
+    "order": 0
 }
 
 {% endhighlight %}
