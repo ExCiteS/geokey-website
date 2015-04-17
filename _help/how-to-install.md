@@ -26,7 +26,7 @@ This guide walks you through the process of setting up GeoKey on your own server
 3. Setup all other dependencies
 
     ```
-    sudo apt-get install python-pip python-virtualenv
+    sudo apt-get install python-pip python-virtualenv python-dev 
     ```
 
 ### Setting up the database
