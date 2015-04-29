@@ -46,6 +46,7 @@ $yellow: #F7CA18;
 }
 
 @import "syntax";
+@import "docs";
 
 body {
     font: 18px/1.5 $font-stack;
@@ -254,8 +255,14 @@ h2 {
     }
 }
 
-h3 {
+h3, h4, h5, h6 {
     margin-bottom: 0.5em;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
 }
 
 p {

@@ -19,14 +19,14 @@ This guide walks you through the process of setting up GeoKey on your own server
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt wheezy-pgdg main" >> /etc/apt/sources.list'
     wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
     sudo apt-get update
-    
+
     sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4
     ```
 
 3. Setup all other dependencies
 
     ```
-    sudo apt-get install python-pip python-virtualenv python-dev 
+    sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev
     ```
 
 ### Setting up the database
