@@ -3,34 +3,34 @@ layout: internal-docs
 title:  "Observation"
 ---
 
-An Observation represents an entry contributed by a user. Together with a [Location](/docs/internal/location.html), an observations forms a contribution.
+An Observation represents an entry contributed by a user. Together with a [Location](/docs/programming/location.html), an observations forms a contribution.
 
 ### Attributes
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-id                     | int                      | Identifies the field in the database.
-location               | [Location](/docs/internal/location.html) | Geographic location of the observation.
-project                | [Project](/docs/internal/project.html)   | Project the observation has been contributed to.
-category               | [Category](/docs/internal/category.html) | Category of the observation.
-status                 | string                   | Status of the observation. Must be one of `active`, 'draft' `review`, `pending`, `deleted`.
-properties             | dict                     | Key-value pairs of the observation's attributes. Keys represent the key of the category's fields.
-created_at             | datetime                 | Date and time when the observation was created.
-creator                | [User](/docs/internal/user.html) | User who created the observation.
-updated_at             | datetime                 | Date and time when the observation last updated.
-updator                | [User](/docs/internal/user.html) | User who last updated the observation.
-version                | int                      | Version of the observation. Is increased every time the observation is updated.
+`id`                     | int                      | Identifies the observation in the database.
+`location`               | [Location](/docs/programming/location.html) | Geographic location of the observation.
+`project`                | [Project](/docs/programming/project.html)   | Project the observation has been contributed to.
+`category`               | [Category](/docs/programming/category.html) | Category of the observation.
+`status`                 | string                   | Status of the observation. Must be one of `active`, `draft` `review`, `pending`, `deleted`. Defaults to the `default_status` of the contributions category.
+`properties`             | dict                     | Key-value pairs of the observation's attributes. Keys represent the key of the category's fields.
+`created_at`             | datetime                 | Date and time when the observation was created.
+`creator`                | [User](/docs/programming/user.html) | User who created the observation.
+`updated_at`             | datetime                 | Date and time when the observation last updated.
+`updator`                | [User](/docs/programming/user.html) | User who last updated the observation.
+`version`                | int                      | Version of the observation. Is increased every time the observation is updated.
 
 ### Methods
 
 #### `validate_partial(category, data)`
 
-Partially validates data against the category. A partial validation only validates against fields which keys are present in data; if a field that is required is not provided it will be ignored. This method should be used to validate drafts only.
+Partially validates data against the category. A partial validation only validates against those fields that are present in data; if a field that is required is not provided it will be ignored. This method should be used to validate drafts only.
 
 ##### Parameters
 
 <dl class="parameters">
-    <dt>category: <span class="type"><a href="/docs/internal/category.html">Category</a></span></dt>
+    <dt>category: <span class="type"><a href="/docs/programming/category.html">Category</a></span></dt>
         <dd>Category the data is validated against.</dd>
     <dt>data: <span class="type">dict</span></dt>
         <dd>Data that is validated.</dd>
@@ -62,7 +62,7 @@ Validates the data against all fields defined for the category.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>category: <span class="type"><a href="/docs/internal/category.html">Category</a></span></dt>
+    <dt>category: <span class="type"><a href="/docs/programming/category.html">Category</a></span></dt>
         <dd>Category the data is validated against.</dd>
     <dt>data: <span class="type">dict</span></dt>
         <dd>Data that is validated.</dd>
@@ -95,8 +95,8 @@ Updates the properties of the Contribution.
 
 <dl class="parameters">
     <dt>properties: <span class="type">dict</span></dt>
-        <dd>Attributes that are updated. This can contain only updated attributes, all other fields will not be updated.</dd>
-    <dt>updator: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+        <dd>Attributes that are updated. This can contain only updated attributes, all other fields will not be changed.</dd>
+    <dt>updator: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>The user who updates the observation.</dd>
     <dt>status: <span class="type">string</span></dt>
         <dd>Optional. The new status for the contribution.</dd>
@@ -118,14 +118,14 @@ Deletes the contribution by setting its status to `deleted`.
 
 <dl class="parameters">
     <dt>properties: <span class="type">dict</span></dt>
-        <dd>Attrbutes of the contribution.</dd>
-    <dt>creator: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+        <dd>Attributes of the contribution.</dd>
+    <dt>creator: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>The user who creates the observation.</dd>
-    <dt>location: <span class="type"><a href="/docs/internal/location.html">Location</a></span></dt>
+    <dt>location: <span class="type"><a href="/docs/programming/location.html">Location</a></span></dt>
         <dd>Geographic location of the observation.</dd>
-    <dt>category: <span class="type"><a href="/docs/internal/category.html">Category</a></span></dt>
+    <dt>category: <span class="type"><a href="/docs/programming/category.html">Category</a></span></dt>
         <dd>Category of the observation.</dd>
-    <dt>project: <span class="type"><a href="/docs/internal/project.html">Project</a></span></dt>
+    <dt>project: <span class="type"><a href="/docs/programming/project.html">Project</a></span></dt>
         <dd>Project the observation is contributed to..</dd>
     <dt>status: <span class="type">string</span></dt>
         <dd>Optional. The new status for the observation.</dd>
@@ -139,12 +139,12 @@ Deletes the contribution by setting its status to `deleted`.
 
 #### for_moderator(user)
 
-Returns all observations for moderators; That includes all observations in a project; except this with status='draft', which where not created by the given user.
+Returns all observations for moderators; That includes all observations in a project; except this with `status='draft'`, which where not created by the given user.
 
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User the observations are queried for.</dd>
 </dl>
 
@@ -160,7 +160,7 @@ project.observations.for_moderator(user)
 
 #### for_viewer(user)
 
-Returns all observations for viewer, i.e. users who have no moderation permissions on the projects.
+Returns all observations for viewer, i.e. users who have no moderation permissions on the project.
 
 If the user is anonymous, it returns only observations with `status='active'` and `status='review'`
 
@@ -169,7 +169,7 @@ If the user is not anonymous, it returns it returns only observations with `stat
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User the observations are queried for.</dd>
 </dl>
 

@@ -7,26 +7,26 @@ A field is part of a category. It defines type and constraints for one property 
 
 The following types are available:
 
-- `TextField`
-- `NumericField`
-- `DateTimeField`
-- `DateField`
-- `TimeField`
-- `LookupField`
-- `MultipleLookupField`
+- `TextField` for text input.
+- `NumericField` for numeric input.
+- `DateTimeField` for input of date and time.
+- `DateField` for date-only inputs.
+- `TimeField` for time-only inputs.
+- `LookupField`; a list of predefined values, the user can select exactly one.
+- `MultipleLookupField`; a list of predefined values, the user can select arbitrary number.
 
 ### Attributes
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-id                     | int                      | Identifies the field in the database.
-name                   | str                      | Short title of the field.
-description            | str                      | Longer description about the field.
-key                    | str                      | The key is used as an identifier for the field, when exchanging contribution attributes via the API.
-required               | boolean                  | Indicates if a value for this field is required.
-category               | [Category](/docs/internal/category.html) | Category this field is assigned to.
-order                  | int                      | Position of the field in the list of field for the category.
-status                 | str                      | Status of the field. Must be one of `active`, `inactive`, `deleted`.
+`id`                     | int                      | Identifies the field in the database.
+`name`                   | string                   | Short title of the field.
+`description`            | string                   | Longer description about the field.
+`key`                    | string                   | The key is used as an identifier for the field, when exchanging contribution attributes via the API.
+`required`               | boolean                  | Indicates if a value for this field is required.
+`category`               | [Category](/docs/programming/category.html) | Category this field is assigned to.
+`order`                  | int                      | Position of the field in the list of fields for the category.
+`status`                 | string                   | Status of the field. Must be one of `active`, `inactive`, `deleted`. Defaults to `active`.
 
 #### Field-specific attributes
 
@@ -34,28 +34,28 @@ status                 | str                      | Status of the field. Must be
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-maxlength              | int                      | Maximum number of characters accepted for the text field.
-textarea               | boolean                  | Indicates of the field should be displayed as a text box in the front-end.
+`maxlength`              | int                      | Maximum number of characters accepted for the text field.
+`textarea`               | boolean                  | Indicates of the field should be displayed as a text box in the front-end.
 
 ##### NumericField
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-minval                 | float                    | Lowest accepted value for the field.
-maxval                 | float                    | Largest accepted value for the field.
+`minval`                 | float                    | Lowest accepted value for the field.
+`maxval`                 | float                    | Largest accepted value for the field.
 
 ##### Lookupfield / MultipleLookupField
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-lookupvalues           | QuerySet                 | List of [LookupValues](/docs/internal/lookupvalues.html)
+`lookupvalues`           | QuerySet                 | List of [LookupValues](/docs/programming/lookupvalues.html)
 
 ### Read-only properties
 
 Parameter              | Description
 -----------------------|-----------------------------------------------
-type_name              | Human readable type of the field, e.g. "Date and time"
-fieldtype              | Type of the field, e.g. "DateTimeField"
+`type_name`              | Human readable type of the field, e.g. "Date and time"
+`fieldtype`              | Type of the field, e.g. "DateTimeField"
 
 ### Methods
 
@@ -93,7 +93,7 @@ Validates the input against the field definition, i.e. the type and constraints.
         <dd>If the value does not comply to the field definition.</dd>
 </dl>
 
-##### `validate_required(value)`
+#### `validate_required(value)`
 
 Checks if an accepted value is provided if the field is required.
 
@@ -111,7 +111,7 @@ Checks if an accepted value is provided if the field is required.
         <dd>If the field is required and no value is provided.</dd>
 </dl>
 
-##### delete()
+#### `delete()`
 
 Deletes the field by setting its status to `deleted`.
 
@@ -130,7 +130,7 @@ Deletes the field by setting its status to `deleted`.
         <dd>Key used when exchanging contribution attributes via the API/</dd>
     <dt>required: <span class="type">boolean</span></dt>
         <dd>Indicates if a value for the field is required.</dd>
-    <dt>category: <span class="type"><a href="/docs/internal/category.html">Category</a></span></dt>
+    <dt>category: <span class="type"><a href="/docs/programming/category.html">Category</a></span></dt>
         <dd>Category this field is assigned to.</dd>
     <dt>field_type: <span class="type">string</span></dt>
         <dd>Identifies the type of the field.</dd>
@@ -138,7 +138,7 @@ Deletes the field by setting its status to `deleted`.
 
 ##### Returns
 
-<span class="type"><a href="/docs/internal/field.html">Field</a></span>
+<span class="type"><a href="/docs/programming/field.html">Field</a></span>
 
 ##### Example use
 
@@ -163,8 +163,8 @@ Returns a list of all fields in a category that the user can access.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
-        <dd>User the category is queried for.</dd>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
+        <dd>User the fields are queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
     <dt>category_id: <span class="type">integer</span></dt>
@@ -173,7 +173,7 @@ Returns a list of all fields in a category that the user can access.
 
 ##### Returns
 
-<span class="type">django.db.models.query.QuerySet</span>: List of [Fields](/docs/internal/field.html)
+<span class="type">django.db.models.query.QuerySet</span>: List of <span class="type">Fields</span>
 
 #### `get_single(user, project_id, category_id, field_id)`
 
@@ -182,8 +182,8 @@ Returns a single field.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
-        <dd>User the category is queried for.</dd>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
+        <dd>User the field is queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
     <dt>category_id: <span class="type">integer</span></dt>
@@ -194,7 +194,7 @@ Returns a single field.
 
 ##### Returns
 
-<span class="type"><a href="/docs/internal/field.html">Field</a></span>
+<span class="type">Field</span>
 
 ##### Raises
 
@@ -212,8 +212,8 @@ Returns a single field if the user is an administrator of the project.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
-        <dd>User the category is queried for.</dd>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
+        <dd>User the field is queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
     <dt>category_id: <span class="type">integer</span></dt>
@@ -224,7 +224,7 @@ Returns a single field if the user is an administrator of the project.
 
 ##### Returns
 
-<span class="type"><a href="/docs/internal/field.html">Field</a></span>
+<span class="type">Field</span>
 
 ##### Raises
 

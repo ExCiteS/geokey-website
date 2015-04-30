@@ -9,10 +9,10 @@ A lookup value is a pre-defined accepted value for a LookupField or MuiltipleLoo
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-id                     | int                      | Identifies the lookup value in the database.
-name                   | str                      | Short title of the value.
-status                 | str                      | Status of the field, must be one of 'active', 'inactive', `deleted`.
-field                  | LookupField / MultipleLookupField | Field this value is assigned to.
+`id`                     | int                      | Identifies the lookup value in the database.
+`name`                   | string                   | Short title of the value.
+`status`                 | string                   | Status of the field, must be one of 'active', 'inactive', `deleted`.
+`field`                  | LookupField / MultipleLookupField | Field this value is assigned to.
 
 ### Methods
 
@@ -59,7 +59,7 @@ MultipleLookupValue.objects.create(name=name, field=field)
 
 ##### Returns
 
-<span class="type"><a href="/docs/internal/lookupvalue.html">LookupValue</a></span>
+<span class="type"><a href="/docs/programming/lookupvalue.html">LookupValue</a></span>
 
 ##### Raises
 

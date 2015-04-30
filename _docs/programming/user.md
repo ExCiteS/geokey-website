@@ -9,11 +9,11 @@ A registered user.
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-id                     | int                      | Identifies the user in the data base.
-email                  | Email                    | User's email address. Must be unique.
-display_name           | string                   | User's display name. Must be unique.
-is_active              | boolean                  | Indicates if the user is active.
-is_superuser           | boolean                  | Indicates if the user is super user.
+`id`                     | int                      | Identifies the user in the data base.
+`email`                  | Email                    | User's email address. Must be unique.
+`display_name`           | string                   | User's display name. Must be unique.
+`is_active`              | boolean                  | Indicates if the user is active.
+`is_superuser`           | boolean                  | Indicates if the user is super user.
 
 ### Methods
 

@@ -3,19 +3,19 @@ layout: internal-docs
 title:  "MediaFile"
 ---
 
-MediaFiles are images or videos that can be attached to [Observations](/docs/internal/observation.html)
+MediaFiles are images or videos that can be attached to [Observations](/docs/programming/observation.html).
 
 ### Attributes
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-id                     | int                      | Identifies file in the data base.
-name                   | string                   | Title of the file.
-description            | string                   | Long-form caption of the image.
-contribution           | [Observation](/docs/internal/observation.html) | Observation this file is assigned to.
-creator                | [User](/docs/internal/user.html) | User who added the file.
-created_at             | datetime                 | Date and time when the file was added.
-status                 | string                   | Status of the file. Must be one of `active`, `deleted`.
+`id`                     | int                      | Identifies file in the data base.
+`name`                   | string                   | Title of the file.
+`description`            | string                   | Long-form caption of the image.
+`contribution`           | [Observation](/docs/programming/observation.html) | Observation this file is assigned to.
+`creator`                | [User](/docs/programming/user.html) | User who added the file.
+`created_at`             | datetime                 | Date and time when the file was added.
+`status`                 | string                   | Status of the file. Must be one of `active`, `deleted`. Defaults to `active`.
 
 #### File-specific attributes
 
@@ -23,22 +23,22 @@ status                 | string                   | Status of the file. Must be 
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-image                  | ImageFile                | Image uploaded.
+`image`                  | ImageFile                | Image uploaded.
 
 ##### VideoFile
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-video                  | File                     | Video uploaded.
-youtube_id             | string                   | ID of the video uploaded to YouTube.
-thumbnail              | ImageFile                | Thumbnail image of the video.
-youtube_link           | URL                      | Embedable link to the youtube video.
+`video`                  | File                     | Video uploaded.
+`youtube_id`             | string                   | ID of the video uploaded to YouTube.
+`thumbnail`              | ImageFile                | Thumbnail image of the video.
+`youtube_link`           | URL                      | Embedable link to the youtube video.
 
 #### Read-only properties
 
 Property               | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-type_name              | string                   | Indicates the file type. Is one of `ImageFile`, `VideoFile`
+`type_name`              | string                   | Indicates the file type. Is one of `ImageFile`, `VideoFile`
 
 ### Methods
 
@@ -59,9 +59,9 @@ Creates a new file. It examines the content type of the file and creates the app
         <dd>Title of the file</dd>
     <dt>description: <span class="type">string</span></dt>
         <dd>Long-form caption of the image</dd>
-    <dt>creator: <span class="type"><span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>creator: <span class="type"><span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User who adds the file</dd>
-    <dt>contribution: <span class="type"><span class="type"><a href="/docs/internal/observation.html">Observation</a></span></dt>
+    <dt>contribution: <span class="type"><span class="type"><a href="/docs/programming/observation.html">Observation</a></span></dt>
         <dd>Observation this file is assigned to</dd>
     <dt>the_file: <span class="type">File</span></dt>
         <dd>File object representing the file.</dd>

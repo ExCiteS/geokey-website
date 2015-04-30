@@ -9,14 +9,14 @@ Grouping represents a data grouping, that is a view on a subset of all contribut
 
 Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-id                     | int                      | Identifies the grouping in the data base.
-name                   | string                   | Title of the data grouping.
-description            | string                   | Long-form description of the data grouping.
-creator                | [User](/docs/internal/user.html) | User who created the data grouping.
-created_at             | datetime                 | Date and time when the data grouping was created.
-isprivate              | boolean                  | Indicates if the data grouping is private
-status                 | string                   | Status of the data grouping. Must be one of `active` or `deleted`
-project                | [Project](/docs/internal/project.html) | Project the data grouping is assigned to.
+`id`                     | int                      | Identifies the grouping in the data base.
+`name`                   | string                   | Title of the data grouping.
+`description`            | string                   | Long-form description of the data grouping.
+`creator`                | [User](/docs/programming/user.html) | User who created the data grouping.
+`created_at`             | datetime                 | Date and time when the data grouping was created.
+`isprivate`              | boolean                  | Indicates if the data grouping is private
+`status`                 | string                   | Status of the data grouping. Must be one of `active` or `deleted`. Defaults to `active`.
+`project`                | [Project](/docs/programming/project.html) | Project the data grouping is assigned to.
 
 ### Methods
 
@@ -27,13 +27,13 @@ Provides access to all data accessible through the data grouping. It filters all
 ##### Parameters
 
 <dl class="parameters">
-    <dt>creator: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>creator: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User, who requests the data.</dd>
 </dl>
 
 ##### Returns
 
-<span class="type">django.db.models.query.QuerySet</span>: List of [Observations](/docs/internal/observation.html)
+<span class="type">django.db.models.query.QuerySet</span>: List of [Observations](/docs/programming/observation.html)
 
 #### delete()
 
@@ -46,7 +46,7 @@ Returns `True` if the user can moderate the data in the data grouping.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User, who is examined.</dd>
 </dl>
 
@@ -63,11 +63,11 @@ Returns `True` if the user can moderate the data in the data grouping.
         <dd>Title for the data grouping.</dd>
     <dt>description: <span class="type">string</span></dt>
         <dd>Optional. A long-form description for the data grouping.</dd>
-    <dt>creator: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>creator: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User, who creates the data grouping.</dd>
     <dt>private: <span class="type">boolean</span></dt>
         <dd>Optional. Indicates if the data grouping is private.</dd>
-    <dt>project: <span class="type"><a href="/docs/internal/project.html">User</a></span></dt>
+    <dt>project: <span class="type"><a href="/docs/programming/project.html">User</a></span></dt>
         <dd>Project this data grouping is assigned to.</dd>
 </dl>
 
@@ -96,7 +96,7 @@ Returns a list of all data groupings that the user can access in a project.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
         <dd>User the groupings are queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
@@ -113,8 +113,8 @@ Returns a single data grouping.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
-        <dd>User the groupings are queried for.</dd>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
+        <dd>User the grouping is queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
     <dt>grouping_id: <span class="type">integer</span></dt>
@@ -139,8 +139,8 @@ Returns a single data grouping if the user is admin of the project.
 ##### Parameters
 
 <dl class="parameters">
-    <dt>user: <span class="type"><a href="/docs/internal/user.html">User</a></span></dt>
-        <dd>User the groupings are queried for.</dd>
+    <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
+        <dd>User the grouping is queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
     <dt>grouping_id: <span class="type">integer</span></dt>
@@ -150,7 +150,8 @@ Returns a single data grouping if the user is admin of the project.
 ##### Returns
 
 <span class="type">Grouping</span>
-sdsa##### Raises
+
+##### Raises
 
 <dl class="parameters">
     <dt>Grouping.DoesNotExist</dt>
