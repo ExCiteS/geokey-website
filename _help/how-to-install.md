@@ -123,8 +123,8 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
 2. Download and unzip the GeoKey runner:
 
     ```
-    wget http://geokey.org.uk/downloads/runner.tar.gz
-    tar -xvf runner.tar.gz
+    wget http://geokey.org.uk/downloads/settings.tar.gz
+    tar -xvf settings.tar.gz
     ```
 
 3. Open `local_settings.py` and the database info and a secret key to your app
