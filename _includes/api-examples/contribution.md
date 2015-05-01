@@ -10,7 +10,7 @@
         ]
     },
     "properties": {
-        "child_friedly": false,
+        "child_friendly": false,
         "name": "The Grafton",
         "address": "20 Prince of Wales Rd, London NW5 3LG"
     },
