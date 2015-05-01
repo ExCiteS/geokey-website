@@ -103,8 +103,8 @@ We are going to use the default virtual host provided by the Apache installation
         Options -Indexes
     </Location>
 
-    Alias /assets/ /var/www/geokey/assets/
-    <Location "/assets/">
+    Alias /media/ /var/www/geokey/media/
+    <Location "/media/">
         Options -Indexes
     </Location>
     ```
@@ -118,6 +118,7 @@ We are going to use the default virtual host provided by the Apache installation
 6. Add following line just below `from django.core.wsgi import get_wsgi_application`
 
     ```
+    import sys
     sys.path.append('/home/django/runner')
     ```
 

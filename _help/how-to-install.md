@@ -66,22 +66,9 @@ This guide walks you through the process of setting up GeoKey on your own server
 
 4. Install the PostGIS extension on you database
 
-    Connect to the database, which you just created.
-
     ```
-    psql -d geokey
-    ```
-
-    Enable PostGIS extensions in your data base.
-
-    ```
-    geokey=# CREATE EXTENSION postgis;
-    ```
-
-    Close the data base connection.
-
-    ```
-    \q
+    psql -d geokey -c 'create extension postgis;'
+    psql -d geokey -c 'create extension hstore;'
     ```
 
 5. Finally log out as user postgres
@@ -117,7 +104,7 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
 1. Install the package
 
     ```
-    pip install --process-dependency-links geokey
+    pip install geokey
     ```
 
 2. Download and unzip the GeoKey runner:
@@ -160,7 +147,7 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
 6. You should be all set now. Try running the test server:
 
     ```
-    manage.py runserver 0.0.0.0:8000
+    python manage.py runserver 0.0.0.0:8000
     ```
 
    If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
