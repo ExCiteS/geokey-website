@@ -3,276 +3,155 @@ layout: tutorial
 title:  "How to install"
 ---
 
-This guide walks you through the process of setting up GeoKey on your own server. It explains how to setup the database, an Apache web server and what configurations you should do to make GeoKey run smoothly.
+This guide walks you through the process of setting up GeoKey on your own server. It explains how to setup the database, how to install the Python packages and what configurations you should implement to make GeoKey run smoothly.
 
 ### Installing pre-requisites
 
-Before we you can start setting up GeoKey, you need to install the following pre-requisites:
+1. Update your system
 
-1. Postgres (follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt)).
-2. Dev dependencies: `apt-get install postgresql-server-dev-9.3 python-dev`
-3. PostGIS: `sudo apt-get install postgresql-9.3-postgis`
-4. Pip and virtualenv: `sudo apt-get install python-pip python-virtualenv`
-5. Git: `sudo apt-get install git`
-6. Apache2: `sudo apt-get install apache2`
-7. mod-wsgi: `sudo apt-get install libapache2-mod-wsgi`
+    ```
+    sudo apt-get update && sudo apt-get upgrade
+    ```
 
+2. Install Postgres and PostGIS (we follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt))
+
+    ```
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt wheezy-pgdg main" >> /etc/apt/sources.list'
+    wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+    sudo apt-get update
+
+    sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4
+    ```
+
+3. Setup all other dependencies
+
+    ```
+    sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev
+    ```
 
 ### Setting up the database
 
-The database runs on Postgres 9.3 with hstore and PostGIS extension, which should be installed if you followed the instructions above.
+1. Create a new user on you system, which GeoKey uses to write to and read from the data base.
 
-First, you should create a new user, which GeoKey to write to and read from the data base.
+    ```
+    # adduser django
+    ```
 
-Start by adding a new user to your system.
+2. Add the user to your database.
 
-```
-# adduser django
-```
+    Connect to postgres as the postgres user
 
-To add the user to your database and create a database for GeoKey, connect to postgres first.
+    ```
+    # su - postgres
+    $ psql
+    ```
 
-```
-# su - postgres
-$ psql
-```
+    Now you're connected to Postgres, you can add the user and create a new database. To make it simple, we add ownership of that database to the user.
 
-Now you're connected to Postgres, you can add the user and create a new database. To make it simple, we add ownership of that database to the user.
+    ```
+    CREATE USER django WITH PASSWORD 'django123';
+    ```
 
-```
-CREATE USER django WITH PASSWORD 'django123';
-CREATE DATABASE geokey OWNER django;
-```
+3. Create the data base
 
-Close the data base
+    ```
+    CREATE DATABASE geokey OWNER django;
+    ```
 
-```
-\q
-```
+    Close the data base connection.
 
-and connect to the database you just created to install PostGIS and hstore:
+    ```
+    \q
+    ```
 
-```
-psql -d geokey
-```
+4. Install the PostGIS extension on you database
 
-Enable both extensions in your data base.
+    ```
+    psql -d geokey -c 'create extension postgis;'
+    psql -d geokey -c 'create extension hstore;'
+    ```
 
-```
-geokey=# CREATE EXTENSION hstore;
-geokey=# CREATE EXTENSION postgis;
-```
+5. Finally log out as user postgres
+
+    ```
+    logout
+    ```
 
 ### Setting up your virtual environment
 
-When installed, Apache automatically creates the directory `/var/www`, which is the default root for the web server. We're going to place GeoKey and all its dependencies in that directory.
+We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.org/en/latest/virtualenv.html). That way you can run applications that depend on different versions of the same library simultaneously without having to worry about version conflicts.
 
-To be save, we install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.org/en/latest/virtualenv.html). That way you can run applications that depend on different versions of the same library simultaniously without having to worry about version conflicts.
+1. Choose a directory where you have write access and create an empty virtual environment
 
-To set up a virtual environment, create a new directory in `/var/www` that will host GeoKey and its dependencies.
+    ```
+    virtualenv env
+    ```
 
-```
-cd /var/www
-mkdir geokey
-cd geokey
-```
+2. Activate the env
 
-Now create a virtualenv for the instance of GeoKey.
+    ```
+    . env/bin/activate
+    ```
 
-```
-virtualenv env
-```
+3. Upgrade pip so the correct python dependencies will be installed later on
 
-Your virtual environment is now set up.
+    ```
+    pip install --upgrade pip
+    ```
 
-### Installing GeoKey
+### Setting up GeoKey
 
-GeoKey can be installed by downloading the code from the Github repository, installing the requirements in the virtual environment and setting the data base structure.
+1. Install the package
 
-First, clone the code from the [Github repository](https://github.com/ExCiteS/geokey/) and switch to latest stable branch.
+    ```
+    pip install geokey
+    ```
 
-```
-git clone https://github.com/ExCiteS/geokey.git
-git checkout stable/0.4.x
-```
+2. Download and unzip the GeoKey runner:
 
-Switch to the platform directory
+    ```
+    wget http://geokey.org.uk/downloads/settings.tar.gz
+    tar -xvf settings.tar.gz
+    ```
 
-```
-cd geokey
-```
+3. Open `local_settings.py` and the database info and a secret key to your app
 
-and install the dependencies into your virtual environment
+    ```
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.contrib.gis.db.backends.postgis',
+            'NAME': 'geokey',
+            'USER': 'django',
+            'PASSWORD': 'django123',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
-```
-../env/bin/pip install -r requirements.txt
-```
+    SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    ```
 
-Now connect GeoKey to your data base. First, duplicate the project settings and the extensions urls file. The latter one will be used to register extension API endpoints with GeoKey.
 
-```
-cp core/settings/project.sample.py core/settings/project.py
-cp core/url/extensions.sample.py core/url/extensions.py
-```
+4. Create the database structure
 
-Open the file in your favourite text editor (e.g. Vim):
+    ```
+    python manage.py migrate
+    ```
 
-```
-vim core/settings/project.py
-```
+5. Add yourself as super user. You can use the same email and password to log into the system later.
 
-and enter the user name and password of the data base user. Also, don't forget to change the platform name to your project:
+    ```
+    python manage.py createsuperuser
+    ```
 
-```
-PLATFORM_NAME = 'My awesome mapping project'
-```
+6. You should be all set now. Try running the test server:
 
-This name will be user throughout the system, e.g. when notifying users via email.
+    ```
+    python manage.py runserver 0.0.0.0:8000
+    ```
 
-Finally create the structure in your data base:
+   If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
 
-```
-../env/bin/python manage.py migrate
-```
-
-Create yourself as the first super user, This will allow you to manage the whole platform and add more super users. You will be prompted to enter your email, display name and password.
-
-```
-python manage.py createsuperuser
-```
-
-You should be all set now. Try running the test server:
-
-```
-../env/bin/python manage.py runserver 0.0.0.0:8000
-```
-
-If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
-
-### Running GeoKey in Apache
-
-You have now succesfully installed GeoKey on your Debian server. You will agree, that running the server in the test environment is not exactly optimal. Hence, we're now setting up Apache with mod_wsgi to run GeoKey in Apache.
-
-For simplicity, we are going to use the default virtual host provided by the Apache installation.
-
-Open the apache config file in your text editor.
-
-```
-vim /etc/apache2/sites-available/default
-```
-
-Add the following lines just below `<VirtualHost *:80>`:
-
-```
-WSGIDaemonProcess geokey python-path=/var/www/geokey/geokey:/var/www/geokey/env/lib/python2.7/site-packages
-WSGIProcessGroup geokey
-WSGIScriptAlias / /var/www/geokey/geokey/core/wsgi.py
-WSGIPassAuthorization On
-```
-
-This first line creates a new WSGI deamon that runs [the platfom] in Apache. Its name (in our case `geokey`) can be anything, but you should use a descriptive name. The `python-path` directive contains both the path of your Django project and the path to the Python packages inside your virtual environment.
-
-The second line tells the virtual host to use the WSGI daemon we just created.
-
-The third line tells Apache and mod_wsgi where to find the WSGI configuration.
-
-The last line enables WSGI to pass authorisation credentials to the Django application. This is neccessary, because Django would not be able to authenticate users otherwise.
-
-We then have to tell Apache where to find static and media files from your Django project.
-
-```
-Alias /static/ /var/www/geokey/geokey/static/
-<Location "/static/">
-    Options -Indexes
-</Location>
-
-Alias /media/ /var/www/geokey/geokey/media/
-<Location "/media/">
-    Options -Indexes
-</Location>
-```
-
-Finally, we need to tell WSGI where to find configuration files for our Django project. Open the WSGI confguration in your text editor:
-
-```
-sudo vim /var/www/geokey/geokey/core/wsgi.py
-```
-
-Replace `import os` with the following lines:
-
-```
-import os, sys
-sys.path.append('/var/www/geokey/geokey/')
-```
-
-You should be all set now. Now restart Apache
-
-```
-sudo service apache2 restart
-```
-
-and point your browser to your domain. You should see the admin landing page now.
-
-
-### Enabling media upload
-
-In order to enable upload of media, you need to create a media directory and point Django to it. Head to your Django application directory and create the directory.
-
-```
-cd /var/www/geokey/geokey/
-sudo mkdir media
-```
-
-Then allow the default apache user to write to that directory.
-
-```
-chgrp -R www-data media/
-chmod -R g+w media/
-```
-
-Then open the project configuration
-
-```
-vim core/settings/project.py
-```
-
-And set the media root to the directory you have just created.
-
-```
-MEDIA_ROOT = '/var/www/geokey/geokey/media/'
-```
-
-Videos are – by default – uploaded to your Youtube account. First you will need to obtain Youtube API keys following [this guide](https://developers.google.com/youtube/registering_an_application). The add the credentials to the project settings:
-
-```
-YOUTUBE_AUTH_EMAIL = 'your-email@example.com'
-YOUTUBE_AUTH_PASSWORD = 'password'
-YOUTUBE_DEVELOPER_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-YOUTUBE_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
-```
-
-### Enabling email
-
-GeoKey uses e-mail in various cases; for instance, when users want to reset their password. We therefore need to setup [Postfix](http://www.postfix.org/) to send e-mail from your server.
-
-First install Postfix:
-
-```
-apt-get update
-apt-get install postfix
-```
-
-Then open project configuration in your text editor:
-
-```
-vim core/settings/project.py
-```
-
-and add a default e-mail address that is used as sender for e-mails send by Django.
-
-```
-DEFAULT_FROM_EMAIL = 'sender@example.com'
-```
 
 <div class="info-box alert alert-success">
     <i class="fa fa-check-square-o"></i>
@@ -281,6 +160,9 @@ DEFAULT_FROM_EMAIL = 'sender@example.com'
             <li>
                 <h6><a href="/help/install-troubleshooting.html">Troubleshooting</a></h6>
                 <p>Identify and fix troubles with your installation.</p>
+            </li>
+            <li>
+                <h6><a href="/help/run-in-apache.html">Running GeoKey in Apache</a></h6>
             </li>
         </ul>
     </div>
