@@ -22,7 +22,7 @@ show how to install the extension.
 
 ### Register the extension with GeoKey
 
-1. Add the EpiCollect extension to your INSTALLED_APPS settings (`core/settings/project.py`):
+1. Add the EpiCollect extension to your `INSTALLED_APPS` settings (`settings/local_settings.py`):
 
     ```
     INSTALLED_APPS = (
@@ -31,7 +31,7 @@ show how to install the extension.
     )
     ```
 
-2. Include the EpiCollect URL configuration in your extensions urls.py (`core/url/extensions.py`):
+2. Include the EpiCollect URL configuration in your extensions urls.py (`settings/urls.py`):
 
     ```
     url(r'^', include('geokey_epicollect.urls', namespace='geokey_epicollect')),

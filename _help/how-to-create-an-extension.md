@@ -33,7 +33,7 @@ pip install -e .
 
 <span class="tut-step">4</span> Register the extension with GeoKey.
 
-Add the package to installed apps in `core/settings/project.py`:
+Add the package to installed apps in `settings/local_settings.py`:
 
 ```
 INSTALLED_APPS += (
@@ -42,7 +42,7 @@ INSTALLED_APPS += (
 )
 ```
 
-And register the API endpoints in `core/url/extension.py` if applicable:
+And register the API endpoints in `settings/urls.py` if applicable:
 
 ```
 urlpatterns = patterns(
