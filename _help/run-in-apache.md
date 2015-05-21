@@ -137,7 +137,13 @@ Videos are – by default – uploaded to your Youtube account.
 
 1. You will need to obtain Youtube API keys following [this guide](https://developers.google.com/youtube/registering_an_application).
 
-2. The add the credentials to `local_settings`:
+2. Set the `ENABLE_VIDEO` flag in `local_settings`:
+
+    ```
+    ENABLE_VIDEO = True
+    ```
+
+3. The add the credentials to `local_settings`:
 
     ```
     YOUTUBE_AUTH_EMAIL = 'your-email@example.com'
