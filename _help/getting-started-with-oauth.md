@@ -27,7 +27,7 @@ Name            | Type     | Description
 
 ### GeoKey redirects back to your site
 
-If the user authorises the application Community Maps redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from Community Maps.
+If the user authorises the application, GeoKey redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from GeoKey.
 
 ````
 POST /oauth2/token/
@@ -57,7 +57,7 @@ Name              | Type     | Description
 
 ### Sign the request to the API
 
-Using the access token your application can make requests to Community Maps on behalf of the user.
+Using the access token your application can make requests to GeoKey on behalf of the user.
 
 Sign the request by setting the `Authorization` header in the request.
 
