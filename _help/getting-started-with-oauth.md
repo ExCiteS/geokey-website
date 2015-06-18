@@ -25,7 +25,7 @@ Name            | Type     | Description
 `redirect_url`  | `string` | **Required** The URL the user is being redirected to after authorisation.
 `response_type` | `string` | **Required** Must be `token`
 
-### Community Maps redirects back to your site
+### GeoKey redirects back to your site
 
 If the user authorises the application Community Maps redirects back to your site with a temporary token in the `code` parameter. Use the temporary token to request the actual access token from Community Maps.
 
