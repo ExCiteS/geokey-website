@@ -20,7 +20,6 @@ Parameter              | Type                     | Description
 `geographic_extend`      | geometry                 | The geographic extent of the project. You can use it on client side to zoom the map to this extent.
 `categories`             | QuerySet                 | List of [categories](/docs/programming/category.html) assigned to the project
 `observations`           | QuerySet                 | List of [observations](/docs/programming/observation.html) assigned to the project
-`groupings`              | QuerySet                 | List of [data groupings](/docs/programming/grouping.html) assigned to the project
 
 ### Methods
 
