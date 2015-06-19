@@ -162,29 +162,6 @@
             "created_at": "2014-09-17T00:00:00Z"
         }
     ],
-    "data_groupings": [
-        {
-            "id": 45,
-            "name": "Pubs",
-            "description": "",
-            "created_at": "2014-09-19T12:58:23.389Z",
-            "num_contributions": 0
-        },
-        {
-            "id": 44,
-            "name": "Restaurants",
-            "description": "",
-            "created_at": "2014-09-19T12:57:53.527Z",
-            "num_contributions": 0
-        },
-        {
-            "id": 46,
-            "name": "Local shops",
-            "description": "",
-            "created_at": "2014-09-19T12:58:44.663Z",
-            "num_contributions": 0
-        }
-    ],
     "contribution_info": {
         "personal": 0,
         "total": 0,

@@ -3,31 +3,14 @@ layout: docs
 title:  "Add document"
 ---
 
-You can add a documents to a contribution via three different endpoints.
+``````
+POST /api/projects/:project_id/contributions/:contribution_id/media/
+``````
 
 Currently the following file formats are supported:
 
 - _Images:_ `.png`, `.jpg`, `.jpeg`, `.gif`
 - _Videos:_ `.mov`, `.mpeg4`, `.avi`, `.wmv`, `.flv`, `.3gpp`, `.webm`
-
-
-**All users:**
-
-``````
-POST /api/projects/:project_id/data-groupings/all-contributions/contributions/:contribution_id/media/
-``````
-
-**Contributors:**
-
-``````
-POST /api/projects/:project_id/maps/data-groupings/my-contributions/contributions/:contribution_id/media/
-``````
-
-**Users that have been granted access to a data grouping:**
-
-``````
-POST /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contribution_id/media/
-``````
 
 ### Request
 
@@ -36,7 +19,6 @@ POST /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contri
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
-`grouping_id`     | `Integer`   | Optional. Unique identifier for the data grouping.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 
 #### Request headers

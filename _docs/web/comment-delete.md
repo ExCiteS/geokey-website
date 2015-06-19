@@ -3,24 +3,8 @@ layout: docs
 title:  "Delete comment"
 ---
 
-You delete a comment via three different endpoints.
-
-**All users:**
-
 ``````
-DELETE /api/projects/:project_id/data-groupings/all-contributions/contributions/:contribution_id/comments/:comment_id/
-``````
-
-**Contributors:**
-
-``````
-DELETE /api/projects/:project_id/maps/data-groupings/my-contributions/contributions/:contribution_id/comments/:comment_id/
-``````
-
-**Users that have been granted access to a data grouping:**
-
-``````
-DELETE /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contribution_id/comments/:comment_id/
+DELETE /api/projects/:project_id/contributions/:contribution_id/comments/:comment_id/
 ``````
 
 #### URL parameters
@@ -28,7 +12,6 @@ DELETE /api/projects/:project_id/data-groupings/:grouping_id/contributions/:cont
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
-`grouping_id`     | `Integer`   | Optional. Unique identifier for the data grouping.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 `comment_id`      | `Integer`   | Unique identifier for the comment.
 
