@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title:  "How to install"
+title:  "How to install on Ubuntu"
 ---
 
 This guide walks you through the process of setting up GeoKey on your own server. It explains how to setup the database, how to install the Python packages and what configurations you should implement to make GeoKey run smoothly.
@@ -8,9 +8,9 @@ This guide walks you through the process of setting up GeoKey on your own server
 <div class="info-box alert alert-warning">
     <i class="fa fa-check-square-o"></i>
     <div>
-        This guide shows you how to install GeoKey on a Debian machine. We have prepared installation guides for the following additional systems:
+        This guide shows you how to install GeoKey on a Ubuntu machine. We have prepared installation guides for the following additional systems:
         <ul class="tutorial-links">
-            <li><a href="/help/how-to-install-ubuntu.html">Ubuntu</a></li>
+            <li><a href="/help/how-to-install.html">Debian</a></li>
         </ul>
     </div>
 </div>
@@ -26,11 +26,11 @@ This guide walks you through the process of setting up GeoKey on your own server
 2. Install Postgres and PostGIS (we follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt))
 
     ```
-    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt wheezy-pgdg main" >> /etc/apt/sources.list'
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
     wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
     sudo apt-get update
 
-    sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4
+    sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4 pgadmin3
     ```
 
 3. Setup all other dependencies
