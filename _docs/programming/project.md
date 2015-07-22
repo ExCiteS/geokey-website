@@ -138,15 +138,19 @@ Returns `true` if the user is member of at least one user group.
 
 <span class="type">boolean</span>
 
-#### `get_all_contributions(user)`
+#### `get_all_contributions(user, search=None, subset=None)`
 
-Returns all contributions in a project that the user can access.
+Returns all contributions in a project that the user can access. If either `search` or `subset` are given the query set will be filtered accordingly. 
 
 ##### Parameters
 
 <dl class="parameters">
     <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
     <dd>User for whom the contributions are returned.</dd>
+    <dt>search: <span class="type">str</span></dt>
+    <dd>Optional. A free-text search query. Contributions will be filtered agains the term.</dd>
+    <dt>subset: <span class="type">int</span></dt>
+    <dd>Optional. The ID of a subset that should be used to filter the data.
 </dl>
 
 ##### Returns
