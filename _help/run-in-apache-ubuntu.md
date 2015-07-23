@@ -6,7 +6,7 @@ title:  "Run Geokey in Apache"
 This guide walks you through the setup for running GeoKey in Apache using mod_wsgi. We assume that you have already [installed Geokey](how-to-install.html).
 
 <div class="info-box alert alert-warning">
-    <i class="fa fa-check-square-o"></i>
+    <i class="fa fa-exclamation-triangle"></i>
     <div>
         This guide shows you how to run GeoKey on a Ubuntu machine. We have prepared guides for the following additional systems:
         <ul class="tutorial-links">

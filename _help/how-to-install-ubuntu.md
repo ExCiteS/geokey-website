@@ -6,7 +6,7 @@ title:  "How to install on Ubuntu"
 This guide walks you through the process of setting up GeoKey on your own server. It explains how to setup the database, how to install the Python packages and what configurations you should implement to make GeoKey run smoothly.
 
 <div class="info-box alert alert-warning">
-    <i class="fa fa-check-square-o"></i>
+    <i class="fa fa-exclamation-triangle"></i>
     <div>
         This guide shows you how to install GeoKey on a Ubuntu machine. We have prepared installation guides for the following additional systems:
         <ul class="tutorial-links">
@@ -36,7 +36,7 @@ This guide walks you through the process of setting up GeoKey on your own server
 3. Setup all other dependencies
 
     ```
-    sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev
+    sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev binutils libproj-dev gdal-bin python-gdal
     ```
 
 ### Setting up the database
