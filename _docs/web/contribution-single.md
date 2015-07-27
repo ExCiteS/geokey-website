@@ -2,24 +2,9 @@
 layout: docs
 title:  "Single contribution"
 ---
-You can access a single contribution through three different endpoints.
-
-**All users:**
 
 ``````
-GET /api/projects/:project_id/data-groupings/all-contributions/contributions/:contribution_id/
-``````
-
-**Contributors:**
-
-``````
-GET /api/projects/:project_id/maps/data-groupings/my-contributions/contributions/:contribution_id/
-``````
-
-**Users that have been granted access to a data grouping:**
-
-``````
-GET /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contribution_id/
+GET /api/projects/:project_id/contributions/:contribution_id/
 ``````
 
 #### Request parameters
@@ -27,7 +12,6 @@ GET /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contrib
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
-`grouping_id`     | `Integer`   | Optional. Unique identifier for the data grouping.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 
 #### Example response

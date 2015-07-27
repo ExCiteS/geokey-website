@@ -8,9 +8,9 @@ This guide walks you through the setup for running GeoKey in Apache using mod_ws
 <div class="info-box alert alert-warning">
     <i class="fa fa-exclamation-triangle"></i>
     <div>
-        This guide shows you how to run GeoKey on a Debian machine. We have prepared guides for the following additional systems:
+        This guide shows you how to run GeoKey on a Ubuntu machine. We have prepared guides for the following additional systems:
         <ul class="tutorial-links">
-            <li><a href="/help/run-in-apache-ubuntu.html">Ubuntu</a></li>
+            <li><a href="/help/run-in-apache.html">Debian</a></li>
         </ul>
     </div>
 </div>
@@ -75,7 +75,7 @@ We now create the directories that are used to serve static files like images, C
 
     ```
     chgrp -R www-data /var/www/geokey/media/
-    chmod -R g+w /var/www/geokey/media/
+    chmod -R 775 /var/www/geokey/media/
     ```
 
 ### Configure Apache virtual host
@@ -85,7 +85,7 @@ We are going to use the default virtual host provided by the Apache installation
 1. Open the apache config file in your text editor (we use vim, because it's awesome):
 
     ```
-    vim /etc/apache2/sites-available/default
+    vim /etc/apache2/sites-available/000-default.conf
     ```
 
 2. Add the following lines just below `<VirtualHost *:80>`:

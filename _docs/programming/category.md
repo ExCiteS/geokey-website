@@ -57,7 +57,6 @@ Category.objects.create(
     default_status='active',
     colour='#fff000',
     symbol=file
-    create_grouping=True
 )
 ```
 
@@ -78,8 +77,6 @@ Category.objects.create(
         <dd>Optional. Hex code of the categories' display colour.</dd>
     <dt>symbol: <span class="type">File</span></dt>
         <dd>Optional. An image that is used to display contributions of that category on the map.</dd>
-    <dt>create_grouping: <span class="type">boolean</span></dt>
-        <dd>Indicates if a <a href="/docs/programming/grouping.html">data grouping</a> should be automatically created for the category.</dd>
 </dl>
 
 ##### Returns
@@ -96,7 +93,7 @@ Returns a list of categories for a project that the user can access.
 
 <dl class="parameters">
     <dt>user: <span class="type"><a href="/docs/programming/user.html">User</a></span></dt>
-        <dd>User the categoryies are queried for.</dd>
+        <dd>User the categories are queried for.</dd>
     <dt>project_id: <span class="type">integer</span></dt>
         <dd>Identifies the project in the database.</dd>
 </dl>

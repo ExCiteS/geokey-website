@@ -3,43 +3,21 @@ layout: tutorial
 title:  "How to update"
 ---
 
-Updating GeoKey to the latest version takes just three simple steps.
+Updating GeoKey to the latest version takes just three steps.
 
-Fetch the latest updates from Github and switch to the stable branch
+1. Install the latest version GeoKey.
 
-```
-sudo git fetch
-sudo git checkout stable/0.4.x
-```
+    ```
+    sudo pip install -U geokey
+    ```
 
-Update the requirements
+2. Install the database migrations. You need to do that from your local `settings` directory.
 
-```
-pip install -U -r requirements.txt
-```
+    ```
+    python manage.py migrate
+    ```
+3. Restart Apache.
 
-Install the database migrations
-
-```
-python manage.py migrate
-```
-
-If you're running Apache you need to update your WSGI settings again. (We're working on making this more convenient for you.)
-
-Open the WSGI file in your text editor
-
-```
-vim core/settings/wsgi.cgi
-```
-
-and update the system path to your GeoKey directory
-
-```
-sys.path.append('/var/www/geokey/geokey/')
-```
-
-Restart Apache
-
-```
-/etc/init.d/apache2 restart
-```
+    ```
+    sudo service apache2 restart
+    ```

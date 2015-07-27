@@ -3,24 +3,8 @@ layout: docs
 title:  "Single document"
 ---
 
-You can get a single document attached to a contribution via three different endpoints.
-
-**All users:**
-
 ``````
-GET /api/projects/:project_id/data-groupings/all-contributions/contributions/:contribution_id/media/:document_id/
-``````
-
-**Contributors:**
-
-``````
-GET /api/projects/:project_id/maps/data-groupings/my-contributions/contributions/:contribution_id/media/:document_id/
-``````
-
-**Users that have been granted access to a data grouping:**
-
-``````
-GET /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contribution_id/media/:document_id/
+GET /api/projects/:project_id/contributions/:contribution_id/media/:document_id/
 ``````
 
 #### URL parameters
@@ -28,7 +12,6 @@ GET /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contrib
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
-`grouping_id`     | `Integer`   | Optional. Unique identifier for the data grouping.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 `document_id`     | `Integer`   | Unique identifier for the document
 

@@ -3,24 +3,8 @@ layout: docs
 title:  "Add comment"
 ---
 
-You can add a comment to a contribution via three different endpoints.
-
-**All users:**
-
 ``````
-PATCH /api/projects/:project_id/data-groupings/all-contributions/contributions/:contribution_id/comments/
-``````
-
-**Contributors:**
-
-``````
-PATCH /api/projects/:project_id/maps/data-groupings/my-contributions/contributions/:contribution_id/comments/
-``````
-
-**Users that have been granted access to a data grouping:**
-
-``````
-PATCH /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contribution_id/comments/
+PATCH /api/projects/:project_id/contributions/:contribution_id/comments/
 ``````
 
 ### Request
@@ -30,7 +14,6 @@ PATCH /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contr
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
-`grouping_id`     | `Integer`   | Optional. Unique identifier for the data grouping.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 
 #### Request headers

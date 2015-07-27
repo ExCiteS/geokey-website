@@ -3,24 +3,8 @@ layout: docs
 title:  "Update comment"
 ---
 
-You delete a comment via three different endpoints.
-
-**All users:**
-
 ``````
-PATCH /api/projects/:project_id/data-groupings/all-contributions/contributions/:contribution_id/comments/:comment_id/
-``````
-
-**Contributors:**
-
-``````
-PATCH /api/projects/:project_id/maps/data-groupings/my-contributions/contributions/:contribution_id/comments/:comment_id/
-``````
-
-**Users that have been granted access to a data grouping:**
-
-``````
-PATCH /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contribution_id/comments/:comment_id/
+PATCH /api/projects/:project_id/contributions/:contribution_id/comments/:comment_id/
 ``````
 
 ### Request
@@ -30,7 +14,6 @@ PATCH /api/projects/:project_id/data-groupings/:grouping_id/contributions/:contr
 Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
-`grouping_id`     | `Integer`   | Optional. Unique identifier for the data grouping.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 `comment_id`      | `Integer`   | Unique identifier for the comment.
 

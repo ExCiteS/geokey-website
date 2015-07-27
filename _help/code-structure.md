@@ -38,10 +38,6 @@ Django app for projects.
 
 Django app to define categories including fields.
 
-### datagroupings
-
-Django app to define datagroupings, their rules and user groups .
-
 ### contributions
 
 Django app for locations, observations, commends and media uploads that are contributed by users.
