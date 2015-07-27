@@ -4,7 +4,7 @@ title:  "List all contributions"
 ---
 
 ``````
-POST /api/projects/:project_id/contributions/
+GET /api/projects/:project_id/contributions/
 ``````
 
 #### Request Parameters
