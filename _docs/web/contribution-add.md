@@ -36,11 +36,11 @@ The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geoj
         ]
     },
     "properties": {
-        "attributes": {
-            "child_friedly": false,
-            "name": "The Grafton",
-            "address": "20 Prince of Wales Rd, London NW5 3LG"
-        },
+        "child_friedly": false,
+        "name": "The Grafton",
+        "address": "20 Prince of Wales Rd, London NW5 3LG"
+    },
+    "meta": {
         "category": 40
     }   
 }
