@@ -16,7 +16,14 @@ Updating GeoKey to the latest version takes just three steps.
     ```
     python manage.py migrate
     ```
-3. Restart Apache.
+
+3. Copy new and updated static files:
+
+    ```
+    python manage.py collectstatic
+    ```
+
+4. Restart Apache.
 
     ```
     sudo service apache2 restart

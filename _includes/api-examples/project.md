@@ -19,10 +19,12 @@
         ]
     },
     "subsets": [
-        "id": 1,
-        "name": "Italian Restaurants",
-        "description": null
-        "created_at": "2014-09-15T09:40:01.747Z",
+        {
+            "id": 1,
+            "name": "Italian Restaurants",
+            "description": null,
+            "created_at": "2014-09-15T09:40:01.747Z",
+        }
     ],
     "categories": [
         {

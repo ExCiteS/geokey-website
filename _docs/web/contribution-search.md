@@ -6,7 +6,7 @@ title:  "Search and filter contributions"
 The list of contributions can be filtered either by providing a free-text `query_term` or by providing the `subset_id` of a pre-defined subset. Both parameters can be combined; the search filter across all contributions in the subset.
 
 ```
-POST /api/projects/:project_id/contributions/?search={query_term}&subset={subset_id}
+GET /api/projects/:project_id/contributions/?search={query_term}&subset={subset_id}
 ```
 
 #### Request Parameters
