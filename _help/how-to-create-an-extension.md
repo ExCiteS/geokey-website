@@ -14,7 +14,7 @@ for GeoKey extensions that you can use as a starting point for your own
 extension.
 
 <span class="tut-step">1</span>
-[Download](https://github.com/ExCiteS/geokey-extension-boilerplate/archive/v1.0.zip)
+[Download](https://api.github.com/repos/ExCiteS/geokey-extension-boilerplate/zipball/master)
 and unzip the boilerplate.
 
 <span class="tut-step">2</span> Rename all occurrences of `geokey_extension`
