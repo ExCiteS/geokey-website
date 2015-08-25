@@ -15,7 +15,7 @@ The core module provides a set of components that are applied across various par
 - `url/ajax.py`: URLconf for AJAX API endpoints.
 - `url/admin.py`: URLconf for administration interface endpoints.
 - `decorators.py`: Python decorators implementing exception handling for HTTP requests.
-- `settings`: Directory containing settings for development, testing and production environments
+- `settings`: Directory containing settings for development, testing and production environments.
 
 ### static
 

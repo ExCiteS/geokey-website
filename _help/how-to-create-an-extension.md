@@ -33,7 +33,7 @@ pip install -e .
 
 <span class="tut-step">4</span> Register the extension with GeoKey.
 
-Add the package to installed apps in `settings/local_settings.py`:
+Add the package to installed apps in `settings/settings.py`:
 
 ```
 INSTALLED_APPS += (

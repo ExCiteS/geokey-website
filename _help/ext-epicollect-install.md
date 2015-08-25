@@ -8,13 +8,13 @@ show how to install the extension.
 
 ### Installation
 
-1. Install the dependencies
+1. Install the dependencies:
 
     ```
     sudo apt-get install libxml2-dev libxslt1-dev
     ```
 
-2. Install the extension
+2. Install the extension:
 
     ```
     pip install geokey-epicollect
@@ -22,7 +22,7 @@ show how to install the extension.
 
 ### Register the extension with GeoKey
 
-1. Add the EpiCollect extension to your `INSTALLED_APPS` settings (`settings/local_settings.py`):
+1. Add the EpiCollect extension to your `INSTALLED_APPS` settings (`settings/settings.py`):
 
     ```
     INSTALLED_APPS = (
