@@ -3,7 +3,7 @@ layout: docs
 title:  "Field response"
 ---
 
-#### Parameters
+### Parameters
 
 Parameter           | Type        | Description
 --------------------|-------------|-----------------------------------------------
@@ -20,7 +20,7 @@ Parameter           | Type        | Description
 `lookupvalues`      | `Array`     | Optional, only available with `LookupField`. List of accepted values for this field.
 `order`             | `Integer`   | The order in the list of fields.
 
-#### Example
+### Example
 
 {% highlight json %}
 {

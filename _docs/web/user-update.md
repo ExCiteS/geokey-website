@@ -3,11 +3,11 @@ layout: docs
 title:  "Update user info"
 ---
 
+### Request
+
 ``````
 PATCH /api/user/
 ``````
-
-### Request
 
 #### Request headers
 

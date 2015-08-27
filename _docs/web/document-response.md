@@ -3,7 +3,7 @@ layout: docs
 title:  "Document reponse"
 ---
 
-#### Parameters
+### Parameters
 
 Parameter           | Type        | Description
 --------------------|-------------|-----------------------------------------------
@@ -17,6 +17,6 @@ Parameter           | Type        | Description
 `creator`           | `Object`    | User, who created the document.
 `created_at`        | `Timestamp` | Date and time when the document has been created.
 
-#### Example
+### Example
 
 {% include api-examples/document.md %}

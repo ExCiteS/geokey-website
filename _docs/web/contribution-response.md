@@ -3,7 +3,8 @@ layout: docs
 title:  "Contribution response"
 ---
 
-#### Parameters
+### Parameters
+
 Parameter           | Type        | Description
 --------------------|-------------|---------------------------------------------------------------------------------------
 `id`                | `Integer`   | Unique identifier of the category.
@@ -17,6 +18,6 @@ Parameter           | Type        | Description
 `media   `          | `Array`     | List of [documents](document-response.html) added to the contribution.
 `review_comments`   | `Array`     | List of comments that refer to a problem with this contribution. Will be empty if contribution status is `active`.
 
-#### Example
+### Example
 
 {% include api-examples/contribution.md %}

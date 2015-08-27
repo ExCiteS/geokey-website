@@ -3,6 +3,8 @@ layout: docs
 title:  "Delete comment"
 ---
 
+### Request
+
 ``````
 DELETE /api/projects/:project_id/contributions/:contribution_id/comments/:comment_id/
 ``````
@@ -14,6 +16,8 @@ Parameter         | Type        | Description
 `project_id`      | `Integer`   | Unique identifier for the project.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 `comment_id`      | `Integer`   | Unique identifier for the comment.
+
+### Response
 
 #### Response codes
 

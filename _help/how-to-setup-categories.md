@@ -22,11 +22,11 @@ Finally click *Save* to create the category. You will be redirected to the categ
     <div>
         <ul class="tutorial-links">
             <li>
-                <h6><a href="how-to-create-field.html">How to create fields for a category</a></h6>
+                <h3><a href="how-to-create-field.html">How to create fields for a category</a></h3>
                 <p>Learn how to add fields to your category.</p>
             </li>
             <li>
-                <h6><a href="category-display-settings.html">Category Display Settings</a></h6>
+                <h3><a href="category-display-settings.html">Category Display Settings</a></h3>
                 <p>Define how your contributions will be displayed on the map.</p>
             </li>
         </ul>

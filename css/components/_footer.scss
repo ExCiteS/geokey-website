@@ -1,0 +1,20 @@
+footer{
+    color: #fff;
+    @include gradient($brand-primary);
+    padding-top: $padding-large-vertical * 4;
+    padding-bottom: $padding-large-vertical * 4;
+
+    div.row {
+        & > div {
+            @extend .col-sm-4;
+
+            ul {
+                @extend .list-unstyled;
+            }
+        }
+
+        a {
+            color: lighten($brand-primary, 60%);
+        }
+    }
+}

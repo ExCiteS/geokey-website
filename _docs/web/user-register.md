@@ -3,11 +3,11 @@ layout: docs
 title:  "Register a user"
 ---
 
+### Request
+
 ``````
 POST /api/user/
 ``````
-
-### Request
 
 #### Request headers
 
@@ -30,8 +30,6 @@ Header            | Required value
 You need to obtain a `client_id` by [registering your application](/help/register-your-app.html) with GeoKey.
 
 ### Response
-
-#### Response example
 
 {% highlight json %}
 {

@@ -3,11 +3,11 @@ layout: docs
 title:  "Add contribution"
 ---
 
+### Request
+
 ``````
 POST /api/projects/:project_id/contributions/
 ``````
-
-### Request
 
 #### URL Parameters
 
@@ -23,7 +23,7 @@ Header            | Required value
 
 #### POST body example
 
-The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geojson-objects) encoded description of the contribution and its location. 
+The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geojson-objects) encoded description of the contribution and its location.
 
 {% highlight json %}
 {
@@ -42,7 +42,7 @@ The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geoj
     },
     "meta": {
         "category": 40
-    }   
+    }
 }
 {% endhighlight %}
 
@@ -57,6 +57,6 @@ The POST body must contain a [GeoJSON](http://geojson.org/geojson-spec.html#geoj
 Code  |  Reason
 ------|-----------------------------------------
  201  | The contribution has been stored successfully.
- 400  | The request data is not valid. 
+ 400  | The request data is not valid.
  403  | The user authenticated with the request is not allowed to contribute to the project.
  404  | The project was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence private projects to unauthorised users.

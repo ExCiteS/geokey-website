@@ -1,0 +1,21 @@
+dl.parameters {
+    font-size: 16px;
+
+    dt {
+        color:$brand-danger;
+        font-family: $font-family-monospace;
+    }
+
+    dd {
+        text-indent: $padding-large-horizontal;
+        margin-bottom: $padding-large-vertical;
+    }
+}
+
+span.type {
+    color: $brand-success;
+    font-family: $font-family-monospace;
+    a:link {
+        color: $brand-success;
+    }
+}

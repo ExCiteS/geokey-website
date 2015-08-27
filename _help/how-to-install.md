@@ -168,11 +168,12 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
     <div>
         <ul class="tutorial-links">
             <li>
-                <h6><a href="/help/install-troubleshooting.html">Troubleshooting</a></h6>
+                <h3><a href="/help/install-troubleshooting.html">Troubleshooting</a></h3>
                 <p>Identify and fix troubles with your installation.</p>
             </li>
             <li>
-                <h6><a href="/help/run-in-apache.html">Running GeoKey in Apache</a></h6>
+                <h3><a href="/help/run-in-apache.html">Running GeoKey in Apache</a></h3>
+                <p>Now that you have installed GeoKey, learn how to make it available on the Web.</p>
             </li>
         </ul>
     </div>

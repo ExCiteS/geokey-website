@@ -3,11 +3,11 @@ layout: docs
 title:  "Update contribution"
 ---
 
+### Request
+
 ``````
 PATCH /api/projects/:project_id/contributions/:contribution_id/
 ``````
-
-### Request
 
 #### URL parameters
 

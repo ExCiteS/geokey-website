@@ -1,0 +1,130 @@
+header {
+    color: #fff;
+    @include gradient($brand-primary);
+    margin-top: 0;
+    padding-top: $padding-large-vertical * 4;
+    padding-bottom: $padding-large-vertical * 7;
+
+    a.btn,
+    button {
+        @extend .btn;
+        @extend .btn-default;
+        background-color: transparent;
+        color: #fff;
+        border-width: 2px;
+        border-color: #fff;
+
+        &:hover {
+            color: #fff;
+            background-color: lighten($brand-primary, 15%);
+            border-color: #fff;
+        }
+    }
+
+    h1 {
+        @extend .col-md-12;
+        margin-bottom: 0;
+        font-weight: 700;
+
+        span {
+            text-transform: uppercase;
+            display: block !important;
+            font-size: $font-size-small;
+            letter-spacing: 3px;
+            font-weight: normal;
+            margin-bottom: $padding-small-vertical;
+        }
+    }
+
+    p {
+        @extend .col-md-8;
+        font-size: $font-size-large;
+    }
+
+    nav {
+        @extend .container;
+        padding: $padding-large-vertical*2 $padding-large-horizontal;
+        font-size: 16px;
+
+        a {
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: lighten($brand-primary, 70%);
+            }
+
+            &.brand {
+                font-family: $font-family-alt;
+                font-size: $font-size-h3;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                float: left;
+                text-decoration: none;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 5px 0 0 0;
+            list-style: none;
+            text-align: right;
+
+            a:link,
+            a:visited {
+                @include transition(background-color, 0.3s, ease);
+                color: #fff;
+                text-decoration: none;
+                padding: $padding-large-vertical $padding-large-horizontal;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            @media screen and (max-width: $screen-sm) {
+                @include transition(right, 0.3s, ease);
+                position: absolute;
+                top: 59px;
+                right: -9999px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 999;
+
+                &.active {
+                    right: 0;
+                }
+
+                li {
+                    height: 46px;
+                }
+
+                a:link {
+                    display: block;
+                    padding: ($padding-large-vertical) ($padding-large-horizontal + 5px);
+                }
+            }
+
+            @media screen and (min-width: $screen-sm) {
+                li {
+                    display: inline-block;
+                }
+
+                a {
+                    border-radius: $navbar-border-radius;
+                }
+            }
+        }
+
+        button#burger {
+            float: right;
+
+            @media screen and (min-width: $screen-sm) {
+                display: none;
+            }
+        }
+    }
+}

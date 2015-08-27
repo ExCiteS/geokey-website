@@ -7,10 +7,8 @@ title: "GeoKey – Blog"
     {% include nav.html %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
-                <h1>Blog</h1>
-                <p>Read about what we've been up to recently</p>
-            </div>
+            <h1>Blog</h1>
+            <p>Read about what we've been up to recently</p>
         </div>
     </div>
 </header>
@@ -18,17 +16,17 @@ title: "GeoKey – Blog"
 <section>
     <div class="container">
 
-            {% for post in site.posts %}
-            <article class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <p class="meta"><i class="fa fa-file-text"></i> Published on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time> by {% if post.author_link %}<a href="{{ post.author_link }}">{% endif %}{{ post.author}}{% if post.author_link %}</a>{% endif %}</p>
+        {% for post in site.posts %}
+        <article>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-                {{ post.excerpt }}
-                <a href="{{ post.url }}" class="no-underline btn"><i class="fa fa-link"></i> Read more</a>
-            </div>
+            <p class="meta"><i class="fa fa-clock-o"></i> <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="published">{{ post.date | date_to_long_string }}</time> &mdash; <i class="fa fa-user"></i> {% if post.author_link %}<a href="{{ post.author_link }}">{% endif %}{{ post.author}}{% if post.author_link %}</a>{% endif %}</p>
+
+            {{ post.excerpt }}
+
+            <p><a href="{{ post.url }}" class="no-underline btn"><i class="fa fa-link"></i> Read more</a></p>
         </article>
-            {% endfor %}
+        {% endfor %}
 
     </div>
 </section>

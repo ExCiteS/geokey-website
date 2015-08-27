@@ -1,0 +1,24 @@
+#try-it {
+    text-align: center;
+}
+
+section#features {
+    @extend .container;
+    h2 {
+        text-align: center;
+    }
+
+    .feature {
+        @extend .col-sm-6;
+
+        i {
+            margin-top: 25px;
+        }
+    }
+}
+
+section#about {
+    img {
+        width: inherit;
+    }
+}

@@ -3,11 +3,11 @@ layout: docs
 title:  "Update password"
 ---
 
+### Request
+
 ``````
 POST /api/user/password/change
 ``````
-
-### Request
 
 #### Request headers
 
@@ -26,7 +26,9 @@ Header            | Required value
 {% endhighlight %}
 
 
-### Response codes
+### Response
+
+#### Response codes
 
 Code  |  Reason
 ------|-----------------------------------------

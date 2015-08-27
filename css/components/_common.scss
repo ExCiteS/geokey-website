@@ -1,0 +1,189 @@
+div#wrapper {
+    overflow: hidden;
+    position:relative;
+}
+
+section {
+    @include stripes();
+    padding-top: $padding-xxl-vertical;
+    padding-bottom: $padding-xxl-vertical;
+
+    .row {
+        & > h2,
+        & > h3,
+        & > h4,
+        & > h5,
+        & > p,
+        & > ul,
+        & > ol,
+        & > dl,
+        & > div.highlight,
+        & > table {
+            @extend .col-sm-10;
+            @extend .col-sm-offset-1;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        li {
+            margin-bottom: $font-size-base/2;
+        }
+    }
+
+    .row.overview {
+        & > h2 {
+            @extend .col-sm-12;
+            @extend .col-sm-offset-0;
+        }
+    }
+
+    h2 {
+        span {
+            text-transform: uppercase;
+            display: block !important;
+            font-size: $font-size-small;
+            color: lighten($brand-primary, 30%);
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+.btn-group {
+    @extend .btn-group;
+}
+
+a.btn,
+button {
+    @extend .btn;
+    @extend .btn-default;
+    border-width: 2px;
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: lighten($btn-default-color, 75%);
+    }
+}
+
+img {
+    border: 1px solid $gray-lighter;
+    @include border-right-radius($border-radius-base);
+    @include border-left-radius($border-radius-base);
+    padding: $padding-small-vertical;
+}
+
+div.highlight {
+    pre {
+        @include border-right-radius($border-radius-base);
+        border-left: 5px solid $brand-primary;
+        padding: $padding-large-vertical $padding-large-horizontal;
+        background-color: lighten($brand-primary, 75%);
+        font-size: 16px;
+    }
+}
+
+div.overview-description {
+    @extend .col-sm-4;
+}
+
+div.overview-links {
+    @extend .col-sm-8;
+}
+
+div.docs-links {
+    @extend .col-sm-6;
+
+    &:last-child {
+        @extend .col-sm-4;
+        @extend .col-sm-offset-2;
+    }
+}
+
+div.overview-links,
+div.docs-links {
+    ul {
+        @include links-list;
+    }
+
+}
+
+table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-hover;
+}
+
+div.info-box {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: $padding-large-vertical * 4;
+    margin-bottom: $padding-large-vertical * 4;
+    border: 1px solid $brand-primary;
+    @include clearfix;
+    @include border-right-radius($border-radius-base);
+    @include border-left-radius($border-radius-base);
+    @extend .col-sm-8;
+    @extend .col-sm-offset-2;
+
+    &.alert {
+        padding: 0;
+
+        i {
+            font-size: 20px;
+            color: #fff;
+            width: 10%;
+            float: left;
+            padding: 10px;
+            text-align: center;
+
+            @media screen and (min-width: $screen-sm) {
+                font-size: 40px;
+            }
+        }
+
+        p, div {
+            @include border-right-radius($border-radius-base);
+            background-color: #fff;
+            width: 90%;
+            float: right;
+            display: block;
+            padding: 10px;
+            min-height: 62px;
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        ul.tutorial-links {
+            @include links-list;
+
+            p {
+                width: 100%;
+                padding: 0;
+                min-height: 0;
+                float: none;
+            }
+        }
+    }
+
+    &.alert-success {
+        background-color: $brand-success;
+        border-color: $brand-success;
+    }
+
+    &.alert-warning {
+        background-color: $brand-warning;
+        border-color: $brand-warning;
+    }
+
+    &.alert-info {
+        background-color: $brand-primary;
+    }
+}

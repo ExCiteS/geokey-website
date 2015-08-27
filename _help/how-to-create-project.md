@@ -38,7 +38,8 @@ Finally, click *Save* to create your project. You are now redirect your projectâ
     <div>
     <ul class="tutorial-links">
         <li>
-          <h6><a href="how-to-setup-categories.html">How to setup categories for data collection</a></h6>
+          <h3><a href="how-to-setup-categories.html">How to setup categories for data collection</a></h3>
+          <p>Categories define the types of data you want to collect in your project.</p>
         </li>
     </ul>
     </div>

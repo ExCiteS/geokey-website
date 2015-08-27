@@ -1,0 +1,24 @@
+article {
+    @extend .row;
+    margin-bottom: $padding-xxl-vertical;
+
+    h2 {
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: $brand-primary;
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+}
+
+.meta {
+    color: $gray-light;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
