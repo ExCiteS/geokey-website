@@ -16,6 +16,11 @@ section#features {
         text-align: center;
     }
 
+    h3 {
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
     .feature {
         @extend .col-sm-6;
 
