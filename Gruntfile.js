@@ -21,7 +21,6 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'build/css/global.css': 'css/main.scss',
                     'build/css/geokey.css': 'css/geokey.scss'
                 }
             }
@@ -30,10 +29,6 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    {expand: true, src: ['css/fonts/*'], dest: 'build/'},
-                    {expand: true, src: ['css/octicons/*'], dest: 'build/'},
-                    {expand: true, src: ['css/bootstrap.min.css'], dest: 'build/'},
-                    {expand: true, src: ['css/syntax.css'], dest: 'build/'},
                     {expand: true, src: ['js/*'], dest: 'build/'}
                 ]
             }
