@@ -22,11 +22,8 @@ section#features {
     }
 
     .feature {
+        padding-top: $padding-xxl-vertical;
         @extend .col-sm-6;
-
-        i {
-            margin-top: 25px;
-        }
     }
 }
 

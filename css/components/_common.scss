@@ -9,8 +9,8 @@ h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
 
 section {
     @include stripes();
-    padding-top: $padding-xxl-vertical;
-    padding-bottom: $padding-xxl-vertical;
+    padding-top: $padding-xxl-vertical * 1.5;
+    padding-bottom: $padding-xxl-vertical * 1.5;
 
     .row {
         & > h2,
