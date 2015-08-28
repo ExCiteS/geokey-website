@@ -15,8 +15,33 @@ layout: default
 
 <section>
     <div class="container">
-        <article>
-            {{ content }}
-        </article>
+        <div class="row">
+            <div id="docs-nav">
+                <h2><span>Navigate</span></h2>
+                <ul>
+                    <li><a href="#request">Request</a></li>
+                    <li><a href="#response">Response</a></li>
+                </ul>
+            </div>
+            <div id="docs-cnt">
+                {{ content }}
+            </div>
+        </div>
     </div>
 </section>
+
+<script>
+    var headerHeight = document.getElementsByTagName('header')[0]. offsetHeight;
+    var nav = document.getElementById('docs-nav');
+    var cnt = document.getElementById('docs-cnt');
+
+    window.onscroll = function () {
+        if (window.scrollY > headerHeight) {
+            nav.classList.add('fixed');
+            cnt.classList.add('nav-fixed');
+        } else {
+            nav.classList.remove('fixed');
+            cnt.classList.remove('nav-fixed');
+        }
+    }
+</script>

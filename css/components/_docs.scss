@@ -6,10 +6,6 @@ div#docs-nav {
         top: 50px;
     }
 
-    h2 {
-        margin-top: 0;
-    }
-
     ul {
         @include list-unstyled;
         font-size: $font-size-small;
