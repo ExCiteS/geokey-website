@@ -2,6 +2,14 @@
     text-align: center;
 }
 
+section#about {
+    background-color: #fff;
+
+    img {
+        border: 0;
+    }
+}
+
 section#features {
     @extend .container;
     h2 {
