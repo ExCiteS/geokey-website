@@ -3,7 +3,7 @@ layout: tutorial
 title:  "How to setup categories for data collection"
 ---
 
-Now that we have [created a new project](how-to-create-project.html), we want to setup categories and their fields for data collection. Categories help us to define what kind of data is being collected and what kind of information a contributor needs to provide. Based on categories clients create forms for data collection and the provided input is validated before it appears on the map.
+Now that we have [created a new project](how-to-create-project.html), we want to setup categories and their fields for data collection. Categories help us to define what kind of data is being collected and what kind of information a contributor needs to provide. Based on categories, clients create forms for data collection and the provided input is validated before it appears on the map.
 
 We start adding categories by selecting the _Catgories_ from the menu on left-hand side of the project home page.
 

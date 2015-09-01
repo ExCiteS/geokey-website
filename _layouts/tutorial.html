@@ -13,8 +13,16 @@ layout: default
 
 <section>
     <div class="container">
-        <article class="row">
-            {{ content }}
-        </article>
+        <div class="row">
+            <div id="docs-nav">
+                <h2><span>Navigate</span></h2>
+                <ul></ul>
+            </div>
+            <div id="docs-cnt">
+                {{ content }}
+            </div>
+        </div>
     </div>
 </section>
+
+<script src="/build/js/toc.js"></script>

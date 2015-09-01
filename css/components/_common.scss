@@ -57,6 +57,17 @@ section {
     h3 {
         text-transform: uppercase;
         letter-spacing: 3px;
+        margin-top: $padding-large-vertical*5;
+    }
+
+    h4 {
+        font-weight: bold;
+        margin-top: $padding-large-vertical*3;
+    }
+
+    h5 {
+        font-style: italic;
+        margin-top: $padding-large-vertical*3;
     }
 }
 
@@ -131,8 +142,7 @@ div.info-box {
     @include clearfix;
     @include border-right-radius($border-radius-base);
     @include border-left-radius($border-radius-base);
-    @extend .col-sm-8;
-    @extend .col-sm-offset-2;
+    @extend .col-sm-12;
 
     &.alert {
         padding: 0;
