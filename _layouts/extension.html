@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<header id="header-docs">
+    {% include nav.html %}
+    <div class="container">
+        <div class="row">
+            <div>
+                <h1><span>Extension</span> {{ page.title }}</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div id="docs-nav">
+                <h2><span>Navigate</span></h2>
+                <ul></ul>
+            </div>
+            <div id="docs-cnt">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/build/js/toc.js"></script>

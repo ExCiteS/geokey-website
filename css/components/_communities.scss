@@ -1,0 +1,65 @@
+section#collect-data,
+section#use-data {
+    h2, p {
+        text-align: center;
+    }
+
+    div.apps {
+        @extend .container;
+
+        div.app {
+            @extend .row;
+            padding-top: $padding-xxl-vertical*2;
+            padding-bottom: $padding-xxl-vertical*2;
+            margin-top: $padding-xxl-vertical*2;
+            margin-bottom: $padding-xxl-vertical*2;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            p {
+                text-align: left !important;
+            }
+
+            &#community-maps {
+                background: url(/img/community-maps.png) no-repeat 0 50%;
+
+                @media screen and (max-width: $screen-sm) {
+                    background-position: 320px 0;
+                    padding-top: 320px;
+                }
+
+                @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+                    background-size: 57%;
+                }
+
+                h3, p {
+                    @extend .col-sm-5;
+                    @extend .col-sm-offset-7;
+                }
+            }
+
+            &#epicollect {
+                background: url(/img/epicollect.png) no-repeat 100% 0;
+
+                @media screen and (max-width: $screen-sm) {
+                    background-position: 50% 0;
+                    padding-top: 400px;
+                }
+
+                h3, p {
+                    @extend .col-sm-7;
+                    @extend .col-sm-offset-0;
+                }
+            }
+
+            &#your-app {
+                h3, p, ul {
+                    @extend .col-sm-5;
+                    @extend .col-sm-offset-7;
+                }
+            }
+        }
+    }
+}

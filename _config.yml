@@ -12,3 +12,5 @@ collections:
     output: true
   docs:
     output: true
+  extensions:
+    output: true
