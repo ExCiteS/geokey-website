@@ -6,14 +6,15 @@ var headers = document.getElementsByTagName('h3');
 
 
 for (var i = 0, len = headers.length; i < len; i++) {
-    var a = document.createElement('a');
-    a.setAttribute('href', '#' + headers[i].getAttribute('id'));
-    a.textContent = headers[i].textContent;
+    if (headers[i].getAttribute('id')) {
+        var a = document.createElement('a');
+        a.setAttribute('href', '#' + headers[i].getAttribute('id'));
+        a.textContent = headers[i].textContent;
 
-    li = document.createElement('li');
-    li.appendChild(a);
-
-    nav_links.appendChild(li);
+        var li = document.createElement('li');
+        li.appendChild(a);
+        nav_links.appendChild(li);
+    }
 }
 
 var headerHeight = document.getElementsByTagName('header')[0]. offsetHeight;
