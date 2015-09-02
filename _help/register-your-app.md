@@ -26,12 +26,12 @@ After saving your app, you will be redirected to the app’s settings page. Here
     <div>
         <ul class="tutorial-links">
             <li>
-                    <h6><a href="getting-started-with-oauth.html">Gettings started with OAuth</a></h6>
-              <p>Learn how to obtain OAuth tokens and how to sign your request to authenticate and authorise users.</p>
+                <h3><a href="getting-started-with-oauth.html">Gettings started with OAuth</a></h3>
+                <p>Learn how to obtain OAuth tokens and how to sign your request to authenticate and authorise users.</p>
             </li>
             <li>
-              <h6><a href="/docs/">Read the API docs</a></h6>
-              <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
+                <h3><a href="/docs/">Read the API docs</a></h3>
+                <p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p>
             </li>
         </ul>
     </div>

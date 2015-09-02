@@ -3,7 +3,7 @@ layout: tutorial
 title:  "Getting started with OAuth"
 ---
 
-OAuth is an open standard to authorise third-party applications to access information in GeoKey. OAuth is an open protocol that employs exchanging randomly generated access tokens to identify and authorise users instead of exposing user name and password. To authenticate users, client applications have to simply sign the requests to the API with the access token obtained.
+OAuth is an open standard to authorise third-party applications to access information in GeoKey. OAuth employs exchanging randomly generated access tokens to identify and authorise users instead of exposing user name and password. To authenticate users, client applications have to sign requests to the API with the access token obtained.
 
 In order to obtain OAuth tokens with your client application, you need to [register your application](/help/register-your-app.html) before getting started. Each registered application is assigned a unique Client ID and Client Secret.
 
@@ -40,7 +40,7 @@ The following sections explain the OAuth flows for these three grant types.
     http://example.com/#token=ACCESS_TOKEN
     ```
 
-    You can extract the token from the URL and sign your API calls with that token.
+    You can extract the token from the URL and [sign your calls](#sign-the-request-to-the-api) with that token.
 
 ### Authorization Code Flow
 
@@ -80,7 +80,7 @@ The following sections explain the OAuth flows for these three grant types.
     `client_id`       | `string` | **Required.** The Client ID that has been issued when you registered your application.
     `client_secret`   | `string` | **Required.** The Client Secret that has been issued when you registered your application.
 
-    #### Example response
+The following response contains the OAuth token to [sign API requests](#sign-the-request-to-the-api).
 
 {% highlight json %}
 {
@@ -93,22 +93,22 @@ The following sections explain the OAuth flows for these three grant types.
 
 ### Password grant
 
-1. The user enters their username and password in a form provided in your application. Your application then posts the information to the OAuth server.
+The user enters their username and password in a form provided in your application. Your application then posts the information to the OAuth server.
 
-    ````
-    POST /oauth2/token/
-    ````
+````
+POST /oauth2/token/
+````
 
-    ##### Parameters
+#### Parameters
 
-    Name            | Type     | Description
-    ----------------|----------|-----------------------------------
-    `client_id`     | `string` | **Required.** The Client ID that has been issued when you registered your application.
-    `grant_type`    | `string` | **Required.** Must be `password`
-    `username`      | `string` | **Required.** The user's user name.
-    `password`      | `string` | **Required.** The user's password.
+Name            | Type     | Description
+----------------|----------|-----------------------------------
+`client_id`     | `string` | **Required.** The Client ID that has been issued when you registered your application.
+`grant_type`    | `string` | **Required.** Must be `password`
+`username`      | `string` | **Required.** The user's user name.
+`password`      | `string` | **Required.** The user's password.
 
-    #### Example response
+The following response contains the OAuth token to [sign API requests](#sign-the-request-to-the-api).
 
 {% highlight json %}
 {
@@ -131,4 +131,4 @@ Sign the request by setting the `Authorization` header in the request.
 Authorization: Bearer iohdiu89YXHSusa9diushd89AYKDHdskfj8B8hd7
 ```
 
-<div class="info-box alert alert-info"><i class="fa fa-info-circle"></i><div><ul class="tutorial-links"><li><h6><a href="register-your-app.html">Register your app</a></h6><p>Before you can use our API you need to register your app.</p></li><li><h6><a href="/docs/">Read the API docs</a></h6><p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p></li></ul></div></div></div>
+<div class="info-box alert alert-info"><i class="fa fa-info-circle"></i><div><ul class="tutorial-links"><li><h3><a href="register-your-app.html">Register your app</a></h3><p>Before you can use our API you need to register your app.</p></li><li><h3><a href="/docs/">Read the API docs</a></h3><p>Find out which API endpoints to use to get information on projects and how to add, read and update contributions.</p></li></ul></div></div></div>
