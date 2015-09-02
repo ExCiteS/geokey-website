@@ -6,7 +6,6 @@ var headers = document.getElementsByTagName('h3');
 
 
 for (var i = 0, len = headers.length; i < len; i++) {
-    console.log(headers[i].getAttribute('id'));
     if (headers[i].getAttribute('id')) {
         var a = document.createElement('a');
         a.setAttribute('href', '#' + headers[i].getAttribute('id'));
