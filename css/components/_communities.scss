@@ -13,6 +13,7 @@ section#use-data {
             padding-bottom: $padding-xxl-vertical*2;
             margin-top: $padding-xxl-vertical*2;
             margin-bottom: $padding-xxl-vertical*2;
+            border-bottom: 1px solid $gray-lighter;
 
             &:last-child {
                 margin-bottom: 0;
@@ -23,7 +24,7 @@ section#use-data {
             }
 
             &#community-maps {
-                background: url(/img/community-maps.png) no-repeat 0 50%;
+                background: url(/img/community-maps.png) no-repeat 0 100%;
 
                 @media screen and (max-width: $screen-sm) {
                     background-position: 320px 0;
@@ -41,11 +42,19 @@ section#use-data {
             }
 
             &#epicollect {
-                background: url(/img/epicollect.png) no-repeat 100% 0;
+                background: url(/img/epicollect.png) no-repeat;
 
                 @media screen and (max-width: $screen-sm) {
                     background-position: 50% 0;
                     padding-top: 400px;
+                }
+
+                @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+                    background-position: 450px 0;
+                }
+
+                @media screen and (min-width: $screen-md) {
+                    background-position: 570px 0;
                 }
 
                 h3, p {
