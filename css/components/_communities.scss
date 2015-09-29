@@ -23,6 +23,13 @@ section#use-data {
                 text-align: left !important;
             }
 
+            &#export {
+                h3, p, ul {
+                    @extend .col-sm-6;
+                    @extend .col-sm-offset-6;
+                }
+            }
+
             &#community-maps {
                 background: url(/img/community-maps.png) no-repeat 0 100%;
 
