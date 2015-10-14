@@ -30,6 +30,13 @@ section#use-data {
                 }
             }
 
+            &#import {
+                h3, p, ul {
+                    @extend .col-sm-7;
+                    @extend .col-sm-offset-0;
+                }
+            }
+
             &#community-maps {
                 background: url(/img/community-maps.png) no-repeat 0 100%;
 
