@@ -11,7 +11,7 @@ Within the directory GeoKey you will find several directories: [core](#core), [s
 
 #### core
 
-`Core` provides shared functionality that is used accros different parts of GeoKey. This directory contains the following files:
+`Core` provides shared functionality that is used across different parts of GeoKey. This directory contains the following files:
 
 - `context_processors.py`: Pre-processors to add common information to template contexts.
 - `decorators.py`: Python decorators implementing exception handling for HTTP requests

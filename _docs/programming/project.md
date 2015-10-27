@@ -157,19 +157,6 @@ Returns all contributions in a project that the user can access. If either `sear
 
 <span class="type">django.db.models.query.QuerySet</span>: List of [Observations](/docs/programming/observation.html)
 
-#### `contact_admins(sender, mail_content)`
-
-Sends an email to all administrators in the project.
-
-##### Parameters
-
-<dl class="parameters">
-    <dt>sender: <span class="type">string</dt>
-    <dd>Email address of the user that sends the email.</dd>
-    <dt>mail_content: <span class="type">string</dt>
-    <dd>Text of the email.</dd>
-</dl>
-
 ### Creating a model instance
 
 #### `Project.create(name, description, isprivate, everyone_contributes, creator)`
