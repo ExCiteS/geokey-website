@@ -3,6 +3,8 @@ layout: docs
 title:  "Single document"
 ---
 
+### Request
+
 ``````
 GET /api/projects/:project_id/contributions/:contribution_id/media/:document_id/
 ``````
@@ -15,7 +17,7 @@ Parameter         | Type        | Description
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 `document_id`     | `Integer`   | Unique identifier for the document
 
-#### Example response
+### Response
 
 The response contains a [document](document-response.html) attached to the contribution.
 

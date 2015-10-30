@@ -3,6 +3,8 @@ layout: docs
 title:  "List comments"
 ---
 
+### Request
+
 ``````
 GET /api/projects/:project_id/contributions/:contribution_id/comments/
 ``````
@@ -14,7 +16,7 @@ Parameter         | Type        | Description
 `project_id`      | `Integer`   | Unique identifier for the project.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 
-#### Example response
+### Response
 
 The response contains an array of all [comments](comment-response.html) made to the contribution.
 

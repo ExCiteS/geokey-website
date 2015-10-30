@@ -3,6 +3,8 @@ layout: docs
 title:  "Delete contribution"
 ---
 
+### Request
+
 ``````
 DELETE /api/projects/:project_id/contributions/:contribution_id/
 ``````
@@ -13,6 +15,8 @@ Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | Unique identifier for the project.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
+
+### Response
 
 #### Response codes
 

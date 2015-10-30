@@ -1,0 +1,35 @@
+footer{
+    color: #fff;
+    @include gradient($brand-primary);
+    padding-top: $padding-large-vertical * 4;
+    padding-bottom: $padding-large-vertical * 4;
+    font-size: $font-size-small + 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    div.row {
+        & > div {
+            @extend .col-sm-3;
+            @extend .col-sm-offset-1;
+
+            ul {
+                @extend .list-unstyled;
+            }
+        }
+
+        & > div:first-child {
+            @extend .col-sm-4;
+            @extend .col-sm-offset-0;
+        }
+
+        a {
+            color: lighten($brand-primary, 60%);
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: #fff;
+        }
+    }
+}

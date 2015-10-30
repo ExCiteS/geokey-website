@@ -3,6 +3,8 @@ layout: docs
 title:  "List documents"
 ---
 
+### Request
+
 ``````
 GET /api/projects/:project_id/contributions/:contribution_id/media/
 ``````
@@ -14,7 +16,7 @@ Parameter         | Type        | Description
 `project_id`      | `Integer`   | Unique identifier for the project.
 `contribution_id` | `Integer`   | Unique identifier for the contribution.
 
-#### Example response
+### Response
 
 The response contains an array of all [documents](document-response.html) attached to the contribution.
 

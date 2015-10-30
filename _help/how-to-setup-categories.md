@@ -3,7 +3,7 @@ layout: tutorial
 title:  "How to setup categories for data collection"
 ---
 
-Now that we have [created a new project](how-to-create-project.html), we want to setup categories and their fields for data collection. Categories help us to define what kind of data is being collected and what kind of information a contributor needs to provide. Based on categories clients create forms for data collection and the provided input is validated before it appears on the map.
+Now that we have [created a new project](how-to-create-project.html), we want to setup categories and their fields for data collection. Categories help us to define what kind of data is being collected and what kind of information a contributor needs to provide. Based on categories, clients create forms for data collection and the provided input is validated before it appears on the map.
 
 We start adding categories by selecting the _Catgories_ from the menu on left-hand side of the project home page.
 
@@ -22,11 +22,11 @@ Finally click *Save* to create the category. You will be redirected to the categ
     <div>
         <ul class="tutorial-links">
             <li>
-                <h6><a href="how-to-create-field.html">How to create fields for a category</a></h6>
+                <h3><a href="how-to-create-field.html">How to create fields for a category</a></h3>
                 <p>Learn how to add fields to your category.</p>
             </li>
             <li>
-                <h6><a href="category-display-settings.html">Category Display Settings</a></h6>
+                <h3><a href="category-display-settings.html">Category Display Settings</a></h3>
                 <p>Define how your contributions will be displayed on the map.</p>
             </li>
         </ul>

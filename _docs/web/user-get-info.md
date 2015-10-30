@@ -3,13 +3,13 @@ layout: docs
 title:  "Get user info"
 ---
 
+### Request
+
 ``````
 GET /api/user/
 ``````
 
 ### Response
-
-#### Response example
 
 {% highlight json %}
 {

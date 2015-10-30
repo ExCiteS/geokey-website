@@ -3,11 +3,11 @@ layout: docs
 title:  "Update comment"
 ---
 
+### Request
+
 ``````
 PATCH /api/projects/:project_id/contributions/:contribution_id/comments/:comment_id/
 ``````
-
-### Request
 
 #### URL parameters
 
@@ -28,8 +28,6 @@ Parameter         | Type        | Description
 ### Response
 
 The response contains the [comment](comment-response.html) that has been added to the contribution.
-
-#### Example
 
 {% highlight json %}
 {
@@ -52,5 +50,5 @@ The response contains the [comment](comment-response.html) that has been added t
 Code  |  Reason
 ------|-----------------------------------------
 200  | The comment has been updated successfully.
-403  | The user authenticated with the request is not allowed to delete the contribution. (You have to be either creator of the contribution or a moderator of the project)
-404  | The project or contribution was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence private projects to unauthorised users.
+403  | The user authenticated with the request is not allowed to update the comment. (You have to be either creator of the comment or a moderator of the project)
+404  | The project, contribution or comment was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence private projects to unauthorised users.

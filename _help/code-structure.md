@@ -1,59 +1,82 @@
 ---
 layout: tutorial
-title:  "Platform code structure"
+title:  "Repository code structure"
 ---
 
-This document provides an overview on how the application code is structured into directories and how apps are structured internally.
+This document provides an overview on how the GeoKey's repository is structured. You will find all program files in the directory `geokey`. The contents of this directory are explained further.
 
-## Directory Structure
+### General Directory Structure
 
-### core
+Within the directory GeoKey you will find several directories: [core](#core), [static](#static) and [templates](#templates) contain code that is relevant to all components of GeoKey. All [other directories](#django-applications) hold Django apps that contain the program logic of GeoKey.
 
-The core module provides a set of components that are applied across various parts of the system.
+#### core
 
-- `urls.py`: Django's root URLconf. Provides switches to specialised endpoints for the platform, such as administration interface, the AJAX API and OAuth components.
-- `url/ajax.py`: URLconf for AJAX API endpoints.
-- `url/admin.py`: URLconf for administration interface endpoints.
-- `decorators.py`: Python decorators implementing exception handling for HTTP requests.
-- `settings`: Directory containing settings for development, testing and production environments
+`Core` provides shared functionality that is used across different parts of GeoKey. This directory contains the following files:
 
-### static
+- `context_processors.py`: Pre-processors to add common information to template contexts.
+- `decorators.py`: Python decorators implementing exception handling for HTTP requests
+- `exceptions.py`: Implements custom exceptions.
+- `middleware.py`: Contains request middleware that is executed when requests to the API are handled.
+- `mixins.py`: Contains mixins that are used to implement functionality that shared across model instances.
+- `serializers.py`: Contains base classes that are used to implement specific model serialisers.
+- `urls.py`: Django's root URL configuration. It provides switches to URLs available for GeoKey. You can find the following URL configurations in the directory `url`:
+    - `ajax.py`: Configurations for internal AJAX API endpoints that are used with admin panels.
+    - `admin.py`: Configurations for administration interface.
+    - `api.py`: Configurations for the public API.
+- `settings`: Directory containing settings for development, production environments
 
-Static JavaScript, CSS files and frameworks used in the administration interface.
+#### static
 
-- `lib`: All front-end libraries on which the administration interface depends. (Currently includes: [Twitter Bootstrap 3.0.0](http://getbootstrap.com/), [jQuery 1.10.1](http://jquery.com/), [Modernizr 2.6.2](http://modernizr.com/), [Leaflet](http://leafletjs.com/))
-- `ccs`: Costum CSS. Partly overrides Bootstrap's defaults.
-- `img`: Images used in the interface
-- `js`: JavaScript used in the interface.
+This directory contains all static files that are needed in the administration pages. The directory contains several sub-directories for JavaScript and CSS libraries (`lib`), custom CSS (`css`), images (`img`) and custom JavaScript (`js`).
 
-### templates
+GeoKey makes use of the following JavaScript and CSS libraries, that can be found in `lib`:
 
-HTML templates for the administration interface.
+- [bootstrap](http://getbootstrap.com)
+- [bootstrap-colorpicker](http://mjolnic.com/bootstrap-colorpicker/)
+- [bootstrap-datetime](https://eonasdan.github.io/bootstrap-datetimepicker/)
+- [jasny-bootstrap](http://www.jasny.net/bootstrap/)
+- [file-upload](https://github.com/kartik-v/bootstrap-fileinput)
+- [handlebars](http://handlebarsjs.com/)
+- [jQuery](https://jquery.com/)
+- [modernizr](http://modernizr.com/)
+- [moment](http://momentjs.com/)
 
-### projects
+#### templates
 
-Django app for projects.
+`templates` contains HTML templates for the administration panels. The templates can be found sub-directories corresponding to the [Django apps](#django-applications).
 
-### categories
+#### Django applications
 
-Django app to define categories including fields.
+The remaining directories all contain Django applications that make modules that make GeoKey. The apps contain functionality for components as follows. Please have a look at [GeoKey's data model](/help/data-model.html) to find out how components are related.
 
-### contributions
+- **applications**: OAuth2 applications.
+- **projects**: Projects.
+- **categories**: Categories and Fields.
+- **contributions**: Observations, Locations, Comments and MediaFiles.
+- **users**: User and UserGroups.
+- **extensions**: Functionality to register extensions.
+- **superusertools**: Functionality for superuser tools. Contains only admin panel views, no models.
+- **subsets**: Subsets.
 
-Django app for locations, observations, commends and media uploads that are contributed by users.
+The structure of each of the application directory is explained in the following section.
 
-### users
+### Application Components
 
-Everything related to users and user groups.
+Each directory represents is a Django application, that follows a certain convention. Most of GeoKey's Django apps consist of the following files. Apps that differ from that convention are pointed out below.
 
-## Application Components
+- **base.py:** Definitions for lists and dictionaries shared across an app, e.g. accepted status types for a model instance.
+- **forms.py:** [Forms](https://docs.djangoproject.com/en/dev/topics/forms/#the-form-class) to validate data in the admin panels.
+- **manager.py:** [Django managers](https://docs.djangoproject.com/en/dev/topics/db/managers/), which provide access to instances of models.
+- **models.py:** Model definitions.
+- **serializers.py:** [Django Rest Framework](http://www.django-rest-framework.org/) serialisers for model instances used to validate updates and serialise objects in the APIs.
+- **views.py:** [Django class-based views](https://docs.djangoproject.com/en/1.8/ref/class-based-views/) for the app.
 
-Each app is made up of the following components.
+Some parts of complex apps have sub-directories instead of single files. For instance, the app _contributions_ has a sub-directory `views` that separates views for observations, locations, comments and media files.
 
-- **base:** Definitions for lists and dictionaries shared across an app, e.g. accepted status types for a model instance.
-- **forms:** [Form field definitions](https://docs.djangoproject.com/en/dev/topics/forms/) for creating new model instances.
-- **manager:** [Django managers](https://docs.djangoproject.com/en/dev/topics/db/managers/), which provide access to model instances of the app.
-- **models:** Model definitions.
-- **serializers:** [Django Rest Framework](http://www.django-rest-framework.org/) serialisers for model instances used to validate updates and serialise objects in APIs.
-- **views:** [Django class-based views](https://docs.djangoproject.com/en/1.3/ref/class-based-views/) for the app.
 - **tests:** Unit and integration tests for the app.
+- **templatetags**: Custom template tags used in templates related to this app.
+
+The app _contributions_ has two additional directories:
+
+- **parsers:** Contains parsers to parse various data formats (GeoJSON) into de-serialisable objects.
+- **renderer:** Renders serialised objects into various data formats (GeoJSON, KML).

@@ -1,0 +1,34 @@
+#try-it {
+    text-align: center;
+}
+
+section#about {
+    background-color: #fff;
+
+    img {
+        border: 0;
+    }
+}
+
+section#features {
+    @extend .container;
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
+    .feature {
+        padding-top: $padding-xxl-vertical;
+        @extend .col-sm-6;
+    }
+}
+
+section#about {
+    img {
+        width: inherit;
+    }
+}

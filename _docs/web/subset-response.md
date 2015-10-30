@@ -3,7 +3,7 @@ layout: docs
 title:  "Subset response"
 ---
 
-#### Parameters
+### Parameters
 
 Parameter           | Type        | Description
 --------------------|-------------|---------------------------------------------------------------------------------------
@@ -12,7 +12,7 @@ Parameter           | Type        | Description
 `description`       | `String`    | Detailed description of the nature of the subset.
 `created_at`        | `Timestamp` | Date and time, when the subset was created.
 
-#### Example
+### Example
 
 {% highlight json %}
 {

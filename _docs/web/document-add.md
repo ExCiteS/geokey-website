@@ -3,9 +3,7 @@ layout: docs
 title:  "Add document"
 ---
 
-``````
-POST /api/projects/:project_id/contributions/:contribution_id/media/
-``````
+Add a photo or video to a contribution.
 
 Currently the following file formats are supported:
 
@@ -13,6 +11,10 @@ Currently the following file formats are supported:
 - _Videos:_ `.mov`, `.mpeg4`, `.avi`, `.wmv`, `.flv`, `.3gpp`, `.webm`
 
 ### Request
+
+``````
+POST /api/projects/:project_id/contributions/:contribution_id/media/
+``````
 
 #### URL parameters
 
@@ -47,8 +49,6 @@ Content-Type: image/png
 Content-Disposition: attachment; filename=genome.jpeg;
 
 ### Response
-
-#### Example response
 
 The response contains a [document](document-response.html) attached to the contribution.
 

@@ -3,7 +3,7 @@ layout: docs
 title:  "Comment response"
 ---
 
-#### Parameters
+### Parameters
 
 Parameter           | Type        | Description
 --------------------|-------------|-----------------------------------------------
@@ -15,7 +15,7 @@ Parameter           | Type        | Description
 `responses`         | `Array`     | List of comments that respond to this comment.
 `review_status`     | `String`    | Optional. Can be `open` or `resolved`. Use `review_status` if you want to indicated that this comment refers to a problem with the contribution. The contribution status will then changed to `review`.
 
-#### Example
+### Example
 
 {% highlight json %}
 {

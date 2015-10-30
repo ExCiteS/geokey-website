@@ -24,3 +24,4 @@ npm-debug.log
 node_modules
 _site
 local_settings
+bower_components

@@ -6,22 +6,23 @@ layout: default
     {% include nav.html %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <h1>{{ page.title }}</h1>
-            </div>
+            <h1><span>Programming API</span> {{ page.title }}</h1>
         </div>
     </div>
 </header>
 
 <section>
     <div class="container">
-        <article class="row tutorial">
-            <div class="col-sm-3">
-                {% include internal-nav.html %}
+        <div class="row">
+            <div id="docs-nav">
+                <h2><span>Navigate</span></h2>
+                <ul></ul>
             </div>
-            <div class="col-sm-9">
+            <div id="docs-cnt">
                 {{ content }}
             </div>
-        </article>
+        </div>
     </div>
 </section>
+
+<script src="/build/js/toc.js"></script>

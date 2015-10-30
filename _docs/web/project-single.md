@@ -3,6 +3,8 @@ layout: docs
 title:  "Single project"
 ---
 
+### Request
+
 `````````````````````
 GET /api/projects/:project_id/
 `````````````````````
@@ -13,7 +15,7 @@ Parameter         | Type        | Description
 ------------------|-------------|--------------------------------------
 `project_id`      | `Integer`   | A unique identifier for the project.
 
-#### Response
+### Response
 
 The response contains a [complete Project repsonse object](project-response.html).
 

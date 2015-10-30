@@ -6,8 +6,8 @@ layout: default
     {% include nav.html %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-10 col-md-offset-1">
-                <h1>{{ page.title }}</h1>
+            <div>
+                <h1><span>Web API Docs</span> {{ page.title }}</h1>
             </div>
         </div>
     </div>
@@ -15,10 +15,19 @@ layout: default
 
 <section>
     <div class="container">
-        <article class="row tutorial">
-            <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <div class="row">
+            <div id="docs-nav">
+                <h2><span>Navigate</span></h2>
+                <ul>
+                    <!-- <li><a href="#request">Request</a></li>
+                    <li><a href="#response">Response</a></li> -->
+                </ul>
+            </div>
+            <div id="docs-cnt">
                 {{ content }}
             </div>
-        </article>
+        </div>
     </div>
 </section>
+
+<script src="/build/js/toc.js"></script>

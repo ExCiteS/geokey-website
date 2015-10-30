@@ -3,11 +3,11 @@ layout: docs
 title:  "Add comment"
 ---
 
+### Request
+
 ``````
 PATCH /api/projects/:project_id/contributions/:contribution_id/comments/
 ``````
-
-### Request
 
 #### URL parameters
 
@@ -35,8 +35,6 @@ Header            | Required value
 ### Response
 
 The response contains the [comment](comment-response.html) that has been added to the contribution.
-
-#### Example
 
 {% highlight json %}
 {

@@ -3,7 +3,7 @@ layout: docs
 title:  "Category response"
 ---
 
-#### Parameters
+### Parameters
 
 Parameter           | Type        | Description
 --------------------|-------------|---------------------------------------------------------------------------------------
@@ -16,6 +16,6 @@ Parameter           | Type        | Description
 `symbol`            | `String`    | Image URL of a symbol, , which should be used to display features for this category.
 `order`             | `Integer`   | The order in the list of categories.
 
-#### Example
+### Example
 
 {% include api-examples/category.md %}

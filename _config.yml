@@ -5,10 +5,12 @@ permalink: /blog/:year/:title.html
 exclude: ['Gruntfile.js', 'package.json', 'node_modules']
 
 redcarpet:
-  extensions: ['tables']
+  extensions: ['tables', 'with_toc_data']
 
 collections:
   help:
     output: true
   docs:
+    output: true
+  extensions:
     output: true

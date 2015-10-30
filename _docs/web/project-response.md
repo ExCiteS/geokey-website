@@ -3,7 +3,7 @@ layout: docs
 title:  "Project response"
 ---
 
-#### Parameters
+### Parameters
 
 Parameter           | Type        | Description                                                                           | Compact object | Complete object
 --------------------|-------------|---------------------------------------------------------------------------------------|----------------|----------------
@@ -17,6 +17,6 @@ Parameter           | Type        | Description                                 
 `user_info`         | `Object`    | Information, which permissions this user has been granted in the project.             | ✔              | ✔
 `geographic_extent` | `Object`    | GeoJson Geometry about the project's geographic boundaries as defined by the project admin. |                | ✔
 
-#### Example
+### Example
 
 {% include api-examples/project.md %}

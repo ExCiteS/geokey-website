@@ -34,7 +34,7 @@ To add a new value enter its name in the field below the list and click _Add_. T
     <div>
         <ul class="tutorial-links">
             <li>
-                <h6><a href="field-types.html">Field types</a></h6>
+                <h3><a href="field-types.html">Field types</a></h3>
                 <p>Learn about different field types and what you can do with them.</p>
             </li>
         </ul>
