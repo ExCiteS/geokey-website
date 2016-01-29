@@ -8,7 +8,8 @@ Add a photo or video to a contribution.
 Currently the following file formats are supported:
 
 - _Images:_ `.png`, `.jpg`, `.jpeg`, `.gif`
-- _Videos:_ `.mov`, `.mpeg4`, `.avi`, `.wmv`, `.flv`, `.3gpp`, `.webm`
+- _Videos:_ `.mov`, `.mpeg4`, `.avi`, `.wmv`, `.flv`, `.3gpp`, `.3gpp2`, `.webm`
+- _Audio:_ `.wave`, `.wav`, `.mp3`, `.3gpp`, `.3gpp2`
 
 ### Request
 
@@ -29,7 +30,7 @@ Header          | Required value
 ----------------|----------------------------
 `Content-Type`  | `multipart/form-data`
 
-#### POST body exampe
+#### POST body example
 
 ````
 ---XXX---
@@ -46,7 +47,6 @@ Content-Type: image/png
 
 ---XXX---
 ````
-Content-Disposition: attachment; filename=genome.jpeg;
 
 ### Response
 
