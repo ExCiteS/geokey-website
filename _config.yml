@@ -1,5 +1,5 @@
 name: GeoKey
-highlighter: pygments
+highlighter: rouge
 permalink: /blog/:year/:title.html
 exclude: ['Gruntfile.js', 'package.json', 'node_modules']
 
