@@ -1,4 +1,4 @@
-name: Community Maps
+name: GeoKey
 highlighter: pygments
 permalink: /blog/:year/:title.html
 exclude: ['Gruntfile.js', 'package.json', 'node_modules']
