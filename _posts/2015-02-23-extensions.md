@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Build an extension for GeoKey"
+title: "Build an extension for GeoKey"
 author: Oliver Roick
 author_link: "https://twitter.com/oliverroick"
-date:   2015-02-23 11:00:00
+date: 2015-02-23 11:00:00
 categories: news
 ---
 

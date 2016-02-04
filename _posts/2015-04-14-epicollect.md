@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Use EpiCollect to collect data with GeoKey"
+title: "Use EpiCollect to collect data with GeoKey"
 author: Oliver Roick
 author_link: "https://twitter.com/oliverroick"
-date:   2015-04-14 11:00:00
+date: 2015-04-14 11:00:00
 categories: news
 ---
 

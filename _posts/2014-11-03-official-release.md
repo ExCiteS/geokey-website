@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "GeoKey — The Official Relase"
+title: "GeoKey — The Official Relase"
 author: Oliver Roick
 author_link: "https://twitter.com/oliverroick"
-date:   2014-11-03 14:00:00
+date: 2014-11-03 14:00:00
 categories: news
 ---
 
