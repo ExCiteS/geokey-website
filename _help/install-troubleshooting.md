@@ -23,7 +23,7 @@ pip install -I pillow
 
 This [answer on Stack Overflow](http://stackoverflow.com/a/10109941/2942141)_ provides more information. 
 
-### Retrieval of audio files
+### Retrieving audio files
 
 If audio files refuses to be retrieved from the server, you probably need to enable CORS. For example, on Apache the following line needs to be added inside the `<Location>` from where your media files are being server:
 
