@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title:  "Troubleshooting"
+title: "Troubleshooting"
 ---
 
 ### Image upload
@@ -21,4 +21,18 @@ sudo apt-get install libjpeg-dev
 pip install -I pillow
 ```
 
-This [answer on Stack Overflow](http://stackoverflow.com/a/10109941/2942141) provides more information. 
+This [answer on Stack Overflow](http://stackoverflow.com/a/10109941/2942141)_ provides more information. 
+
+### Retrieval of audio files
+
+If audio files refuses to be retrieved from the server, you probably need to enable CORS. For example, on Apache the following line needs to be added inside the `<Location>` from where your media files are being server:
+
+```
+Header set Access-Control-Allow-Origin "*"
+```
+
+Altering headers requires the use of [mod_headers](http://httpd.apache.org/docs/2.0/mod/mod_headers.html)_. It is enabled by default on Apache, however, you may want to ensure it is enabled by running the following command:
+
+```
+a2enmod headers
+```
