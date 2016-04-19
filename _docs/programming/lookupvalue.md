@@ -12,6 +12,7 @@ Parameter              | Type                     | Description
 `id`                     | int                      | Identifies the lookup value in the database.
 `name`                   | string                   | Short title of the value.
 `status`                 | string                   | Status of the field, must be one of 'active', 'inactive', `deleted`.
+`symbol`                 | File                     | An image file that is used to display value of that lookup.
 `field`                  | LookupField / MultipleLookupField | Field this value is assigned to.
 
 ### Methods
