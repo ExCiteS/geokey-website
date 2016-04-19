@@ -118,7 +118,7 @@ The request returns details on the project.
         "can_moderate": false,
         "is_admin": false,
         "can_contribute": true
-    },
+    }
 }
 ```
 
