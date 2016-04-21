@@ -1,12 +1,11 @@
 ### SublimeText ###
-# SublimeText project files
 *.sublime-workspace
 
-### SASS ###
-### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+### Sass ###
 *.sass-cache
 
-### Node ###
+### Node.js ###
+node_modules
 lib-cov
 *.seed
 *.log
@@ -16,12 +15,11 @@ lib-cov
 *.pid
 *.gz
 
+### Misc ###
+local_settings
+bower_components
+_site
 pids
 logs
 results
-
-npm-debug.log
-node_modules
-_site
-local_settings
-bower_components
+*.log
