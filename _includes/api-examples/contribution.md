@@ -63,10 +63,10 @@
                 },
                 {
                     "id": 119,
-                    "name": "Child friedly",
-                    "key": "child_friedly",
-                    "fieldtype": "TrueFalseField",
-                    "description": "Would your take your kids?",
+                    "name": "Average spend",
+                    "key": "average_spend",
+                    "fieldtype": "NumberField",
+                    "description": "How much would a person usually spend?",
                     "status": "active",
                     "required": false
                 }
