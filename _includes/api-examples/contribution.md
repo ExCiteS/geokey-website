@@ -19,7 +19,7 @@
         "key": "name",
         "value": "The Grafton"
     },
-    "expiry_field": "2030-01-12T11:12:38.690Z"
+    "expiry_field": "2030-01-12T11:12:38.690Z",
     "location": {
         "id": 2964,
         "name": null,

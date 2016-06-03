@@ -22,13 +22,13 @@ On the following page, you are asked to complete a form with the following field
     - Choose *Public* if you want your project to be publicly available. Users, who want to access your data, do not have to be signed in to view your maps.
 - **Project permissions:** Here you can decide — again, on a high level — who gets to contribute to your project. The options depend o whether the project is private or public.
 
-    ##### Public projects
+    **Public projects**
 
     - Select *All users* and any user can contribute data to your project, even if they are not signed in.
     - Select *All authenticated users* and all users, who are signed in, can contribute data.
     - Select *Only members of contributor groups can cantribute*, and only users, who are members of any user group that has contributor permissions, can contribute to the project.
 
-    ##### Private projects
+    **Private projects**
 
     - Select *All users* and all users who have access to the project will be allowed to also contribute data.
     - Select *Only members of contributor groups can cantribute*, and only users, who are members of any user group that has contributor permissions, can contribute to the project.

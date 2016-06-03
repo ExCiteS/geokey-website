@@ -29,7 +29,6 @@ This guide walks you through the process of setting up GeoKey on your own server
     sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt trusty-pgdg main" >> /etc/apt/sources.list'
     wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
     sudo apt-get update
-
     sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4 pgadmin3
     ```
 
@@ -137,7 +136,9 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
             'PORT': '',
         }
     }
+    ```
 
+    ```
     SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     ```
 
