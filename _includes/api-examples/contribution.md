@@ -12,12 +12,14 @@
     "properties": {
         "child_friendly": false,
         "name": "The Grafton",
-        "address": "20 Prince of Wales Rd, London NW5 3LG"
+        "address": "20 Prince of Wales Rd, London NW5 3LG",
+        "expires_at": "2030-01-12T11:12:38.690Z"
     },
     "display_field": {
         "key": "name",
         "value": "The Grafton"
     },
+    "expiry_field": "2030-01-12T11:12:38.690Z"
     "location": {
         "id": 2964,
         "name": null,

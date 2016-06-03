@@ -16,6 +16,7 @@ Parameter              | Type                     | Description
 `order`                  | int                      | Position at which the category should be displayed in the list of the project's categories.
 `status`                 | string                   | Current status of the category, must be one of `active`, `inactive` or `deleted`. Defaults to `active`.
 `display_field`          | [Field](/docs/internat/field.html) | Field that is used to display contributions in a list. That field should be a descriptive field, such as a name.
+`expiry_field`           | [Field](/docs/internat/field.html) | Field that is used to set the expiry date for contributions.
 `default_status`         | string                   | Default status that is assigned to all contributions of that category when they are created. Must be one of `active` or `pending`. Defaults to `pending`.
 `colour`                 | string                   | Hex code defining the colour that is used to display contributions of that category on the map.
 `symbol`                 | File                     | An image file that is used to display contributions of that category on the map.
