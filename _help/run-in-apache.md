@@ -144,7 +144,6 @@ Videos are – by default – uploaded to your YouTube account.
     `YOUTUBE_DEVELOPER_KEY = 'xxxxxxxxxxx'`
 
     `YOUTUBE_CLIENT_ID = 'xxxxxxxxxxx.apps.googleusercontent.com'`
-    ```
 
 ### Enabling email
 
