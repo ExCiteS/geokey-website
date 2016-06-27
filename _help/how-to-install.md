@@ -1,6 +1,6 @@
 ---
 layout: tutorial
-title:  "How to install"
+title: "How to install"
 ---
 
 This guide walks you through the process of setting up GeoKey on your own server. It explains how to setup the database, how to install the Python packages and what configurations you should implement to make GeoKey run smoothly.
@@ -25,66 +25,53 @@ This guide walks you through the process of setting up GeoKey on your own server
 
 2. Install Postgres and PostGIS (we follow the [official guides](http://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS21UbuntuPGSQL93Apt))
 
-    ```
-    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt wheezy-pgdg main" >> /etc/apt/sources.list'
-    wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-    sudo apt-get update
-    sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4
-    ```
+    `sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt wheezy-pgdg main" >> /etc/apt/sources.list'`
+
+    `wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -`
+
+    `sudo apt-get update`
+
+    `sudo apt-get install postgresql-9.4-postgis-2.1 postgresql-contrib postgresql-server-dev-9.4`
 
 3. Setup all other dependencies
 
-    ```
-    sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev binutils libproj-dev gdal-bin python-gdal
-    ```
+    `sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev binutils libproj-dev gdal-bin python-gdal`
 
 ### Setting up the database
 
-1. Create a new user on you system, which GeoKey uses to write to and read from the data base.
+1. Create a new user on you system, which GeoKey uses to write to and read from the data base
 
-    ```
-    # adduser django
-    ```
+    `# adduser django`
 
-2. Add the user to your database.
+2. Add the user to your database
 
-    Connect to postgres as the postgres user
+    Connect to PostgreSQL
 
-    ```
-    # su - postgres
-    $ psql
-    ```
+    `# su - postgres`
 
-    Now you're connected to Postgres, you can add the user and create a new database. To make it simple, we add ownership of that database to the user.
+    `$ psql`
 
-    ```
-    CREATE USER django WITH PASSWORD 'django123';
-    ```
+    Now you're connected to PostgreSQL, you can add the user and create a new database, and to make it simple, we add ownership of that database to the user
 
-3. Create the data base
+    `CREATE USER django WITH PASSWORD 'django123';`
 
-    ```
-    CREATE DATABASE geokey OWNER django;
-    ```
+3. Create the database
 
-    Close the data base connection.
+    `CREATE DATABASE geokey OWNER django;`
 
-    ```
-    \q
-    ```
+    Close the data base connection
+
+    `\q`
 
 4. Install the PostGIS extension on you database
 
-    ```
-    psql -d geokey -c 'create extension postgis;'
-    psql -d geokey -c 'create extension hstore;'
-    ```
+    `psql -d geokey -c 'create extension postgis;'`
 
-5. Finally log out as user postgres
+    `psql -d geokey -c 'create extension hstore;'`
 
-    ```
-    logout
-    ```
+5. Finally log out
+
+    `logout`
 
 ### Setting up your virtual environment
 
