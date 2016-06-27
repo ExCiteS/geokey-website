@@ -97,7 +97,7 @@ We are going to use the default virtual host provided by the Apache installation
 
     `<Location "/static/">`
 
-        `Options -Indexes`
+    `   Options -Indexes`
 
     `</Location>`
 
@@ -105,7 +105,7 @@ We are going to use the default virtual host provided by the Apache installation
 
     `<Location "/media/">`
 
-        `Options -Indexes`
+    `   Options -Indexes`
 
     `</Location>`
 
