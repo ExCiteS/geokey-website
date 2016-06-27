@@ -57,7 +57,7 @@ We now create directories that are used to serve static files like images, CSS a
 
     `python manage.py collectstatic`
 
-    Depending on your user role, you might need to add temporarily writing permission to `/var/www/geokey/static`.
+    Depending on your user role, you might need to add temporarily writing permission to `/var/www/geokey/static/`.
 
 7. Finally, allow Apache to write to you media directory
 
