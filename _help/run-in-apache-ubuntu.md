@@ -125,26 +125,25 @@ We are going to use the default virtual host provided by the Apache installation
     Point your browser to your domain. You should see the admin landing page now.
 
 
-### Enabling Youtube upload
+### Enabling YouTube upload
 
-Videos are – by default – uploaded to your Youtube account.
+Videos are – by default – uploaded to your YouTube account.
 
-1. You will need to obtain Youtube API keys following [this guide](https://developers.google.com/youtube/registering_an_application).
+1. You will need to obtain YouTube API keys following [this guide](https://developers.google.com/youtube/registering_an_application).
 
 2. Set the `ENABLE_VIDEO` flag in `local_settings`:
 
-    ```
-    ENABLE_VIDEO = True
-    ```
+    `ENABLE_VIDEO = True`
 
 3. The add the credentials to `local_settings`:
 
-    ```
-    YOUTUBE_AUTH_EMAIL = 'your-email@example.com'
-    YOUTUBE_AUTH_PASSWORD = 'password'
-    YOUTUBE_DEVELOPER_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-    YOUTUBE_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
-    ```
+    `YOUTUBE_AUTH_EMAIL = 'your-email@example.com'`
+
+    `YOUTUBE_AUTH_PASSWORD = 'password'`
+
+    `YOUTUBE_DEVELOPER_KEY = 'xxxxxxxxxxx'`
+
+    `YOUTUBE_CLIENT_ID = 'xxxxxxxxxxx.apps.googleusercontent.com'`
 
 ### Enabling email
 
