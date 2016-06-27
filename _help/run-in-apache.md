@@ -19,7 +19,7 @@ This guide walks you through the setup for running GeoKey in Apache using `mod_w
 
 `sudo apt-get install apache2 libapache2-mod-wsgi`
 
-### Create directories that serve static files
+### Create directories for static files
 
 We now create directories that are used to serve static files like images, CSS and JavaScript, also media uploaded by users.
 
