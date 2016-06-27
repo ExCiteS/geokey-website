@@ -17,9 +17,7 @@ This guide walks you through the setup for running GeoKey in Apache using `mod_w
 
 ### Install Apache and mod-wsgi
 
-```
-sudo apt-get install apache2 libapache2-mod-wsgi
-```
+`sudo apt-get install apache2 libapache2-mod-wsgi`
 
 ### Create directories that serve static files
 
@@ -27,56 +25,40 @@ We now create directories that are used to serve static files like images, CSS a
 
 1. Head to Apache www directory
 
-    ```
-    cd /var/www
-    ```
+    `cd /var/www`
 
 2. Create a directory for GeoKey specific files
 
-    ```
-    sudo mkdir geokey
-    ```
+    `sudo mkdir geokey`
 
 3. Create directories for static files and assets uploaded by users
 
-    ```
-    sudo mkdir geokey/static
-    sudo mkdir geokey/media
-    ```
+    `sudo mkdir geokey/static`
+    `sudo mkdir geokey/media`
 
 4. Open your `local_settings.py`, e.g.
 
-    ```
-    sudo vim /home/django/runner/local_settings.py
-    ```
+    `sudo vim /home/django/runner/local_settings.py`
 
 5. Add or change settings for `static` and `media`
 
-    ```
-    STATIC_ROOT = '/var/www/geokey/static/'
-    STATIC_URL = '/static/'
-    ```
+    `STATIC_ROOT = '/var/www/geokey/static/'`
+    `STATIC_URL = '/static/'`
 
-    ```
-    MEDIA_ROOT = '/var/www/geokey/media/'
-    MEDIA_URL = '/media/'
-    ```
+    `MEDIA_ROOT = '/var/www/geokey/media/'`
+    `MEDIA_URL = '/media/'`
 
 6. Collect static files from the Python packages (they will be automatically stored under `/var/www/geokey/static/`)
 
-    ```
-    cd /home/django/runner
-    python manage.py collectstatic
-    ```
+    `cd /home/django/runner`
+    `python manage.py collectstatic`
 
     Depending on your user role, you might need to add temporarily writing permission to `/var/www/geokey/static`.
 
 7. Finally, allow Apache to write to you media directory
 
-    ```
-    chgrp -R www-data /var/www/geokey/media/
-    chmod -R 775 /var/www/geokey/media/
-    ```
+    `chgrp -R www-data /var/www/geokey/media/`
+    `chmod -R 775 /var/www/geokey/media/`
 
 ### Configure Apache virtual host
 
