@@ -93,54 +93,50 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
 
 1. Install the package
 
-    ```
-    pip install geokey
-    ```
+    `pip install geokey`
 
 2. Download and unzip the GeoKey runner:
 
-    ```
-    wget http://geokey.org.uk/downloads/settings.tar.gz
-    tar -xvf settings.tar.gz
-    ```
+    `wget http://geokey.org.uk/downloads/settings.tar.gz`
+
+    `tar -xvf settings.tar.gz`
 
 3. Open `settings.py` and add the database info and a secret key to your app
 
-    ```
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.contrib.gis.db.backends.postgis',
-            'NAME': 'geokey',
-            'USER': 'django',
-            'PASSWORD': 'django123',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
-    ```
+    `DATABASES = {`
 
-    ```
-    SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-    ```
+    `   'default': {`
+
+    `        'ENGINE': 'django.contrib.gis.db.backends.postgis',`
+
+    `        'NAME': 'geokey',`
+
+    `        'USER': 'django',`
+
+    `        'PASSWORD': 'django123',`
+
+    `        'HOST': 'localhost',`
+
+    `        'PORT': '',`
+
+    `   }`
+
+    `}`
+
+    `SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'`
 
 
 4. Create the database structure
 
-    ```
-    python manage.py migrate
-    ```
+    `python manage.py migrate`
 
-5. Add yourself as super user. You can use the same email and password to log into the system later.
+5. Add yourself as superuser
 
-    ```
-    python manage.py createsuperuser
-    ```
+    `python manage.py createsuperuser`
 
-6. You should be all set now. Try running the test server:
+6. You should be all set now, try running the test server
 
-    ```
-    python manage.py runserver 0.0.0.0:8000
-    ```
+    `python manage.py runserver 0.0.0.0:8000`
 
    If you point your browser to `your-domain.com:8000/admin` you should see the landing page of GeoKey.
 
