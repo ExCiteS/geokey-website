@@ -69,20 +69,19 @@ We now create directories that are used to serve static files like images, CSS a
 
 We are going to use the default virtual host provided by the Apache installation. The same configuration can be applied to other virtual hosts on your system.
 
-1. Open the apache config file in your text editor (we use vim, because it's awesome):
+1. Open the Apache configuration file in your text editor (we use vim, because it's awesome):
 
-    ```
-    vim /etc/apache2/sites-available/default
-    ```
+    `vim /etc/apache2/sites-available/default.conf`
 
 2. Add the following lines just below `<VirtualHost *:80>`:
 
-    ```
-    WSGIDaemonProcess geokey python-path=/home/django:/home/django/env/lib/python2.7/site-packages
-    WSGIProcessGroup geokey
-    WSGIScriptAlias / /home/django/wsgi.py
-    WSGIPassAuthorization On
-    ```
+    `WSGIDaemonProcess geokey python-path=/home/django:/home/django/env/lib/python2.7/site-packages`
+
+    `WSGIProcessGroup geokey`
+
+    `WSGIScriptAlias / /home/django/wsgi.py`
+
+    `WSGIPassAuthorization On`
 
     This first line creates a new WSGI daemon that runs GeoKey in Apache. Its name (in our case `geokey`) can be anything, but you should use a descriptive name. The `python-path` directive contains both the path of your Django project and the path to the Python packages inside your virtual environment.
 
@@ -92,40 +91,38 @@ We are going to use the default virtual host provided by the Apache installation
 
     The last line enables WSGI to pass authorisation credentials to the Django application. This is necessary, because Django would not be able to authenticate users otherwise.
 
-3. We then have to tell Apache where to find static and media files from your Django project. (Remember, we previously created these directories and copied the static files.)
+3. We then have to tell Apache where to find static and media files from your Django project (temember, we previously created these directories and copied the static files)
 
-    ```
-    Alias /static/ /var/www/geokey/static/
-    <Location "/static/">
-        Options -Indexes
-    </Location>
+    `Alias /static/ /var/www/geokey/static/`
 
-    Alias /media/ /var/www/geokey/media/
-    <Location "/media/">
-        Options -Indexes
-    </Location>
-    ```
+    `<Location "/static/">`
 
-5. Finally, we need to tell WSGI where to find configuration files for our Django project. Open the WSGI configuration in your text editor:
+        `Options -Indexes`
 
-    ```
-    sudo vim /home/django/runner/wsgi.py
-    ```
+    `</Location>`
+
+    `Alias /media/ /var/www/geokey/media/`
+
+    `<Location "/media/">`
+
+        `Options -Indexes`
+
+    `</Location>`
+
+5. To tell WSGI where to find configuration files for our Django project, open the WSGI configuration in your text editor
+
+    `sudo vim /home/django/runner/wsgi.py`
 
 6. Add following line just below `from django.core.wsgi import get_wsgi_application`
 
-    ```
-    import sys
-    sys.path.append('/home/django/runner')
-    ```
+    `import sys`
+    `sys.path.append('/home/django/runner')`
 
-7. You should be all set now. Now restart Apache
+7. Now restart the Apache
 
-    ```
-    sudo service apache2 restart
-    ```
+    `sudo service apache2 restart`
 
-    and point your browser to your domain. You should see the admin landing page now.
+    Point your browser to your domain. You should see the admin landing page now.
 
 
 ### Enabling Youtube upload
