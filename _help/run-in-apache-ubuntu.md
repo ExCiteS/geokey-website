@@ -147,23 +147,12 @@ Videos are – by default – uploaded to your YouTube account.
 
 ### Enabling email
 
-GeoKey uses e-mail in various cases; for instance, when users want to reset their password. We therefore need to setup [Postfix](http://www.postfix.org/) to send e-mail from your server.
+GeoKey uses email in various cases; for instance, when users want to reset their password. We therefore need to setup [Postfix](http://www.postfix.org/) to send email from your server.
 
-1. First install Postfix:
+1. First install Postfix
 
-    ```
-    apt-get update
-    apt-get install postfix
-    ```
+    `apt-get update && apt-get install postfix`
 
-2. Open project configuration in your text editor:
+2. Add a default email address that is used as sender for e-ails send by Django in `local_settings`
 
-    ```
-    vim /home/django/runner/local_settings.py
-    ```
-
-3. Add a default e-mail address that is used as sender for e-mails send by Django.
-
-    ```
-    DEFAULT_FROM_EMAIL = 'sender@example.com'
-    ```
+    `DEFAULT_FROM_EMAIL = 'sender@example.com'`
