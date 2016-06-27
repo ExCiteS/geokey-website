@@ -34,6 +34,7 @@ We now create directories that are used to serve static files like images, CSS a
 3. Create directories for static files and assets uploaded by users
 
     `sudo mkdir geokey/static`
+
     `sudo mkdir geokey/media`
 
 4. Open your `local_settings.py`, e.g.
@@ -43,14 +44,17 @@ We now create directories that are used to serve static files like images, CSS a
 5. Add or change settings for `static` and `media`
 
     `STATIC_ROOT = '/var/www/geokey/static/'`
+
     `STATIC_URL = '/static/'`
 
     `MEDIA_ROOT = '/var/www/geokey/media/'`
+
     `MEDIA_URL = '/media/'`
 
 6. Collect static files from the Python packages (they will be automatically stored under `/var/www/geokey/static/`)
 
     `cd /home/django/runner`
+
     `python manage.py collectstatic`
 
     Depending on your user role, you might need to add temporarily writing permission to `/var/www/geokey/static`.
@@ -58,6 +62,7 @@ We now create directories that are used to serve static files like images, CSS a
 7. Finally, allow Apache to write to you media directory
 
     `chgrp -R www-data /var/www/geokey/media/`
+
     `chmod -R 775 /var/www/geokey/media/`
 
 ### Configure Apache virtual host
