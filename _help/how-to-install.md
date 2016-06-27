@@ -79,21 +79,15 @@ We will install GeoKey in a [virtual enviroment](http://virtualenv.readthedocs.o
 
 1. Choose a directory where you have write access and create an empty virtual environment
 
-    ```
-    virtualenv env
-    ```
+    `virtualenv env`
 
 2. Activate the env
 
-    ```
-    . env/bin/activate
-    ```
+    `source env/bin/activate`
 
 3. Upgrade pip so the correct python dependencies will be installed later on
 
-    ```
-    pip install --upgrade pip
-    ```
+    `pip install --upgrade pip`
 
 ### Setting up GeoKey
 
