@@ -29,7 +29,7 @@ window.onscroll = function() {
         cnt.classList.remove('nav-fixed');
 
         if (!navHeight) {
-            navHeight = nav[0].offsetWidth;
+            navHeight = nav.offsetWidth;
         }
     }
 
