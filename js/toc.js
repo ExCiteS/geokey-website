@@ -17,14 +17,23 @@ for (var i = 0, len = headers.length; i < len; i++) {
     }
 }
 
-var headerHeight = document.getElementsByTagName('header')[0]. offsetHeight;
+var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
+var navHeight;
 
-window.onscroll = function () {
+window.onscroll = function() {
     if (window.scrollY > headerHeight) {
         nav.classList.add('fixed');
         cnt.classList.add('nav-fixed');
     } else {
         nav.classList.remove('fixed');
         cnt.classList.remove('nav-fixed');
+
+        if (!navHeight) {
+            navHeight = nav[0].offsetWidth;
+        }
+    }
+
+    if (!navHeight) {
+        nav.style.width = navHeight + 'px';
     }
 }
