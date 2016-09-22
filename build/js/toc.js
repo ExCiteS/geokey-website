@@ -25,7 +25,7 @@ window.onscroll = function() {
         nav.classList.add('fixed');
         cnt.classList.add('nav-fixed');
 
-        if (!navHeight) {
+        if (navHeight) {
             nav.style.width = navHeight + 'px';
         }
     } else {
