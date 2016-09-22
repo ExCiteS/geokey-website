@@ -21,21 +21,17 @@ var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
 var navHeight;
 
 window.onscroll = function() {
-    if (window.scrollY > headerHeight) {
-        nav.classList.add('fixed');
-        cnt.classList.add('nav-fixed');
+    if (!navHeight) {
+        navHeight = nav.offsetWidth;
+    }
 
-        if (navHeight) {
-            nav.style.width = navHeight + 'px';
-        }
+    if (window.scrollY > headerHeight) {
+        cnt.classList.add('nav-fixed');
+        nav.classList.add('fixed');
+        nav.style.width = navHeight + 'px';
     } else {
         nav.style.width = null;
-
         nav.classList.remove('fixed');
         cnt.classList.remove('nav-fixed');
-
-        if (!navHeight) {
-            navHeight = nav.offsetWidth;
-        }
     }
 }
