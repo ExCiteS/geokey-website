@@ -15,7 +15,7 @@ GET /api/user/
 {
   "id": 1,
   "email": "example@email.com",
-  "display_name": "Oliver"
+  "display_name": "Oliver",
   "social_accounts": [
     {
       "id": 1,
