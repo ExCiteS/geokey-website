@@ -24,8 +24,8 @@ GET /api/user/
     {
       "id": 2,
       "provider": "twitter"
-  	}
-	]
+    }
+  ]
 }
 {% endhighlight %}
 
