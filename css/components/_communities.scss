@@ -42,8 +42,8 @@ section#use-data {
                 }
             }
 
-            &#epicollect {
-                background: url(/img/epicollect.png) no-repeat;
+            &#sapelli {
+                background: url(/img/sapelli.png) no-repeat;
 
                 @media screen and (max-width: $screen-sm) {
                     background-position: 50% 0;
@@ -63,6 +63,25 @@ section#use-data {
                     @extend .col-sm-offset-0;
                 }
             }
+
+            &#epicollect {
+                background: url(/img/epicollect.png) no-repeat;
+
+                @media screen and (max-width: $screen-sm) {
+                    background-position: 320px 0;
+                    padding-top: 320px;
+                }
+
+                @media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+                    background-size: 57%;
+                }
+
+                h3, p {
+                    @extend .col-sm-5;
+                    @extend .col-sm-offset-7;
+                }
+            }
+
 
             &#your-app {
                 h3, p {
