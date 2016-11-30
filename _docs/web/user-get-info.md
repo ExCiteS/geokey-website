@@ -14,7 +14,18 @@ GET /api/user/
 {% highlight json %}
 {
   "id": 1,
-  "display_name": "Oliver"
+  "email": "example@email.com",
+  "display_name": "Oliver",
+  "social_accounts": [
+    {
+      "id": 1,
+      "provider": "facebook"
+    },
+    {
+      "id": 2,
+      "provider": "twitter"
+    }
+  ]
 }
 {% endhighlight %}
 
