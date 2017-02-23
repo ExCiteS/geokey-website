@@ -3,7 +3,7 @@ layout: docs
 title:  "Search and filter contributions"
 ---
 
-The list of contributions can be filtered either by providing a free-text `query_term`, by providing the `subset_id` of a pre-defined subset or boundary box '{xmin,ymin,xmax,ymax}'. All parameters can be combined; the search filter across all contributions in the subset together with the boundary box or they can also be used individually. Please, bare in mind that the boundary box should follow [OSGeo standards](http://geojson.org/geojson-spec.html#feature-collection-objects). 
+The list of contributions can be filtered either by providing a free-text `query_term`, by providing the `subset_id` of a pre-defined subset or boundary box '{xmin,ymin,xmax,ymax}'. All parameters can be combined; the search filter across all contributions in the subset together with the boundary box or they can also be used individually. Please, bare in mind that the boundary box should follow OSGeo standards. 
 
 ### Request
 
