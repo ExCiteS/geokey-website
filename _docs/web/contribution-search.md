@@ -8,17 +8,17 @@ The list of contributions can be filtered either by providing a free-text `query
 ### Request
 
 ```
-GET /api/projects/:project_id/contributions/?search={query_term}&subset={subset_id}&bbox=xmin,ymin,xmax,ymax
+GET /api/projects/:project_id/contributions/?search={query_term}&subset={subset_id}&bbox={xmin,ymin,xmax,ymax}
 ```
 
 #### Request Parameters
 
-Parameter         | Type        | Description
-------------------|-------------|--------------------------------------
-`project_id`      | `Integer`   | A unique identifier for the project.
-`subset_id`       | `Integer`   | Optional. A unique identifier for the subset.
-`query_term`      | `String`    | Optional. The term you want to search for.
-`bbox`            | `String`    | Optional. The boundary box you want to search for.
+Parameter               | Type        | Description
+----------------------- |-------------|--------------------------------------
+`project_id`            | `Integer`   | A unique identifier for the project.
+`subset_id`             | `Integer`   | Optional. A unique identifier for the subset.
+`query_term`            | `String`    | Optional. The term you want to search for.
+`xmin,ymin,xmax,ymax`   | `String`    | Optional. The boundary box you want to search for.
 
 ### Response
 
