@@ -41,7 +41,7 @@ a2enmod headers
 
 If you fail to install GDAL on Debian, follow the procedure:
 
-1. Install dev tools:
+Install dev tools:
 
 ```
 sudo apt-get install libgdal-dev
@@ -49,13 +49,13 @@ export CPLUS_INCLUDE_PATH=/usr/include/gdal
 export C_INCLUDE_PATH=/usr/include/gdal
 ```
 
-2. Check which version of GDAL was installed:
+Check which version of GDAL was installed:
 
 ```
 gdalinfo --version
 ```
 
-3. Use the same version (x.x.x) to install GDAL as a Python package:
+Use the same version (x.x.x) to install GDAL as a Python package:
 
 ```
 pip install GDAL==x.x.x
