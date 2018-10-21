@@ -35,7 +35,7 @@ This guide walks you through the process of setting up GeoKey on your own server
 
 3. Setup all other dependencies
 
-    `sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev binutils libproj-dev gdal-bin python-gdal`
+    `sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev libmagickcore-dev libmagickwand-dev imagemagick binutils libproj-dev libav-tools gdal-bin python-gdal`
 
 ### Setting up the database
 
