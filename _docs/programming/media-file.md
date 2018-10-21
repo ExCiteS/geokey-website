@@ -3,7 +3,7 @@ layout: internal-docs
 title:  "MediaFile"
 ---
 
-MediaFiles are images or videos that can be attached to [Observations](/docs/programming/observation.html).
+MediaFiles are images, documents or videos that can be attached to [Observations](/docs/programming/observation.html).
 
 ### Attributes
 
@@ -25,6 +25,13 @@ Parameter              | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
 `image`                  | ImageFile                | Image uploaded.
 
+##### DocumentFile
+
+Parameter              | Type                     | Description
+-----------------------|--------------------------|-----------------------------------------------
+`document`               | File                     | Document uploaded.
+`thumbnail`              | ImageFile                | Thumbnail image of the document.
+
 ##### VideoFile
 
 Parameter              | Type                     | Description
@@ -38,7 +45,7 @@ Parameter              | Type                     | Description
 
 Property               | Type                     | Description
 -----------------------|--------------------------|-----------------------------------------------
-`type_name`              | string                   | Indicates the file type. Is one of `ImageFile`, `VideoFile`
+`type_name`              | string                   | Indicates the file type. Is one of `ImageFile`, `DocumentFile`, `VideoFile`
 
 ### Methods
 
@@ -72,6 +79,8 @@ Creates a new file. It examines the content type of the file and creates the app
 <dl class="parameters">
     <dt><span class="type">ImageFile</span></dt>
         <dd>if an image was uploaded</dd>
+    <dt><span class="type">DocumentFile</span></dt>
+        <dd>if a document was uploaded</dd>
     <dt><span class="type">VideoFile</span></dt>
         <dd>if an video was uploaded</dd>
 </dl>
