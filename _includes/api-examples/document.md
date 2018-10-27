@@ -11,6 +11,6 @@
         "id": 422,
         "display_name": "Peter Schmeichel"
     },
-    "created_at": "2014-06-05T11:31:02.613Z",
+    "created_at": "2014-06-05T11:31:02.613Z"
 }
 {% endhighlight %}
