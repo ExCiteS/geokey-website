@@ -7,7 +7,7 @@ title:  "Data model"
 
 Participatory mapping activities are organised into _projects_. Each project has a different objective and geographic extent. Users who are member of a project contribute perceptions or measurements of their environment to a project.
 
-Perceptions and measurements are contributed to a project using _contributions_. Each contribution has a location. By separating observations and contributions, different users can contribute different perceptions on the same location or continuous measurements can be collected for a certain location. Users can further add comments to contributions, reply to comments or attach media files like photographs, videos or audio files to a contribution.
+Perceptions and measurements are contributed to a project using _contributions_. Each contribution has a location. By separating observations and contributions, different users can contribute different perceptions on the same location or continuous measurements can be collected for a certain location. Users can further add comments to contributions, reply to comments or attach media files like photographs, documents, videos or audio files to a contribution.
 
 Each contribution has a _category_ that describes which information the contributor is expected to provide. Each category has a number of _fields_. For each field expected data types, accepted values and if the field is required must be stated. Field itself is an abstract entity and is instantiated by specific field types (see [Field Types](/help/field-types.html) for available types). Categories are used to validate user inputs and to create forms for user interfaces.
 

@@ -35,7 +35,11 @@ This guide walks you through the process of setting up GeoKey on your own server
 
 3. Setup all other dependencies
 
-    `sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev binutils libproj-dev libav-tools gdal-bin python-gdal`
+    `sudo apt-get install python-pip python-virtualenv python-dev libjpeg-dev libmagickcore-dev libmagickwand-dev imagemagick binutils libproj-dev libav-tools gdal-bin python-gdal`
+
+4. Change ImageMagick permissions for it to be able to write:
+
+    `sed -i 's/\(<policy domain="coder" rights=\)"none" \(pattern="PDF" \/>\)/\1"read|write"\2/g' /etc/ImageMagick-6/policy.xml`
 
 ### Setting up the database
 
