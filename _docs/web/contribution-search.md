@@ -36,5 +36,5 @@ The response contains a [GeoJSON Feature Collection](http://geojson.org/geojson-
 Code  |  Reason
 ------|-----------------------------------------
  200  |  The list of contributions has been returned successfully.
- 404  |  The project was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence private projects to unauthorised users.
- 406  |  The boundary box intruduced is wrong.
+ 404  |  The project was not found. For security reasons we do not leak information about private projects, hence we don't confirm existence of private projects to unauthorised users.
+ 406  |  The boundary box specified is wrong.
